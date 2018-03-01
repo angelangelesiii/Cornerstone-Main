@@ -34,7 +34,7 @@ function my_acf_settings_dir( $dir ) {
 // add_filter('acf/settings/show_admin', '__return_false');
 
 // 4. Include ACF
-include_once( get_stylesheet_directory() . '/acfp/acfp.php' );
+include_once( get_stylesheet_directory() . '/acfp/acf.php' );
 
 // Google Maps API key
 function my_acf_init() {
