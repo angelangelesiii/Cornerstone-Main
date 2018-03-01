@@ -1,0 +1,39 @@
+.acf-map {
+	width: 100%;
+	height: 400px;
+	/*border: #ccc solid 1px;*/
+	margin: 0;
+	font-family: 'Raleway', 'Roboto', sans-serif !important;
+}
+.acf-map.hide-init h3,
+.acf-map.hide-init p {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+.acf-map p,
+.acf-map h3 {
+	font-size: 1rem;
+	font-family: 'Raleway', 'Roboto', sans-serif !important;
+}
+.acf-map h3 {
+	font-size: 1em;
+	margin: 10px 0;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.acf-map p {
+	font-family: 'Roboto', sans-serif !important;
+	margin: 0.5em 0 !important;
+	line-height: 1.3em;
+	font-size: 1em;
+	max-width: 300px;
+}
+.acf-map i.fa {
+	font-size: 2em;
+	margin: 5px 5px 0 0;
+}
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
+}
