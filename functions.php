@@ -163,7 +163,7 @@ function cornerstone_main_scripts() {
 	wp_enqueue_script( 'cornerstone-main-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	// Fontawesome
-	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/dist/css/fa/css/font-awesome.min.css' );
+	wp_enqueue_style( 'fontawesome-5', get_template_directory_uri().'/dist/css/fa/css/fontawesome-all.min.css' );
 
 	// Google Fonts
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Open+Sans:300,300i,400,400i,700,800' );
@@ -198,7 +198,7 @@ function cornerstone_main_scripts() {
 	wp_enqueue_script( 'scrollmagic-indicators', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js', false, false, true);
 
 	// Slick Slider
-	wp_enqueue_script( 'slick', get_template_directory_uri().'/dist/js/slick.min.js', false, false, true );
+	// wp_enqueue_script( 'slick', get_template_directory_uri().'/dist/js/slick.min.js', false, false, true );
 
 	// ImagesLoaded
 	wp_enqueue_script( 'imagesloaded', get_template_directory_uri().'/dist/js/imagesloaded.pkgd.min.js', false, false, true );
