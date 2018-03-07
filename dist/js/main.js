@@ -10,6 +10,7 @@ jQuery(document).ready(function($){ // Document Ready
 
     function toggleMenu() {
         $('body').toggleClass('menu-opened')
+        $('#mainheader').toggleClass('opened')
         $('#mainmenubutton').toggleClass('opened');
         $('#mainmenupanel').toggleClass('opened');
         $('#menu-overlay').toggleClass('opened');
@@ -36,5 +37,22 @@ jQuery(document).ready(function($){ // Document Ready
     }))
     // .addIndicators()
     .addTo(mainController);
+
+    // Navbar scrolling toggle
+    var navBarToggle = new ScrollMagic.Scene({
+        triggerElement: '.transition-mark',
+        triggerHook: 0,
+        offset: -30
+    })
+    .on('enter', function() { // if viewport moved by 50px, remove 'top-position' class
+        $('#mainheader').toggleClass('top-position');
+        $('#mainheader').toggleClass('not-top-position');
+	})
+	.on('leave', function() {// if viewport is < 50px from top, add 'top-position' class
+        $('#mainheader').toggleClass('top-position');
+        $('#mainheader').toggleClass('not-top-position');
+    })
+    .addIndicators()
+	.addTo(mainController);
 
 });

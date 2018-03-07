@@ -24,12 +24,14 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cornerstone-main' ); ?></a>
 
-	<header id="mainheader" class="full-header">
+	<div id="top"></div>
+	<header id="mainheader" class="full-header top-position">
 		<div class="wrapper-header">
 			<nav id="mainnav" class="clearfix">
 				<div class="logo-container">
 					<a href="<?php the_permalink(); ?>">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_white_block.png' ?>" alt="Cornerstone Logo" class="logo logo-white">
+						<img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_colored_block.png' ?>" alt="Cornerstone Logo" class="logo logo-colored">
 						<h1 id="website-title">CORNERSTONE</h1>
 					</a>
 				</div>

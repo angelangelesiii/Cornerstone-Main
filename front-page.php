@@ -21,6 +21,8 @@ get_header(); ?>
 				</div>
 			</section>
 
+			<div class="transition-mark"></div>
+
 			<section class="core">
 				<div class="wrapper-medium">
 					<div class="row">

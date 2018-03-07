@@ -124,19 +124,44 @@ a.btn:hover {
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	/* background: rgba(0, 0, 0, 0.233); */
 	padding: 0 30px;
+	transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
 }
+/* #mainheader.not-top-position {
+	background: #3F9AB1;
+} */
 #mainnav {
 	padding: 15px 0;
 }
 #mainnav .logo-container {
 	float: left;
+	position: relative;
 }
 #mainnav .logo {
 	max-height: 38px;
 	display: block;
 	float: left;
+}
+#mainnav .logo.logo-colored {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.35 ease;
+	-webkit-transition: all 0.35 ease;
+	-moz-transition: all 0.35 ease;
+	-ms-transition: all 0.35 ease;
+	-o-transition: all 0.35 ease;
+	opacity: 0;
+}
+#mainheader.not-top-position #mainnav .logo.logo-colored {
+	opacity: 1;
+}
+#mainheader.not-top-position.opened #mainnav .logo.logo-colored {
+	opacity: 0;
 }
 #website-title {
 	font-family: 'Century Gothic', sans-serif;
@@ -145,6 +170,17 @@ a.btn:hover {
 	margin: 0 0 0 10px;
 	font-weight: normal;
 	font-size: 1.6em;
+	transition: all 0.35s ease;
+	-webkit-transition: all 0.35s ease;
+	-moz-transition: all 0.35s ease;
+	-ms-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease;
+}
+#mainheader.not-top-position #website-title {
+	color: #3F9AB1;
+}
+#mainheader.not-top-position.opened #website-title {
+	color: #FFFFFF;
 }
 /* Menu Button */
 .menu-button-container {
@@ -173,6 +209,9 @@ a.btn:hover {
 	-moz-transition: all 0.35s ease;
 	-ms-transition: all 0.35s ease;
 	-o-transition: all 0.35s ease;
+}
+#mainheader.not-top-position .bar {
+	background-color: #3F9AB1;
 }
 .menu-button-container .bar:nth-of-type(2) {
 	width: 66%;
@@ -219,6 +258,9 @@ a.btn:hover {
 	visibility: hidden;
 }
 	/* opened */
+	.menu-button-container.opened .bar {
+		background-color: #FFFFFF !important;
+	}
 	.menu-button-container.opened .bar:nth-of-type(2) {
 		width: 10%;
 		opacity: 0;
@@ -242,7 +284,7 @@ a.btn:hover {
 /* Main Menu Panel */
 #mainmenupanel {
 	position: fixed;
-	background: #000000;
+	background: #3F9AB1;
 	right: -100%;
 	width: 80%;
 	max-width: 500px;
@@ -264,7 +306,7 @@ a.btn:hover {
 	height: 100%;
 	width: 100%;
 	margin: 50px 0 0;
-	padding: 0 30px;
+	padding: 0 50px;
 	float: right;
 	list-style-type: none;
 	text-align: right;
@@ -298,7 +340,7 @@ a.btn:hover {
 	-o-transition: all 0.35s ease;
 }
 #menu-overlay.opened {
-	opacity: 0.5;
+	opacity: 0.7;
 	visibility: visible;
 }
 .spacer {
