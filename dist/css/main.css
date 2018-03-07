@@ -11,11 +11,18 @@
 	src: url('../fonts/GOTHIC.TTF');
 }
 
+/* Color Scheme
+Verdigris: #3F9AB1
+Columbia Blue: #B9DAE2
+Alabaster White: #EFEBE6
+White: #FFFFFF
+Spanish Gray: #939393
+*/
+
 
 /* ========================================= */
 /* STRUCTURE                                 */
 /* ========================================= */
-
 
 body {
 	font-family: 'Mukta Malar', sans-serif;
