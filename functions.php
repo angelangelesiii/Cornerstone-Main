@@ -167,7 +167,7 @@ function cornerstone_main_scripts() {
 	wp_enqueue_style( 'fontawesome-5', get_template_directory_uri().'/dist/css/fa/css/fontawesome-all.min.css' );
 
 	// Google Fonts
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Kanit:700,900|Mukta+Malar:200,300,400,700' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900' );
 
 	// Foundation Grid
 	wp_enqueue_style( 'foundation', get_template_directory_uri().'/dist/css/foundation.css' );

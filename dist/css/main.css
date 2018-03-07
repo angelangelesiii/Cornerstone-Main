@@ -25,9 +25,9 @@ Spanish Gray: #939393
 /* ========================================= */
 
 body {
-	font-family: 'Mukta Malar', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	background-color: #F7F7F6;
+	background-color: #EFEBE6;
 	color: #474747;
 }
 /* body.menu-opened {
@@ -74,9 +74,6 @@ body {
 
 .right {
 	text-align: right;
-}
-.left {
-	text-align: left;
 }
 .left {
 	text-align: left;
