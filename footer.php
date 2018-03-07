@@ -14,8 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<hr/>
-		<p>Ths is the footer</p>
+		<div class="wrapper-medium">
+			<p>Ths is the footer</p>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
