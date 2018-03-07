@@ -1,0 +1,60 @@
+/* 
+*
+*   FRONT PAGE STYLESHEET
+*   www.cornerstonephilippines.com
+*
+*/
+
+
+/* ========================================= */
+/* HERO BANNER                               */
+/* ========================================= */
+
+.hero-banner {
+    background-position: center center;
+    background-size: cover;
+    color: #FFFFFF;
+    position: relative;
+    background-attachment: fixed;
+}
+.hero-banner .overlay {
+    background: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+}
+.hero-banner .hero-container {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    text-align: center;
+}
+.hero-banner .hero-container .hero-text {
+    font-size: 5em;
+    text-transform: lowercase;
+    margin: 0;
+}
+.hero-banner .hero-container .hero-subtext {
+    font-size: 1.3em;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+
+/* ========================================= */
+/* CORE                                      */
+/* ========================================= */
+
+
