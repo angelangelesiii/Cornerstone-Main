@@ -23,4 +23,18 @@ jQuery(document).ready(function($){ // Document Ready
         toggleMenu();
     });
 
+    // Parallax effect
+    var mainController = new ScrollMagic.Controller();
+
+    var frontPageParallax = new ScrollMagic.Scene({
+        triggerElement: '.hero-banner',
+        triggerHook: 0,
+        duration: '130%'
+    })
+    .setTween(TweenMax.to('.parallaxBG', 1, {
+        y: '30%',
+    }))
+    // .addIndicators()
+    .addTo(mainController);
+
 });

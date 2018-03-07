@@ -9,6 +9,7 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<section class="full-section hero-banner" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);">
+				<div class="parallaxBG" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);"></div>
 				<div class="overlay"></div>
 				<div class="hero-container">
 					<div class="wrapper">
