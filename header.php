@@ -20,12 +20,41 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cornerstone-main' ); ?></a>
 
 	<header id="mainheader" class="full-header">
-		<h1><?php echo bloginfo( 'title' ); ?></h1>
+		<div class="wrapper-header">
+			<nav id="mainnav" class="clearfix">
+				<div class="logo-container">
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_white_block.png' ?>" alt="Cornerstone Logo" class="logo logo-white">
+						<h1 id="website-title">CORNERSTONE</h1>
+					</a>
+				</div>
+				<button class="menu-button-container" id="mainmenubutton">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<div class="hint hint--closed">Menu</div>
+				</button>
+				<nav class="main-menu clearfix" id="mainmenupanel">
+					<div class="spacer"></div>
+					<div class="header-menu-container">
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'header-menu-1',
+								'menu_id'        => 'header-menu',
+							) );
+						?>
+					</div>
+				</nav>
+			</nav>
+		</div>
 	</header>
 
+	<div id="menu-overlay"></div>
+
+	
 	<div id="content" class="site-content">
