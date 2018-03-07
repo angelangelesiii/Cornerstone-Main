@@ -5,6 +5,13 @@
 *
 */
 
+/* Century Gothic */
+@font-face {
+	font-family: 'Century Gothic';
+	src: url('../fonts/GOTHIC.TTF');
+}
+
+
 /* ========================================= */
 /* STRUCTURE                                 */
 /* ========================================= */
