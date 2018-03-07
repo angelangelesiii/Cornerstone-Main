@@ -25,11 +25,28 @@ get_header(); ?>
 					<div class="row">
 						<div class="core-item column medium-4 small-12">
 							<div class="image-container">
-								<div class="image"></div>
+								<div class="image-round" style="background: #B9DAE2"></div>
 							</div>
+							<h3 class="core-item-title">Outreach</h3>
+							<p class="core-item-subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, est! Inventore obcaecati aliquid maxime iusto.</p>
+							<a href="#" class="btn">Learn more</a>
 						</div>
-						<div class="core-item column medium-4 small-12"></div>
-						<div class="core-item column medium-4 small-12"></div>
+						<div class="core-item column medium-4 small-12">
+							<div class="image-container">
+								<div class="image-round" style="background: #B9DAE2"></div>
+							</div>
+							<h3 class="core-item-title">Medical</h3>
+							<p class="core-item-subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sed voluptatem obcaecati qui unde ex ipsa similique libero magni molestias.</p>
+							<a href="#" class="btn">Learn more</a>
+						</div>
+						<div class="core-item column medium-4 small-12">
+							<div class="image-container">
+								<div class="image-round" style="background: #B9DAE2"></div>
+							</div>
+							<h3 class="core-item-title">Indigenous</h3>
+							<p class="core-item-subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut modi libero officiis consectetur?</p>
+							<a href="#" class="btn">Learn more</a>
+						</div>
 					</div>
 				</div>
 			</section>

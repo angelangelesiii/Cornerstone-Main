@@ -28,7 +28,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	background-color: #EFEBE6;
-	color: #474747;
+	color: #646464;
 }
 /* body.menu-opened {
 	overflow: hidden;
@@ -83,6 +83,34 @@ body {
 	height: 100vh;
 	min-height: 600px;
 	width: 100%;
+}
+
+/* Buttons */
+a.btn:link,
+a.btn:visited {
+	display: inline-block;
+	text-decoration: none;
+	color: #3F9AB1;
+	border: 2px solid #3F9AB1;
+	padding: 13px 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	letter-spacing: 0.12em;
+	transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+a.btn:hover {
+	background: #3F9AB1;
+	color: #FFFFFF;
 }
 
 
