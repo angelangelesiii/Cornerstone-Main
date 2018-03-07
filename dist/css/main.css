@@ -1,0 +1,63 @@
+/* 
+*
+*   MAIN STYLESHEET
+*   www.cornerstonephilippines.com
+*
+*/
+
+/* ========================================= */
+/* STRUCTURE                                 */
+/* ========================================= */
+
+
+body {
+	font-family: 'Mukta Malar', sans-serif;
+	font-weight: 400;
+	background-color: #F7F7F6;
+	color: #474747;
+}
+
+/*Clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/*Wrapper*/
+.wrapper {
+	width: 100%;
+	max-width: 972px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.wrapper-medium {
+	width: 100%;
+	max-width: 1185px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.wrapper-big {
+	width: 100%;
+	max-width: 1420px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.wrapper.no-pad,
+.wrapper-medium.no-pad,
+.wrapper-big.no-pad {
+	padding: 0 !important;
+}
+.relative-wrapper {
+	position: relative;
+}
+
+.right {
+	text-align: right;
+}
+.left {
+	text-align: left;
+}
