@@ -31,11 +31,11 @@
 				<div class="logo-container">
 					<a href="<?php the_permalink(); ?>">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_white_block.png' ?>" alt="Cornerstone Logo" class="logo logo-white">
-						<img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_colored_block.png' ?>" alt="Cornerstone Logo" class="logo logo-colored">
+						<!-- <img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_colored_block.png' ?>" alt="Cornerstone Logo" class="logo logo-colored"> -->
 						<h1 id="website-title">CORNERSTONE</h1>
 					</a>
 				</div>
-				<button class="menu-button-container" id="mainmenubutton">
+				<button class="menu-button" id="mainmenubutton">
 					<span class="bar"></span>
 					<span class="bar"></span>
 					<span class="bar"></span>

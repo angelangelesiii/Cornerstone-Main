@@ -40,9 +40,9 @@ jQuery(document).ready(function($){ // Document Ready
 
     // Navbar scrolling toggle
     var navBarToggle = new ScrollMagic.Scene({
-        triggerElement: '.transition-mark',
+        triggerElement: '#top',
         triggerHook: 0,
-        offset: -30
+        offset: 100
     })
     .on('enter', function() { // if viewport moved by 50px, remove 'top-position' class
         $('#mainheader').toggleClass('top-position');
