@@ -32,10 +32,10 @@ jQuery(document).ready(function($){ // Document Ready
             y: '30%',
         }, 'a')
         .to('.hero-banner .overlay', 1, {
-            opacity: 0.9,
+            opacity: 1,
         }, 'a')
         .to('.hero-banner .hero-container', 1, {
-            opacity: 0.2,
+            opacity: 0.1,
             scale: 0.7,
             y:'60%',
         }, 'a');
