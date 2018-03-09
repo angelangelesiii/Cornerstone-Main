@@ -112,6 +112,26 @@ a.btn:hover {
 	background: #3F9AB1;
 	color: #FFFFFF;
 }
+a.btn.btn--large {
+	padding: 18px 30px;
+	font-size: 1em;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+a.btn.btn--large:hover {
+	padding: 18px 40px;
+}
+a.btn.btn--white {
+	border: 2px solid #FFFFFF;
+	color: #FFFFFF;
+}
+a.btn.btn--white:hover {
+	background: #FFFFFF;
+	color: #3F9AB1;
+}
 
 
 /* ========================================= */
