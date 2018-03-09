@@ -22,6 +22,7 @@ get_header(); ?>
 			<div class="transition-mark"></div>
 
 			<section class="core">
+				<h1 class="section-title">What God use us for</h1>
 				<div class="core-items-container clearfix">
 					<div class="core-item">
 						<div class="core-item-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/core-1.jpg' ?>);">

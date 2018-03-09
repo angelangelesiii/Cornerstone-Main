@@ -77,7 +77,28 @@
 .core {
     padding: 0;
     background: #000000;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: 10;
+}
+.core .section-title {
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 5em;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding-bottom: 30px;
+}
+.core .core-items-container {
+    position: relative;
+    z-index: 2;
 }
 .core .core-item {
     width: 33.3%;
@@ -162,12 +183,12 @@
 .core .core-item .text-container {
     position: absolute;
     z-index: 3;
-    top: 0;
+    top: 50%;
     right: 100%;
     width: 100%;
     min-height: 300px;
-    /* background: rgba(0, 0, 0, 0.5); */
-    padding: 50px 70px 30px 30px;
+    /*background: rgba(0, 0, 0, 0.5);
+    */padding: 50px 70px 30px 30px;
     color: #FFFFFF;
     opacity: 1;
     visibility: visible;
@@ -177,6 +198,11 @@
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 .core .core-item.active .text-container {
     opacity: 1;

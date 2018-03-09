@@ -6,9 +6,28 @@
 
 jQuery(document).ready(function($){ // Document Ready
 
+    var frontController = new ScrollMagic.Controller();
+
     // =====================================
     // core items interaction
     // =====================================
+
+    // Title animation
+    var coreTitleAnimation = new ScrollMagic.Scene({
+        triggerElement: '.core',
+        triggerHook: 1,
+        duration: '70%',
+    })
+    .setTween(TweenMax.fromTo('.core .section-title', 0.5, {
+        y: 0,
+        scale: 0.5
+    }, {
+        y: '-100%',
+        scale: 1
+    }))
+    // .addIndicators()
+    .addTo(frontController);
+
 
     // set core item text container size 
     function setCoreItemTextContainerSize() {
