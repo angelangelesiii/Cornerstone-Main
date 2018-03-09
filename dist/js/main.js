@@ -27,14 +27,23 @@ jQuery(document).ready(function($){ // Document Ready
     // Parallax effect
     var mainController = new ScrollMagic.Controller();
 
+    var heroEffect = new TimelineMax()
+        .to('.parallaxBG', 1, {
+            y: '30%',
+        }, 'a')
+        .to('.hero-banner .overlay', 1, {
+            opacity: 0.8,
+        }, 'a')
+        .to('.hero-banner .hero-container', 1, {
+            opacity: 0.3,
+        }, 'a');
+
     var frontPageParallax = new ScrollMagic.Scene({
         triggerElement: '.hero-banner',
         triggerHook: 0,
         duration: '130%'
     })
-    .setTween(TweenMax.to('.parallaxBG', 1, {
-        y: '30%',
-    }))
+    .setTween(heroEffect)
     // .addIndicators()
     .addTo(mainController);
 
