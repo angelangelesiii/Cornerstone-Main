@@ -22,8 +22,37 @@ get_header(); ?>
 			<div class="transition-mark"></div>
 
 			<section class="core">
-				<div class="wrapper-big">
-					
+				<div class="core-items-container clearfix">
+					<div class="core-item">
+						<div class="core-item-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/core-1.jpg' ?>);">
+						</div>
+						<div class="overlay"></div>
+						<div class="text-container">
+							<h2>Outreach</h2>
+							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<a href="#" class="btn btn--white">Learn more</a>
+						</div>
+					</div>
+					<div class="core-item">
+						<div class="core-item-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/core-2.jpg' ?>);">
+						</div>
+						<div class="overlay"></div>
+						<div class="text-container">
+							<h2>Medical</h2>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium excepturi voluptate beatae.</p>
+							<a href="#" class="btn btn--white">Learn more</a>
+						</div>
+					</div>
+					<div class="core-item">
+						<div class="core-item-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/core-3.jpg' ?>);">
+						</div>
+						<div class="overlay"></div>
+						<div class="text-container">
+							<h2>Indigenous</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci.</p>
+							<a href="#" class="btn btn--white">Learn more</a>
+						</div>
+					</div>
 				</div>
 			</section>
 

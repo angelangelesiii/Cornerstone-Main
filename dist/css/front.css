@@ -75,35 +75,122 @@
 /* ========================================= */
 
 .core {
-    padding: 80px 0;
+    padding: 0;
+    background: #000000;
+    overflow: hidden;
 }
 .core .core-item {
-    text-align: center;
-    margin-bottom: 30px;
-}
-.core .core-item .image-container {
-    width: 100%;
-    max-width: 250px;
+    width: 33.3%;
+    float: left;
     position: relative;
-    margin: 0 auto;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    content: '';
+    min-height: 700px;
+    overflow: hidden;
+    background-color: #000000;
+    cursor: pointer;
 }
-.core .core-item .image-container .image-round {
+.core .core-item:nth-of-type(3) {
+    width: 33.4%;
+}
+.core .core-item.active {
+    width: 70%;
+    cursor: default;
+}
+.core .core-item.inactive {
+    width: 15%;
+}
+.core .core-item .core-item-image {
+    overflow: hidden;
+    min-height: 70px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.core .core-item:hover .core-item-image {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.core .core-item.active:hover .core-item-image {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
+.core .core-item.inactive .core-item-image {
+    opacity: 1;
+}
+.core .core-item .overlay {
+    background-color: #FFFFFF;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    padding-bottom: 100%;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 }
-.core .core-item .core-item-title {
-    font-size: 1.7em;
+.core .core-item.active:hover .overlay {
+    opacity: 0;
 }
-.core .core-item a.btn {
-    margin-top: 10px;
+.core .core-item:hover .overlay {
+    opacity: 0.07;
+}
+.core .core-item .text-container {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    min-height: 300px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 50px 70px 30px 30px;
+    color: #FFFFFF;
+    opacity: 1;
+    visibility: visible;
+    text-align: center;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+.core .core-item.active .text-container {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+}
+.core .core-item .text-container h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.core .core-item .text-container p {
+    font-size: 2.1em;
+    font-weight: 700;
 }
 
 
