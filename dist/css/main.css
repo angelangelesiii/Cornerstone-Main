@@ -30,9 +30,9 @@ body {
 	background-color: #EFEBE6;
 	color: #646464;
 }
-/* body.menu-opened {
+body.menu-opened {
 	overflow: hidden;
-} */
+}
 
 /*Clearfix*/
 .clearfix:before,
@@ -173,7 +173,7 @@ a.btn.btn--white:hover {
 #mainheader.not-top-position #mainnav .logo-container {
 	margin: 0;
 	padding: 10px 15px;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 #mainheader.not-top-position.opened #mainnav .logo-container {
 	background: transparent;
@@ -236,7 +236,7 @@ a.btn.btn--white:hover {
 	padding: 0;
 }
 #mainheader.not-top-position .menu-button-container {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.4);
 	margin: 0;
 	padding: 10px 15px;
 }

@@ -35,7 +35,9 @@ jQuery(document).ready(function($){ // Document Ready
             opacity: 0.8,
         }, 'a')
         .to('.hero-banner .hero-container', 1, {
-            opacity: 0.3,
+            opacity: 0.2,
+            scale: 0.7,
+            y:'70%',
         }, 'a');
 
     var frontPageParallax = new ScrollMagic.Scene({

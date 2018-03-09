@@ -15,7 +15,7 @@ get_header(); ?>
 					<div class="wrapper">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
 					</div>
-					<a href="javascript:void(0)" class="btn btn--white btn--large">Find us</a>
+					<a href="javascript:void(0)" class="btn btn--white btn--large">View our locations</a>
 				</div>
 			</section>
 
