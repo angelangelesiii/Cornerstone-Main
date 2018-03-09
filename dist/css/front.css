@@ -62,6 +62,12 @@
     letter-spacing: 0.1em;
     margin: 0;
 }
+.hero-banner .hero-container .hero-image {
+    max-width: 1000px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 50px;
+}
 
 
 /* ========================================= */

@@ -13,11 +13,9 @@ get_header(); ?>
 				<div class="overlay"></div>
 				<div class="hero-container">
 					<div class="wrapper">
-						<h2 class="hero-text">
-							We are Cornerstone.
-						</h2>
-						<p class="hero-subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
 					</div>
+					<a href="javascript:void(0)" class="btn btn--white btn--large">Find us</a>
 				</div>
 			</section>
 
