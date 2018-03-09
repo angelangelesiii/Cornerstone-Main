@@ -113,16 +113,20 @@ a.btn:hover {
 	color: #FFFFFF;
 }
 a.btn.btn--large {
-	padding: 18px 30px;
+	padding: 18px 35px;
 	font-size: 1em;
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-o-border-radius: 15px;
+	border-radius: 34px;
+	-webkit-border-radius: 34px;
+	-moz-border-radius: 34px;
+	-ms-border-radius: 34px;
+	-o-border-radius: 34px;
 }
 a.btn.btn--large:hover {
-	padding: 18px 40px;
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
 }
 a.btn.btn--white {
 	border: 2px solid #FFFFFF;
@@ -159,11 +163,11 @@ a.btn.btn--white:hover {
 	position: relative;
 	margin: 10px 15px;
 	padding: 0;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-o-border-radius: 8px;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
 	transition: all 0.2s ease;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -223,7 +227,7 @@ a.btn.btn--white:hover {
 .menu-button-container {
 	float: right;
 	border-radius: 8px;
-	-webkit-border-radius: 8px;
+	-webkit-border-radius: 0px;
 	-moz-border-radius: 8px;
 	-ms-border-radius: 8px;
 	-o-border-radius: 8px;
@@ -308,6 +312,12 @@ a.btn.btn--white:hover {
 	-ms-transition: all 0.35s ease;
 	-o-transition: all 0.35s ease;
 }
+#mainheader.top-position .menu-button .hint {
+	margin: 0 0px 0 0;
+}
+#mainheader.top-position .menu-button:hover .hint {
+	margin: 0 10px 0 0;
+}
 .menu-button:hover .hint{
 	opacity: 1;
 	visibility: visible;
@@ -344,7 +354,7 @@ a.btn.btn--white:hover {
 /* Main Menu Panel */
 #mainmenupanel {
 	position: fixed;
-	background: #3F9AB1;
+	background: rgba(0, 0, 0, 0.8);
 	right: -100%;
 	width: 80%;
 	max-width: 500px;
