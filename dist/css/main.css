@@ -352,6 +352,7 @@ a.btn.btn--white:hover {
 	top: 0;
 	z-index: -1;
 	color: #FFFFFF;
+	overflow: auto;
 	transition: all 0.35s ease;
 	-webkit-transition: all 0.35s ease;
 	-moz-transition: all 0.35s ease;
@@ -428,7 +429,7 @@ SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
 	#mainheader {
-		padding: 15px 15px;
+		padding: 10px 10px;
 	}
 	#mainmenubutton .hint {
 		display: none;
