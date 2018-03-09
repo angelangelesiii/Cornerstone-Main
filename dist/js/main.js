@@ -52,7 +52,7 @@ jQuery(document).ready(function($){ // Document Ready
         $('#mainheader').toggleClass('top-position');
         $('#mainheader').toggleClass('not-top-position');
     })
-    .addIndicators()
+    // .addIndicators()
 	.addTo(mainController);
 
 });

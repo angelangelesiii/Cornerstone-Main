@@ -144,7 +144,7 @@ a.btn.btn--white:hover {
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	padding: 15px 30px 0;
+	padding: 10px 20px 0;
 	transition: all 0.25s ease;
 	-webkit-transition: all 0.25s ease;
 	-moz-transition: all 0.25s ease;
@@ -157,6 +157,26 @@ a.btn.btn--white:hover {
 #mainnav .logo-container {
 	float: left;
 	position: relative;
+	margin: 10px 15px;
+	padding: 0;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+}
+#mainheader.not-top-position #mainnav .logo-container {
+	margin: 0;
+	padding: 10px 15px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+#mainheader.not-top-position.opened #mainnav .logo-container {
+	background: transparent;
 }
 #mainnav .logo {
 	max-height: 38px;
@@ -200,11 +220,34 @@ a.btn.btn--white:hover {
 	color: #FFFFFF;
 }
 /* Menu Button */
+.menu-button-container {
+	float: right;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	margin: 10px 15px;
+	padding: 0;
+}
+#mainheader.not-top-position .menu-button-container {
+	background-color: rgba(0, 0, 0, 0.6);
+	margin: 0;
+	padding: 10px 15px;
+}
+#mainheader.not-top-position.opened .menu-button-container {
+	background: transparent;
+}
 .menu-button {
 	max-height: 48px;
 	width: 28px;
 	float: right;
-	margin-top: 7px;
+	margin: 7px 0;
 	padding: 0;
 	background: transparent;
 	border-radius: 0;
@@ -248,8 +291,8 @@ a.btn.btn--white:hover {
 	position: absolute;
 	right: 100%;
 	top: 0;
-	margin: 0 10px 0 0;
-	padding: 6px 10px;
+	margin: 0 20px 0 0;
+	padding: 9px 12px;
 	border-radius: 3px;
 	color: #FFFFFF;
 	letter-spacing: 0.15em;
@@ -258,7 +301,7 @@ a.btn.btn--white:hover {
 	font-size: 1.1em;
 	visibility: hidden;
 	opacity: 0;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.3);
 	transition: all 0.35s ease;
 	-webkit-transition: all 0.35s ease;
 	-moz-transition: all 0.35s ease;
@@ -268,7 +311,7 @@ a.btn.btn--white:hover {
 .menu-button:hover .hint{
 	opacity: 1;
 	visibility: visible;
-	margin: 0 20px 0 0;
+	margin: 0 30px 0 0;
 }
 .menu-button.opened .hint {
 	opacity: 0;
@@ -283,19 +326,19 @@ a.btn.btn--white:hover {
 		opacity: 0;
 	}
 	.menu-button.opened .bar:nth-of-type(1) {
-		transform: rotate(-45deg) translate(-10px, 4px);
-		-webkit-transform: rotate(-45deg) translate(-10px, 4px);
-		-moz-transform: rotate(-45deg) translate(-10px, 4px);
-		-ms-transform: rotate(-45deg) translate(-10px, 4px);
-		-o-transform: rotate(-45deg) translate(-10px, 4px);
+		transform: rotate(-45deg) translate(-8px, 6px);
+		-webkit-transform: rotate(-45deg) translate(-8px, 6px);
+		-moz-transform: rotate(-45deg) translate(-8px, 6px);
+		-ms-transform: rotate(-45deg) translate(-8px, 6px);
+		-o-transform: rotate(-45deg) translate(-8px, 6px);
 		width: 100%;
 }
 	.menu-button.opened .bar:nth-of-type(3) {
-		transform: rotate(45deg) translate(-10px, -4px);
-		-webkit-transform: rotate(45deg) translate(-10px, -4px);
-		-moz-transform: rotate(45deg) translate(-10px, -4px);
-		-ms-transform: rotate(45deg) translate(-10px, -4px);
-		-o-transform: rotate(45deg) translate(-10px, -4px);
+		transform: rotate(45deg) translate(-8px, -6px);
+		-webkit-transform: rotate(45deg) translate(-8px, -6px);
+		-moz-transform: rotate(45deg) translate(-8px, -6px);
+		-ms-transform: rotate(45deg) translate(-8px, -6px);
+		-o-transform: rotate(45deg) translate(-8px, -6px);
 		width: 100%;
 }
 /* Main Menu Panel */
@@ -307,7 +350,7 @@ a.btn.btn--white:hover {
 	max-width: 500px;
 	height: 100%;
 	top: 0;
-	z-index: 1;
+	z-index: -1;
 	color: #FFFFFF;
 	transition: all 0.35s ease;
 	-webkit-transition: all 0.35s ease;
@@ -385,7 +428,7 @@ SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
 	#mainheader {
-		padding: 0 15px;
+		padding: 15px 15px;
 	}
 	#mainmenubutton .hint {
 		display: none;

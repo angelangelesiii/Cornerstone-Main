@@ -35,12 +35,14 @@
 						<h1 id="website-title">CORNERSTONE</h1>
 					</a>
 				</div>
-				<button class="menu-button" id="mainmenubutton">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<div class="hint hint--closed">Menu</div>
-				</button>
+				<div class="menu-button-container clearfix">
+					<button class="menu-button" id="mainmenubutton">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<div class="hint hint--closed">Menu</div>
+					</button>
+				</div>
 				<nav class="main-menu clearfix" id="mainmenupanel">
 					<div class="spacer"></div>
 					<div class="header-menu-container">
