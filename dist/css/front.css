@@ -76,16 +76,30 @@
 
 .core {
     padding: 60px 0;
+    background: #FFFFFF;
 }
 .core .intro {
     text-align: center;
+    margin-bottom: 60px;
+}
+.core .intro .title {
+    font-size: 3em;
+    color: #3F9AB1;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin: 0 0 20px;
+}
+.core .intro p {
+    font-weight: 200;
+    font-size: 1.4em;
 }
 .core-items .core-item {
     text-align: center;
 }
 .core-items .core-item .image-container {
     width: 80%;
-    max-width: 150px;
+    max-width: 200px;
+    margin: 0 auto;
 }
 .core-items .core-item .image-container .image {
     width: 100%;
@@ -93,6 +107,21 @@
     padding-bottom: 100%;
     background-size: cover;
     background-position: center center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.core-items .core-item .core-item-name {
+    font-size: 2em;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 10px 20px;
+}
+.core-items .core-item p {
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 
