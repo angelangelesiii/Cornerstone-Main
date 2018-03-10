@@ -21,6 +21,17 @@ get_header(); ?>
 
 			<div class="transition-mark"></div>
 
+			<nav id="belt-menu-nav">
+				<div class="wrapper-big">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'belt-menu',
+							'menu_id'        => 'belt-menu',
+						) );
+					?>
+				</div>
+			</nav>
+
 			<section class="core">
 				<div class="wrapper">
 					<div class="intro">

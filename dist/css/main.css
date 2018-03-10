@@ -430,6 +430,42 @@ a.btn.btn--white:hover {
 }
 
 
+/* ========================================= */
+/* FOOTER                                    */
+/* ========================================= */
+
+#belt-menu-nav {
+	background: #000000;
+	padding: 30px 0;
+	text-align: center;
+}
+#belt-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 1.1em;
+}
+#belt-menu li.menu-item {
+	display: inline-block;
+}
+#belt-menu li.menu-item::after {
+	content: '\25cf';
+	margin: 0 20px;
+	color: #2c2c2c;
+}
+#belt-menu li.menu-item:last-of-type::after {
+	display: none;
+}
+#belt-menu li.menu-item a:link,
+#belt-menu li.menu-item a:visited {
+	color: #b8b8b8;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
 /*==============================*/
 /* MEDIA QUERIES                */
 /*==============================*/
