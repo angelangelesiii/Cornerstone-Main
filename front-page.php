@@ -22,36 +22,18 @@ get_header(); ?>
 			<div class="transition-mark"></div>
 
 			<section class="core">
-				<h1 class="section-title">What God use us for</h1>
-				<div class="core-items-container clearfix">
-					<div class="core-item">
-						<div class="core-item-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/core-1.jpg' ?>);">
-						</div>
-						<div class="overlay"></div>
-						<div class="text-container">
-							<h2>Outreach</h2>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<a href="#" class="btn btn--white">Learn more</a>
-						</div>
+				<div class="wrapper-medium">
+					<div class="intro">
+						<h2 class="title">We believe in giving</h2>
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem nulla adipisci quae dolorum nemo voluptatibus! Esse dolorum maxime rerum, impedit libero ea culpa vero autem!</p>
 					</div>
-					<div class="core-item">
-						<div class="core-item-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/core-2.jpg' ?>);">
-						</div>
-						<div class="overlay"></div>
-						<div class="text-container">
-							<h2>Medical</h2>
-							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium excepturi voluptate beatae.</p>
-							<a href="#" class="btn btn--white">Learn more</a>
-						</div>
-					</div>
-					<div class="core-item">
-						<div class="core-item-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/core-3.jpg' ?>);">
-						</div>
-						<div class="overlay"></div>
-						<div class="text-container">
-							<h2>Indigenous</h2>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci.</p>
-							<a href="#" class="btn btn--white">Learn more</a>
+					<div class="row core-items">
+						<div class="column medium-4 small-12 core-item">
+							<div class="image-container">
+								<div class="image" style="background-image: url('<?php echo get_template_directory_uri().'/dist/images/core-1.jpg' ?>');"></div>
+							</div>
+							<h3 class="core-item-name">Outreach</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro temporibus voluptatibus non voluptate neque ut ad.</p>
 						</div>
 					</div>
 				</div>
