@@ -27,12 +27,12 @@
 
 	<div id="top"></div>
 	<header id="mainheader" class="full-header top-position">
+		<div class="navbar-bg"></div>
 		<div class="wrapper-header">
 			<nav id="mainnav" class="clearfix">
 				<div class="logo-container">
 					<a href="<?php the_permalink(); ?>">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_white_block.png' ?>" alt="Cornerstone Logo" class="logo logo-white">
-						<!-- <img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_colored_block.png' ?>" alt="Cornerstone Logo" class="logo logo-colored"> -->
 						<h1 id="website-title">CORNERSTONE</h1>
 					</a>
 				</div>
@@ -57,9 +57,32 @@
 				</nav>
 			</nav>
 		</div>
+		<section class="full-section hero-banner" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);">
+			<div class="parallaxBG" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);"></div>
+			<div class="overlay"></div>
+			<div class="hero-container">
+				<div class="wrapper">
+					<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
+				</div>
+				<a href="javascript:void(0)" class="btn btn--white btn--large">Find us near you</a>
+			</div>
+			<div id="belt-menu-trigger"></div>
+			<nav id="belt-menu-nav">
+				<div class="wrapper-big">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'belt-menu',
+							'menu_id'        => 'belt-menu',
+						) );
+					?>
+				</div>
+			</nav>
+		</section>
 	</header>
 
 	<div id="menu-overlay"></div>
 
 	
 	<div id="content" class="site-content">
+
+		

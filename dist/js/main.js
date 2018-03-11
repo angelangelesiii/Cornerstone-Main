@@ -6,6 +6,19 @@
 
 jQuery(document).ready(function($){ // Document Ready
 
+    function mediumSizeScript() {
+        if($(window).width() < 1024) {
+            $('#belt-menu-trigger').addClass('medium-screen');
+        } else {
+            $('#belt-menu-trigger').removeClass('medium-screen');
+        }
+    }
+    mediumSizeScript();
+
+    $(window).resize(function() { // Window resize
+       mediumSizeScript();
+    });
+
     // Main menu button interaction
 
     function toggleMenu() {
@@ -14,6 +27,7 @@ jQuery(document).ready(function($){ // Document Ready
         $('#mainmenubutton').toggleClass('opened');
         $('#mainmenupanel').toggleClass('opened');
         $('#menu-overlay').toggleClass('opened');
+        $('#belt-menu-nav').toggleClass('menu-opened');
     }
 
     $('#mainmenubutton').click(function(e) {
@@ -25,7 +39,10 @@ jQuery(document).ready(function($){ // Document Ready
     });
 
     // Parallax effect
-    var mainController = new ScrollMagic.Controller();
+    var mainController = new ScrollMagic.Controller(),
+        beltColor = $('#belt-menu-nav').css('background-color');
+
+    // console.log(beltColor);
 
     var heroEffect = new TimelineMax()
         .to('.parallaxBG', 1, {
@@ -38,6 +55,14 @@ jQuery(document).ready(function($){ // Document Ready
             opacity: 0.1,
             scale: 0.7,
             y:'20%',
+        }, 'a')
+        .fromTo('#belt-menu-nav', 1, {
+            css: {background: beltColor},
+        },{
+            css: {background: 'rgba(0, 0, 0, 1)'},
+        }, 'a')
+        .to('#belt-menu li.menu-item a', 1, {
+            opacity: 1
         }, 'a');
 
     var frontPageParallax = new ScrollMagic.Scene({
@@ -49,8 +74,27 @@ jQuery(document).ready(function($){ // Document Ready
     // .addIndicators()
     .addTo(mainController);
 
+    // Belt menu pinning
+    var beltMenuHeight = $('#belt-menu-nav').outerHeight();
+    // console.log(beltMenuHeight);
+    $('#belt-menu-trigger').outerHeight(beltMenuHeight);
+    $('#mainheader .navbar-bg').outerHeight(beltMenuHeight);
+
+    var beltMenuPin = new ScrollMagic.Scene({
+        triggerElement: "#belt-menu-trigger",
+        triggerHook: 0,
+    })
+    .on('enter', function() {
+        $('#belt-menu-nav').addClass('latch');
+	})
+	.on('leave', function() {
+        $('#belt-menu-nav').removeClass('latch');
+    })
+    // .addIndicators()
+    .addTo(mainController);
+
     // Navbar scrolling toggle
-    var navBarToggle = new ScrollMagic.Scene({
+    var navbarToggle = new ScrollMagic.Scene({
         triggerElement: '#top',
         triggerHook: 0,
         offset: 100
@@ -64,6 +108,18 @@ jQuery(document).ready(function($){ // Document Ready
         $('#mainheader').toggleClass('not-top-position');
     })
     // .addIndicators()
-	.addTo(mainController);
+    .addTo(mainController);
+    
+    var navbarBGfade = new ScrollMagic.Scene({
+        triggerElement: '#top',
+        duration: 200,
+        triggerHook: 0,
+    })
+    .setTween(TweenMax.to('#mainheader .navbar-bg', 1, {
+        opacity: 1
+    }))
+    // .addIndicators()
+    .addTo(mainController);
+    
 
 });
