@@ -28,6 +28,7 @@ jQuery(document).ready(function($){ // Document Ready
         $('#mainmenupanel').toggleClass('opened');
         $('#menu-overlay').toggleClass('opened');
         $('#belt-menu-nav').toggleClass('menu-opened');
+        $('#belt-menu-alt-nav').toggleClass('menu-opened');
     }
 
     $('#mainmenubutton').click(function(e) {

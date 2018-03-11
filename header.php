@@ -45,7 +45,7 @@
 					</button>
 				</div>
 				<nav class="main-menu clearfix" id="mainmenupanel">
-					<div class="spacer"></div>
+					<!-- <div class="spacer"></div> -->
 					<div class="header-menu-container">
 						<?php
 							wp_nav_menu( array(
@@ -56,7 +56,21 @@
 					</div>
 				</nav>
 			</nav>
+
+			<nav id="belt-menu-alt-nav">
+				<div class="wrapper-big">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'belt-menu',
+							'menu_id'        => 'belt-menu-alt',
+						) );
+					?>
+				</div>
+			</nav>
 		</div>
+
+		<?php if(is_front_page): ?>
+		<!-- Hero Banner -->
 		<section class="full-section hero-banner" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);">
 			<div class="parallaxBG" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);"></div>
 			<div class="overlay"></div>
@@ -78,6 +92,8 @@
 				</div>
 			</nav>
 		</section>
+		<?php endif; ?>
+		
 	</header>
 
 	<div id="menu-overlay"></div>
