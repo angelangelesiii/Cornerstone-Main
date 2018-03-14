@@ -136,7 +136,33 @@ a.btn.btn--white:hover {
 	background: #FFFFFF;
 	color: #3F9AB1;
 }
-
+a.btn.btn--icon {
+	position: relative;
+}
+a.btn.btn--icon::after {
+	font-family: 'Font Awesome 5 Free';
+	font-size: 1em;
+	position: absolute;
+	opacity: 0;
+	margin-left: 0;
+	/* visibility: hidden; */
+	transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+}
+a.btn.btn--icon:hover::after {
+	opacity: 1;
+	/* visibility: visible; */
+	margin-left: 10px;
+}
+a.btn.btn--icon.btn--large.btn--icon:hover {
+	padding-right: 55px;
+}
+a.btn.btn--icon.icon-location::after {
+	content: '\f041';
+}
 
 /* ========================================= */
 /* HEADER and NAV                            */
