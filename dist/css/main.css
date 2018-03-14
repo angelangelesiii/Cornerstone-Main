@@ -362,7 +362,7 @@ a.btn.btn--white:hover {
 #header-menu,
 #header-menu > ul {
 	margin: 100px 0 0;
-	padding: 0 50px;
+	padding: 0 100px;
 	position: absolute;
 	white-space: nowrap;
 	min-width: 100%;
@@ -378,7 +378,7 @@ a.btn.btn--white:hover {
 #header-menu > .menu-item > a:link,
 #header-menu > .menu-item > a:visited {
 	color: #FFFFFF;
-	font-size: 1.5em;
+	font-size: 1.65em;
 	font-weight: 700;
 	text-decoration: none;
 }
