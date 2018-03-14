@@ -202,10 +202,15 @@ function cornerstone_main_scripts() {
 	wp_enqueue_script( 'scrollmagic-indicators', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js', false, false, true);
 
 	// Slick Slider
-	// wp_enqueue_script( 'slick', get_template_directory_uri().'/dist/js/slick.min.js', false, false, true );
+	wp_enqueue_script( 'slick', get_template_directory_uri().'/dist/js/slick.min.js', false, false, true );
+
+	// Masonry
+	// if (is_front_page()) {
+		wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', false, false, true );
+	// }
 
 	// ImagesLoaded
-	wp_enqueue_script( 'imagesloaded', get_template_directory_uri().'/dist/js/imagesloaded.pkgd.min.js', false, false, true );
+	// wp_enqueue_script( 'imagesloaded', get_template_directory_uri().'/dist/js/imagesloaded.pkgd.min.js', false, false, true );
 
 	// Main and Front JS
 	wp_enqueue_script( 'main-js', get_template_directory_uri().'/dist/js/main.js', false, false, true );
