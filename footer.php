@@ -20,6 +20,8 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<!-- Sample commit -->
+
 <?php wp_footer(); ?>
 
 </body>
