@@ -78,7 +78,7 @@
 				<div class="wrapper">
 					<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
 				</div>
-				<a href="javascript:void(0)" class="btn btn--white btn--large">Find us near you</a>
+				<a href="javascript:void(0)" class="btn btn--white btn--large">Come and Join Us</a>
 			</div>
 			<div id="belt-menu-trigger"></div>
 			<nav id="belt-menu-nav">
