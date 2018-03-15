@@ -70,8 +70,18 @@
 		</div>
 
 		<?php if(is_front_page): ?>
+
+		<?php
+		$heroBannerClasses = 'hero-banner';
+		if(is_front_page()):
+			$heroBannerClasses .=' full-section';
+		else:
+			$heroBannerClasses .= ' post-banner';
+		endif;
+		?>
+
 		<!-- Hero Banner -->
-		<section class="full-section hero-banner" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);">
+		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);">
 			<div class="parallaxBG" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);"></div>
 			<div class="overlay"></div>
 			<div class="hero-container">
