@@ -13,7 +13,10 @@ get_header(); ?>
 			<?php // CONTENT--------------------
 
 			// GRID
-			get_template_part( 'fp-parts/fp-grid' ); 
+			// get_template_part( 'fp-parts/fp-grid' ); 
+
+			// FEATURED SLIDER
+			get_template_part( 'fp-parts/fp-featured-slider' ); 
 
 			?>
 
