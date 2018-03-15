@@ -10,6 +10,9 @@ get_header(); ?>
 
 			<div class="transition-mark"></div>
 
+			<!-- GRID -->
+			<?php get_template_part( 'fp-parts/fp-grid' ); ?>
+
 			<!-- CORE -->
 			<section class="core">
 				<div class="wrapper">

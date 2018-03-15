@@ -5,6 +5,42 @@
 *
 */
 
+/* ========================================= */
+/* GRID                                      */
+/* ========================================= */
+
+.grid-section {
+    background-color: #292929;
+    padding: 20px;
+}
+.grid-section .header {
+    /* text-align: right; */
+}
+.grid-section .grid-header {
+    font-size: 5em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.grid-sizer,
+.grid-item { 
+    width: 33.3%; 
+    padding: 10px;
+}
+.grid-item.wide-2 {
+    width: 66.6%;
+}
+
+.grid-item .container .thumbnail {
+    display: block;
+}
+.grid-item .container .content {
+    padding: 10px 20px 30px;
+}
+
+
 
 /* ========================================= */
 /* CORE                                      */
