@@ -19,6 +19,11 @@ jQuery(document).ready(function($){ // Document Ready
        mediumSizeScript();
     });
 
+    // Scrollbars
+    // $('.custom-scrollbar').scrollbar({
+    //     // options
+    // })
+
     // Main menu button interaction
 
     function toggleMenu() {

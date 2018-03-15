@@ -46,7 +46,7 @@
 				</div>
 				<nav class="main-menu clearfix" id="mainmenupanel">
 					<!-- <div class="spacer"></div> -->
-					<div class="header-menu-container">
+					<div class="header-menu-container custom-scrollbar">
 						<?php
 							wp_nav_menu( array(
 								'theme_location' => 'header-menu-1',
@@ -69,17 +69,16 @@
 			</nav>
 		</div>
 
-		<?php if(is_front_page): ?>
-
-		<?php
+		<?php //hero banner
 		$heroBannerClasses = 'hero-banner';
 		if(is_front_page()):
 			$heroBannerClasses .=' full-section';
 		else:
 			$heroBannerClasses .= ' post-banner';
 		endif;
-		?>
-
+		
+		if(is_front_page()): ?>
+		
 		<!-- Hero Banner -->
 		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);">
 			<div class="parallaxBG" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);"></div>
@@ -102,6 +101,25 @@
 				</div>
 			</nav>
 		</section>
+
+		<?php else: ?>
+
+		<!-- Post Banner -->
+		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);">
+			<div class="parallaxBG" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);"></div>
+			<div class="overlay"></div>
+			<nav id="belt-menu-nav">
+				<div class="wrapper-big">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'belt-menu',
+							'menu_id'        => 'belt-menu',
+						) );
+					?>
+				</div>
+			</nav>
+		</section>
+
 		<?php endif; ?>
 		
 	</header>
