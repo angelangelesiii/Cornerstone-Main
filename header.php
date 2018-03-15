@@ -31,7 +31,7 @@
 		<div class="wrapper-header">
 			<nav id="mainnav" class="clearfix">
 				<div class="logo-container">
-					<a href="<?php the_permalink(); ?>">
+					<a href="<?php bloginfo( 'url' ) ?>">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/logo/cs_white_block.png' ?>" alt="Cornerstone Logo" class="logo logo-white">
 						<h1 id="website-title">CORNERSTONE</h1>
 					</a>
