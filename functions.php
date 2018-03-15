@@ -80,6 +80,7 @@ if ( ! function_exists( 'cornerstone_main_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'masonry', 1000, 1000, true);
+		add_image_size( 'bg-medium', 1366, 768, false);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -181,6 +182,9 @@ function cornerstone_main_scripts() {
 	wp_enqueue_style( 'main', get_template_directory_uri().'/dist/css/main.css' );
 	if (is_front_page()) wp_enqueue_style( 'front', get_template_directory_uri().'/dist/css/front.css' );
 
+	// Slick Slider CSS
+	wp_enqueue_style( 'slick', get_template_directory_uri().'/dist/css/slick.css' );
+
 
 	// *** JS ***
 
@@ -193,7 +197,10 @@ function cornerstone_main_scripts() {
 	// JQuery (FOOTER)
 	wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
-    wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery' );
+	
+	// Slick Slider
+	wp_enqueue_script( 'jquery-scrollbar', get_template_directory_uri().'/dist/js/jquery.scrollbar.min.js', false, false, true );
 
     // GSAP
 	wp_enqueue_script( 'GSAP', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js', false, false, true);
@@ -254,3 +261,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+

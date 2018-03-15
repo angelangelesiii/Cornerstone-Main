@@ -15,5 +15,13 @@ jQuery(document).ready(function($){ // Document Ready
         percentPosition: true,
     });
 
+    // FEATURED SLIDER
+    $('.featured-slider-container').slick({
+        autoplay: true,
+        autoplaySpeed: 8000,
+        speed: 1000,
+        arrows: false,
+    });
+
 
 });
