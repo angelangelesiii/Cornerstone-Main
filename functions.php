@@ -171,6 +171,9 @@ function cornerstone_main_scripts() {
 	// Google Fonts
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900' );
 
+	// Jquery Scrollbar
+	wp_enqueue_style( 'scrollbar', get_template_directory_uri().'/dist/css/scrollbar.css' );
+
 	// Foundation Grid
 	wp_enqueue_style( 'foundation', get_template_directory_uri().'/dist/css/foundation.css' );
 
