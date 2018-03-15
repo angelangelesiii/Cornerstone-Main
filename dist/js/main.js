@@ -52,7 +52,7 @@ jQuery(document).ready(function($){ // Document Ready
 
     var heroEffect = new TimelineMax()
         .to('.parallaxBG', 1, {
-            y: '30%',
+            y: '40%',
         }, 'a')
         .to('.hero-banner .overlay', 1, {
             opacity: 1,
