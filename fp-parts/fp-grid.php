@@ -1,3 +1,4 @@
+<!-- GRID -->
 <section class="grid-section">
     <div class="wrapper-medium">
         <div id="grid-container">
@@ -48,3 +49,4 @@
         </div>
     </div>
 </section>
+<!-- END GRID -->
