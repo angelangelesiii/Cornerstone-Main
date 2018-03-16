@@ -1,0 +1,329 @@
+[
+    {
+        "key": "group_5aaa07c21ee7e",
+        "title": "Featured in Front Page",
+        "fields": [
+            {
+                "key": "field_5aaa07cc4c84d",
+                "label": "Featured Posts\/Pages",
+                "name": "featured_posts",
+                "type": "repeater",
+                "instructions": "- Drag the handle on the left side of a row to move the row around for rearranging.\r\n- Click the minus (-) icon on the right side of a row to delete it.\r\n- Click the up arrow icon on the upper left side of the row to minimize it.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5aaa08334c84e",
+                "min": 0,
+                "max": 15,
+                "layout": "row",
+                "button_label": "Add Featured",
+                "sub_fields": [
+                    {
+                        "key": "field_5aaa08334c84e",
+                        "label": "Post\/Page\/Event",
+                        "name": "featured_post",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [],
+                        "taxonomy": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "return_format": "id",
+                        "ui": 1
+                    },
+                    {
+                        "key": "field_5aaa0bfe4d8cc",
+                        "label": "Custom Title",
+                        "name": "custom_title",
+                        "type": "text",
+                        "instructions": "Leave blank if you want the post's original title to be displayed.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5aaa0c2f4d8cd",
+                        "label": "Custom Background",
+                        "name": "custom_background",
+                        "type": "image",
+                        "instructions": "Leave blank if you want the post's original featured image to be displayed.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "featured"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5aab0f07b43a9",
+        "title": "Site Options",
+        "fields": [
+            {
+                "key": "field_5aab0f14bfe7a",
+                "label": "Hero Banner",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5aab0f98bfe7c",
+                "label": "Hero Banner",
+                "name": "hero_banner_group",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_5aab0fc6bfe7e",
+                        "label": "Hero Banner Image",
+                        "name": "image",
+                        "type": "image",
+                        "instructions": "This is the hero banner's featured image. Leave blank to default to the original hero banner. Only PNG type image is allowed.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "large",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": 5,
+                        "mime_types": "png"
+                    },
+                    {
+                        "key": "field_5aab1073bfe7f",
+                        "label": "Hero Banner Background",
+                        "name": "background_select",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "image": "Image",
+                            "video": "Video"
+                        },
+                        "default_value": [
+                            "image"
+                        ],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 1,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_5aab10d7bfe80",
+                        "label": "Hero Banner Background Image",
+                        "name": "background_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5aab1073bfe7f",
+                                    "operator": "==",
+                                    "value": "image"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "large",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": 10,
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5aab1122bfe81",
+                        "label": "Hero Banner Background Video",
+                        "name": "background_video",
+                        "type": "file",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5aab1073bfe7f",
+                                    "operator": "==",
+                                    "value": "video"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": 10,
+                        "mime_types": "mp4,webm"
+                    },
+                    {
+                        "key": "field_5aab1729ce592",
+                        "label": "Hero Banner Background Dim Intensity",
+                        "name": "dim_intensity",
+                        "type": "range",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "min": "",
+                        "max": 75,
+                        "step": 5,
+                        "prepend": "",
+                        "append": "%"
+                    },
+                    {
+                        "key": "field_5aab169ece590",
+                        "label": "Hero Banner Link Text",
+                        "name": "link_text",
+                        "type": "text",
+                        "instructions": "If left blank, it will display \"Learn More\" instead.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5aab16e3ce591",
+                        "label": "Hero Banner Link URL",
+                        "name": "link_url",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "site-options"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]
