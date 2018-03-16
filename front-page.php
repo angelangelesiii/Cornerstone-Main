@@ -15,6 +15,9 @@ get_header(); ?>
 			// GRID
 			// get_template_part( 'fp-parts/fp-grid' ); 
 
+			// MESSAGE
+			get_template_part( 'fp-parts/fp-message' );
+
 			// FEATURED SLIDER
 			get_template_part( 'fp-parts/fp-featured-slider' ); 
 

@@ -5,6 +5,31 @@
 *
 */
 
+
+/* ========================================= */
+/* MESSAGE                                   */
+/* ========================================= */
+
+.message-section {
+    background-color: ##FFFFFF;
+    background-image: url(../images/background/splatter.jpg);
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+    padding: 80px 0;
+}
+.message-section .message {
+    text-align: center;
+}
+.message-section .message p {
+    font-size: 2.5em;
+    font-weight: 200;
+    color: rgb(77, 77, 77);
+    line-height: 1.5em;
+    margin-top: 0;
+}
+
+
 /* ========================================= */
 /* FEATURED SLIDER                           */
 /* ========================================= */
