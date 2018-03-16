@@ -27,7 +27,7 @@ Spanish Gray: #939393
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	background-color: #EFEBE6;
+	background-color: #f0f0f0;
 	color: #646464;
 }
 body.menu-opened {
@@ -713,7 +713,7 @@ article.article {
 	/* border: 1px solid #d8d8d8; */
 }
 article.article .article-content {
-	background: #FFFFFF;
+	background: #ffffff;
 	padding: 50px;
 }
 article.article .article-title-container {
