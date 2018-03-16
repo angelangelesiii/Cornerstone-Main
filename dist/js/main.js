@@ -50,11 +50,15 @@ jQuery(document).ready(function($){ // Document Ready
 
     // console.log(beltColor);
 
+    var dimInitial = $('.hero-banner.full-section').data('dim');
+    // console.log(dimInitial);
     var heroEffect = new TimelineMax()
         .to('.parallaxBG', 1, {
             y: '40%',
         }, 'a')
-        .to('.hero-banner .overlay', 1, {
+        .fromTo('.hero-banner.full-section .overlay', 1, {
+            opacity: dimInitial,
+        }, {
             opacity: 1,
         }, 'a')
         .to('.hero-banner .hero-container', 1, {

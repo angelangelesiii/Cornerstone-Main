@@ -77,11 +77,16 @@
 			$heroBannerClasses .= ' post-banner';
 		endif;
 		
-		if(is_front_page()): ?>
+		if(is_front_page()): 
+		$hero = get_field('hero_banner_group', 'options');
+		$heroImage = get_template_directory_uri().'/dist/images/background/placeholder.jpg';
+		if ($hero['background_image']) $heroImage = wp_get_attachment_image_src( $hero['background_image'], 'bg-large')[0];
+		// print_r($heroImage);
+		?>
 		
 		<!-- Hero Banner -->
-		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);">
-			<div class="parallaxBG" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/placeholder.jpg' ?>);"></div>
+		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo $heroImage ?>);" data-dim="<?php echo ($hero['dim_intensity']*0.01); ?>">
+			<div class="parallaxBG" style="background-image: url(<?php echo $heroImage; ?>);"></div>
 			<div class="overlay"></div>
 			<div class="hero-container">
 				<div class="wrapper">
@@ -101,6 +106,8 @@
 				</div>
 			</nav>
 		</section>
+
+		<!-- <?php print_r($hero); ?> -->
 
 		<?php else: ?>
 

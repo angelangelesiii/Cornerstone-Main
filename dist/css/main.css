@@ -383,7 +383,7 @@ a.btn.btn--icon.icon-location::after {
 	height: 100%;
 	width: 100%;
 	z-index: 99;
-	background: linear-gradient(rgba(0, 0, 0, 1), rgba(9, 19, 22, 0.9));
+	background: linear-gradient(rgba(0, 0, 0, 1), rgba(17, 35, 41, 0.9));
 	opacity: 0;
 	visibility: hidden;
 	overflow: auto;
@@ -572,11 +572,11 @@ a.btn.btn--icon.icon-location::after {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	transition: all 0.35s ease;
+	/* transition: all 0.35s ease;
 	-webkit-transition: all 0.35s ease;
 	-moz-transition: all 0.35s ease;
 	-ms-transition: all 0.35s ease;
-	-o-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease; */
 }
 #belt-menu-alt-nav {
 	position: fixed;
@@ -589,11 +589,11 @@ a.btn.btn--icon.icon-location::after {
 	z-index: 101;
 	opacity: 0;
 	visibility: hidden;
-	transition: all 0.35s ease;
+	/* transition: all 0.35s ease;
 	-webkit-transition: all 0.35s ease;
 	-moz-transition: all 0.35s ease;
 	-ms-transition: all 0.35s ease;
-	-o-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease; */
 }
 #belt-menu-alt-nav.menu-opened {
 	opacity: 1;
