@@ -22,7 +22,9 @@ jQuery(document).ready(function($){ // Document Ready
     // Scrollbars
     // $('.custom-scrollbar').scrollbar({
     //     // options
-    // })
+    //     autoUpdate: true,
+    //     autoScrollSize: true,
+    // });
 
     // Main menu button interaction
 
