@@ -81,6 +81,7 @@ if ( ! function_exists( 'cornerstone_main_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'masonry', 1000, 1000, true);
 		add_image_size( 'bg-medium', 1366, 768, false);
+		add_image_size( 'bg-large', 1920, 1080, false);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -199,7 +200,7 @@ function cornerstone_main_scripts() {
     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
 	wp_enqueue_script( 'jquery' );
 	
-	// Slick Slider
+	// Custom Scrollbar
 	wp_enqueue_script( 'jquery-scrollbar', get_template_directory_uri().'/dist/js/jquery.scrollbar.min.js', false, false, true );
 
     // GSAP
