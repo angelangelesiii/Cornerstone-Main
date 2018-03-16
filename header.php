@@ -80,20 +80,49 @@
 		if(is_front_page()): 
 		$hero = get_field('hero_banner_group', 'options');
 		$heroImage = get_template_directory_uri().'/dist/images/background/placeholder.jpg';
+
+		// Hero Background
 		if ($hero['background_image']) $heroImage = wp_get_attachment_image_src( $hero['background_image'], 'bg-large')[0];
-		// print_r($heroImage);
+
+		// Hero Link
+		$heroLinkText = "Learn More";
+		if ($hero['link_text']) $heroLinkText = $hero['link_text'];
+
+		$heroLinkURL = get_home_url();
+		if ($hero['link_url']) $heroLinkURL = $hero['link_url'];
+
 		?>
 		
 		<!-- Hero Banner -->
 		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo $heroImage ?>);" data-dim="<?php echo ($hero['dim_intensity']*0.01); ?>">
+
+		<?php if($hero['background_select'] == 'image'): // PARALLAX IMAGE BACKGROUND ?>
+
 			<div class="parallaxBG" style="background-image: url(<?php echo $heroImage; ?>);"></div>
 			<div class="overlay"></div>
 			<div class="hero-container">
 				<div class="wrapper">
 					<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
 				</div>
-				<a href="javascript:void(0)" class="btn btn--white btn--large">Come and Join Us</a>
+				<a href="<?php echo $heroLinkURL ?>" class="btn btn--white btn--large"><?php echo $heroLinkText ?></a>
 			</div>
+
+		<?php elseif ($hero['background_select'] == 'video'): // VIDEO BACKGROUND ?>
+			
+			<video id="front-page-video" playsinline autoplay muted loop data-keepplaying>
+				<source src="<?php echo $hero['background_video']; ?>" type="video/mp4">
+			</video>
+			<div class="overlay"></div>
+			<div class="hero-container">
+				<div class="wrapper">
+					<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
+				</div>
+				<a href="<?php echo $heroLinkURL ?>" class="btn btn--white btn--large"><?php echo $heroLinkText ?></a>
+			</div>
+
+		<?php endif; ?>
+
+
 			<div id="belt-menu-trigger"></div>
 			<nav id="belt-menu-nav">
 				<div class="wrapper-big">
