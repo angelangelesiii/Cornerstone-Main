@@ -306,6 +306,122 @@
                         "return_format": "url"
                     }
                 ]
+            },
+            {
+                "key": "field_5aab3bcd0e3fe",
+                "label": "Front Page Layout",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5aab4688bbc67",
+                "label": "Enable custom layout",
+                "name": "enable_custom_layout",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Enables rearranging of sections in the front page",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5aab3bfd82306",
+                "label": "Front Page Layout",
+                "name": "layout",
+                "type": "flexible_content",
+                "instructions": "Add, remove and rearrange sections in the front page.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5aab4688bbc67",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "5aab3c154d119": {
+                        "key": "5aab3c154d119",
+                        "name": "featured_slider",
+                        "label": "Featured Articles\/Posts Slider",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5aab451e82307",
+                                "label": "Featured Articles Slider",
+                                "name": "",
+                                "type": "message",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "You can edit the contents of this slider in the <a href=\"\/wp-admin\/admin.php?page=featured\">Featured<\/a> item in the WordPress admin menu.",
+                                "new_lines": "wpautop",
+                                "esc_html": 0
+                            }
+                        ],
+                        "min": "1",
+                        "max": "1"
+                    },
+                    "5aab45ac82308": {
+                        "key": "5aab45ac82308",
+                        "name": "locations",
+                        "label": "Locations",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5aab45c482309",
+                                "label": "Locations Section",
+                                "name": "",
+                                "type": "message",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "You cannot edit the contents of this section.",
+                                "new_lines": "wpautop",
+                                "esc_html": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Add Section",
+                "min": 1,
+                "max": ""
             }
         ],
         "location": [
