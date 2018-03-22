@@ -22,52 +22,61 @@
 					<div class="acf-map">
 						<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 					</div>
+					<?php // print_r($location); ?>
 				</div>
 				<div class="details">
-					<?php // Address
-					if(get_field('location_address')) the_field('location_address'); ?>
+					<div class="address-container">
+						<?php // Address
+						if(get_field('location_address')) the_field('location_address'); ?>
+					</div>
 					
 					<?php if(have_rows('location_service_times')): // Service Times?>
-					<p class="services">
+					<div class="services">
 						<?php while(have_rows('location_service_times')): the_row(); 
 						// Start loop ?>
 						
 						<?php if(get_row_layout() == 'service_multiple_times'): 
 						// Multiple time service ?>
 						<h2 class="service-description"><?php the_sub_field('description'); ?></h2>
+						<div class="service-times">
 							<?php if(have_rows('times')):
 							$day = '';
 							$count = 0;
 							while(have_rows('times')): the_row();
+							$time = "<span class='time'>".get_sub_field('time')."</span>";
 							?>
 								<?php if($day != get_sub_field('day')): 
 								$day = get_sub_field('day');
+								echo "<span class='day'>";
 								the_sub_field('day');
-								echo ": <br/>";
-								the_sub_field('time');
+								echo ":</span><br/>";
+								echo $time;
 								?>
 								
 								<?php else: 
-								echo " &bull; ";
-								the_sub_field('time'); 
+								echo " <span class='separator'>&bull;</span> ";
+								echo $time;
 								?>
 
 								<?php endif; ?>
 							
 							<?php endwhile; endif; ?>
+						</div>
 						
 						
 						<?php elseif(get_row_layout() == 'service_with_single_time'): 
 						//Single time service ?>
 						<h2 class="service-description"><?php the_sub_field('description'); ?></h2>
-						<?php the_sub_field('day'); ?>: <?php the_sub_field('time'); ?>
+						<div class="service-times">
+							<span class="day"><?php the_sub_field('day'); ?></span>: <span class="time"><?php the_sub_field('time'); ?></span>
+						</div>
 
 						<?php endif; ?>
 
 						<?php // End loop
 						endwhile; ?>
 
-					</p>
+					</div>
 					<p class="button-container"><a href="#" class="btn btn--large">Plan Your Visit</a></p>	
 					
 					<?php endif; ?>
