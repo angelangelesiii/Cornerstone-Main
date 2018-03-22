@@ -102,7 +102,7 @@
 			<?php if($hero['background_select'] == 'image'): // PARALLAX IMAGE BACKGROUND ?>
 
 				<div class="parallaxBG" style="background-image: url(<?php echo $heroImage; ?>);"></div>
-				<div class="overlay"></div>
+				<div class="overlay" style="opacity: <?php echo ($hero['dim_intensity']*0.01); ?>;"></div>
 				<div class="hero-container">
 					<div class="wrapper">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
@@ -115,7 +115,7 @@
 				<video id="front-page-video" playsinline autoplay muted loop data-keepplaying>
 					<source src="<?php echo $hero['background_video']; ?>" type="video/mp4">
 				</video>
-				<div class="overlay"></div>
+				<div class="overlay" style="opacity: <?php echo ($hero['dim_intensity']*0.01); ?>;"></div>
 				<div class="hero-container">
 					<div class="wrapper">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
@@ -162,7 +162,7 @@
 		<!-- Post Banner -->
 		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);">
 			<div class="parallaxBG" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);"></div>
-			<div class="overlay"></div>
+			<div class="overlay" style="opacity: <?php echo ($hero['dim_intensity']*0.01); ?>;"></div>
 			<nav id="belt-menu-nav">
 				<div class="wrapper-big">
 					<?php
