@@ -70,57 +70,60 @@
 		</div>
 
 		<?php //hero banner
-		$heroBannerClasses = 'hero-banner';
+		$heroBannerClasses = 'hero-banner '.'type-'.get_post_type( $post->ID );
 		if(is_front_page()):
 			$heroBannerClasses .=' full-section';
+		elseif(is_home()):
+			$heroBannerClasses .=' blog-hero';
 		else:
 			$heroBannerClasses .= ' post-banner';
 		endif;
 		
-		if(is_front_page()): 
-		$hero = get_field('hero_banner_group', 'options');
-		$heroImage = get_template_directory_uri().'/dist/images/background/placeholder.jpg';
+		if(is_front_page()): // ===== IF YOU ARE IN THE FRONT PAGE
 
-		// Hero Background
-		if ($hero['background_image']) $heroImage = wp_get_attachment_image_src( $hero['background_image'], 'bg-large')[0];
+			$hero = get_field('hero_banner_group', 'options');
+			$heroImage = get_template_directory_uri().'/dist/images/background/placeholder.jpg';
 
-		// Hero Link
-		$heroLinkText = "Learn More";
-		if ($hero['link_text']) $heroLinkText = $hero['link_text'];
+			// Hero Background
+			if ($hero['background_image']) $heroImage = wp_get_attachment_image_src( $hero['background_image'], 'bg-large')[0];
 
-		$heroLinkURL = get_home_url();
-		if ($hero['link_url']) $heroLinkURL = $hero['link_url'];
+			// Hero Link
+			$heroLinkText = "Learn More";
+			if ($hero['link_text']) $heroLinkText = $hero['link_text'];
 
-		?>
-		
-		<!-- Hero Banner -->
-		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo $heroImage ?>);" data-dim="<?php echo ($hero['dim_intensity']*0.01); ?>">
+			$heroLinkURL = get_home_url();
+			if ($hero['link_url']) $heroLinkURL = $hero['link_url'];
 
-		<?php if($hero['background_select'] == 'image'): // PARALLAX IMAGE BACKGROUND ?>
-
-			<div class="parallaxBG" style="background-image: url(<?php echo $heroImage; ?>);"></div>
-			<div class="overlay"></div>
-			<div class="hero-container">
-				<div class="wrapper">
-					<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
-				</div>
-				<a href="<?php echo $heroLinkURL ?>" class="btn btn--white btn--large"><?php echo $heroLinkText ?></a>
-			</div>
-
-		<?php elseif ($hero['background_select'] == 'video'): // VIDEO BACKGROUND ?>
+			?>
 			
-			<video id="front-page-video" playsinline autoplay muted loop data-keepplaying>
-				<source src="<?php echo $hero['background_video']; ?>" type="video/mp4">
-			</video>
-			<div class="overlay"></div>
-			<div class="hero-container">
-				<div class="wrapper">
-					<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
-				</div>
-				<a href="<?php echo $heroLinkURL ?>" class="btn btn--white btn--large"><?php echo $heroLinkText ?></a>
-			</div>
+			<!-- Hero Banner -->
+			<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo $heroImage ?>);" data-dim="<?php echo ($hero['dim_intensity']*0.01); ?>">
 
-		<?php endif; ?>
+			<?php if($hero['background_select'] == 'image'): // PARALLAX IMAGE BACKGROUND ?>
+
+				<div class="parallaxBG" style="background-image: url(<?php echo $heroImage; ?>);"></div>
+				<div class="overlay"></div>
+				<div class="hero-container">
+					<div class="wrapper">
+						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
+					</div>
+					<a href="<?php echo $heroLinkURL ?>" class="btn btn--white btn--large"><?php echo $heroLinkText ?></a>
+				</div>
+
+			<?php elseif ($hero['background_select'] == 'video'): // VIDEO BACKGROUND ?>
+				
+				<video id="front-page-video" playsinline autoplay muted loop data-keepplaying>
+					<source src="<?php echo $hero['background_video']; ?>" type="video/mp4">
+				</video>
+				<div class="overlay"></div>
+				<div class="hero-container">
+					<div class="wrapper">
+						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
+					</div>
+					<a href="<?php echo $heroLinkURL ?>" class="btn btn--white btn--large"><?php echo $heroLinkText ?></a>
+				</div>
+
+			<?php endif; ?>
 
 
 			<div id="belt-menu-trigger"></div>
@@ -138,7 +141,23 @@
 
 		<!-- <?php print_r($hero); ?> -->
 
-		<?php else: ?>
+		<?php elseif(is_home()): // ===== IF YOU ARE IN THE BLOG PAGE ?>
+
+		<!-- Home Banner -->
+		<section class="<?php echo $heroBannerClasses; ?>" >
+			<nav id="belt-menu-nav">
+				<div class="wrapper-big">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'belt-menu',
+							'menu_id'        => 'belt-menu',
+						) );
+					?>
+				</div>
+			</nav>
+		</section>
+
+		<?php else: // ===== ELSE... ?>
 
 		<!-- Post Banner -->
 		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);">
