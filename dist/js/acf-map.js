@@ -20,7 +20,9 @@ function new_map( $el ) {
     
     // styles
     var styles = [
+        // Map style start
 
+        // Map style end
     ];
 
     // vars
@@ -28,8 +30,8 @@ function new_map( $el ) {
         zoom		            : 17,
         disableDefaultUI        : true,
         center		            : new google.maps.LatLng(0, 0),
-        mapTypeId	            : google.maps.MapTypeId.ROADMAP,
-        mapTypeControlOptions   : {
+        mapTypeId	            : 'Styled',
+        mapTypeControlOptions: {
             mapTypeIds: ['Styled']
           },
     };
@@ -37,6 +39,8 @@ function new_map( $el ) {
     
     // create map	        	
     var map = new google.maps.Map( $el[0], args);
+    var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+    map.mapTypes.set('Styled', styledMapType);
     
     
     // add a markers reference

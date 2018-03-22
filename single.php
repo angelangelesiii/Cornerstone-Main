@@ -30,6 +30,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	<div class="wrapper-medium">
+		<?php get_sidebar(); ?>
+	</div>
+
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

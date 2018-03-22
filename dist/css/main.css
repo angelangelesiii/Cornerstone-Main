@@ -544,8 +544,8 @@ a.btn.btn--icon.icon-location::after {
 }
 .hero-banner .hero-container .hero-image {
     max-width: 1000px;
-    width: 90%;
     height: auto;
+	max-height: 400px;
     margin-bottom: 50px;
 }
 
@@ -716,6 +716,12 @@ article.article .article-content {
 	background: #ffffff;
 	padding: 50px;
 }
+article.article .article-content.no-padding {
+	padding: 0;
+}
+article.article .article-content .services {
+	padding: 20px 50px;
+}
 article.article .article-title-container {
 	position: absolute;
 	bottom: 100%;
@@ -730,6 +736,10 @@ article.article .article-title {
 	line-height: 1.4em;
 	display: inline;
 	box-shadow: 10px 0 0 rgba(0, 0, 0, 0.7), -10px 0 0 rgba(0, 0, 0, 0.7);
+}
+article.article .location-description {
+	margin-top: 100px;
+	padding-top: 30px;
 }
 
 
