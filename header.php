@@ -9,6 +9,16 @@
  * @package Cornerstone_Main
  */
 
+function belt_menu_call($menuID = 'belt-menu') {
+	echo '<nav id="belt-menu-nav"> <div class="wrapper-big">';
+		wp_nav_menu( array(
+			'theme_location' => 'belt-menu',
+			'menu_id'        => $menuID,
+		) );
+	echo '</div> </nav>';
+	return $menuID;
+}
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -127,16 +137,7 @@
 
 
 			<div id="belt-menu-trigger"></div>
-			<nav id="belt-menu-nav">
-				<div class="wrapper-big">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'belt-menu',
-							'menu_id'        => 'belt-menu',
-						) );
-					?>
-				</div>
-			</nav>
+			<?php belt_menu_call(); ?>
 		</section>
 
 		<!-- <?php print_r($hero); ?> -->
@@ -145,16 +146,9 @@
 
 		<!-- Home Banner -->
 		<section class="<?php echo $heroBannerClasses; ?>" >
-			<nav id="belt-menu-nav">
-				<div class="wrapper-big">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'belt-menu',
-							'menu_id'        => 'belt-menu',
-						) );
-					?>
-				</div>
-			</nav>
+			<?php belt_menu_call(); ?>
+		</section>
+
 		</section>
 
 		<?php else: // ===== ELSE... ?>
@@ -163,16 +157,7 @@
 		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);">
 			<div class="parallaxBG" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);"></div>
 			<div class="overlay" style="opacity: <?php echo ($hero['dim_intensity']*0.01); ?>;"></div>
-			<nav id="belt-menu-nav">
-				<div class="wrapper-big">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'belt-menu',
-							'menu_id'        => 'belt-menu',
-						) );
-					?>
-				</div>
-			</nav>
+			<?php belt_menu_call(); ?>
 		</section>
 
 		<?php endif; ?>
