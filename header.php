@@ -149,6 +149,10 @@ function belt_menu_call($menuID = 'belt-menu') {
 			<?php belt_menu_call(); ?>
 		</section>
 
+		<?php elseif(!has_post_thumbnail( $post->ID ) || is_404() ): // ===== IF POST HAS NO THUMBNAIL OR 404 ?>
+
+		<section class="<?php echo $heroBannerClasses; ?> no-thumbnail">
+			<?php belt_menu_call(); ?>
 		</section>
 
 		<?php else: // ===== ELSE... ?>
@@ -166,7 +170,10 @@ function belt_menu_call($menuID = 'belt-menu') {
 
 	<div id="menu-overlay"></div>
 
-	
-	<div id="content" class="site-content">
+	<?php
+	$thumbnailSiteClass = '';
+	if (!has_post_thumbnail($post->ID)) $thumbnailSiteClass = 'no-thumbnail';
+	?>
+	<div id="content" class="site-content <?php echo $thumbnailSiteClass; ?>">
 
 		
