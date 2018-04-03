@@ -479,7 +479,7 @@ a.btn.btn--icon.icon-location::after {
 	visibility: hidden;
 }
 .spacer {
-	height: 69px;
+	height: 74px;
 }
 
 
@@ -515,6 +515,10 @@ a.btn.btn--icon.icon-location::after {
 }
 .hero-banner.full-section .overlay {
 	opacity: 0.6;
+}
+.hero-banner.no-thumbnail,
+.hero-banner.post-banner.no-thumbnail {
+	min-height: 74px;
 }
 .hero-banner .hero-container {
     position: absolute;
@@ -712,6 +716,9 @@ article.article {
 	z-index: 3;
 	/* border: 1px solid #d8d8d8; */
 }
+.site-content.no-thumbnail .article.article {
+	margin-top: 0;
+}
 article.article .article-content {
 	background: #ffffff;
 	padding: 50px;
@@ -750,6 +757,11 @@ article.article .article-content .details .services .service-times .day {
 }
 article.article .article-content .details .services .service-times .time {
 	display: inline-block;
+}
+.site-content.no-thumbnail article.article .article-title-container {
+	position: relative;
+	bottom: auto;
+	margin-top: 30px;
 }
 article.article .article-title-container {
 	position: absolute;
