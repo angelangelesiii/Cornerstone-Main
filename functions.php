@@ -262,7 +262,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Post types
  */
-require get_template_directory() . '/inc/post-types.php';
+//require get_template_directory() . '/inc/post-types.php';
 
 /**
  * Load Jetpack compatibility file.
