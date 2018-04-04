@@ -103,6 +103,17 @@ if ( ! function_exists( 'cornerstone_main_setup' ) ) :
 			'caption',
 		) );
 
+		/**
+		 * Filter the except length to 20 words.
+		 *
+		 * @param int $length Excerpt length.
+		 * @return int (Maybe) modified excerpt length.
+		 */
+		function custom_excerpt_length( $length ) {
+			return 20;
+		}
+		add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'cornerstone_main_custom_background_args', array(
 			'default-color' => 'ffffff',
