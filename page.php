@@ -16,19 +16,26 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<?php
-			while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
-				
-			<?php
-			endwhile; // End of the loop.
-			?>
+			<div class="wrapper-medium row collapse">
+				<div class="column large-9 small-12 main-container">
+					<?php
+					while ( have_posts() ) : the_post(); ?>
+		
+					<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
+						
+					<?php
+					endwhile; // End of the loop.
+					?>
+				</div>
+				<div class="column large-3 small-12 sidebar-container">
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	
 	<div class="wrapper-medium">
-		<?php get_sidebar(); ?>
+		
 	</div>
 
 <?php
