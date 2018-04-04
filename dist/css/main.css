@@ -787,6 +787,54 @@ article.article .location-description {
 }
 
 
+/* ========================================= */
+/* EVENTS                                    */
+/* ========================================= */
+
+.events-container {
+	margin: 30px 0 0;
+}
+.events-container .event-item {
+	padding: 0 10px 20px !important;
+}
+.events-container .event-item .inner {
+	background: #FFFFFF;
+	border: 1px solid #dddddd;
+	box-shadow: 1.5px 1.5px 0 #dddddd;
+}
+.events-container .event-item .event-thumbnail {
+	background-color: #3F9AB1;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+}
+.events-container .event-item .event-thumbnail .padder {
+	padding-bottom: 56.25%;
+	opacity: 0;
+	background-color: #FFFFFF;
+}
+.events-container .event-item .event-thumbnail:hover .padder {
+	opacity: 0.15;
+}
+.events-container .event-item .content {
+	padding: 20px 20px 40px;
+	text-align: center;
+}
+.events-container .event-item .content .btn-container {
+	text-align: center;
+}
+.events-container .event-item .content .event-title {
+	font-size: 1.3em;
+	line-height: 1.2em;
+	margin: 0 0 20px;	
+}
+.events-container .event-item .content .event-title a:link,
+.events-container .event-item .content .event-title a:visited {
+	text-decoration: none;
+	color: #3F9AB1;
+}
+
+
 /*==============================*/
 /* MEDIA QUERIES                */
 /*==============================*/
