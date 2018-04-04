@@ -82,6 +82,7 @@ if ( ! function_exists( 'cornerstone_main_setup' ) ) :
 		add_image_size( 'masonry', 1000, 1000, true);
 		add_image_size( 'bg-medium', 1366, 768, false);
 		add_image_size( 'bg-large', 1920, 1080, false);
+		add_image_size( 'bg-small', 620, 620, false);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
