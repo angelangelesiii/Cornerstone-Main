@@ -74,10 +74,12 @@ $content = str_replace(']]>', ']]&gt;', $content);
 							?>
 							<a href="<?php the_permalink(); ?>"><span class="event-thumbnail" style="<?php echo $thumbnailStyle; ?>"><div class="padder"></div></span></a>
 							<div class="content">
-								<h3 class="event-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<p class="schedule">
-									Event date: <?php echo $articleDate; ?><br/>
+									<?php echo $articleDate; ?><br/>
 								</p>
+								<h3 class="event-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<p><?php the_excerpt(); ?></p>
+								
 								<div class="btn-container">
 									<a href="<?php the_permalink(); ?>" class="btn">Details</a>
 								</div>
