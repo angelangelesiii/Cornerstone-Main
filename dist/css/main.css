@@ -866,6 +866,48 @@ article.article .location-description {
 	color: #3F9AB1;
 }
 
+/* Single Event */
+.event-date-meta {
+	margin-bottom: 30px;
+}
+.event-date-meta .date {
+	font-size: 1.8em;
+	font-weight: 200;
+	color: #3F9AB1;
+	display: block;
+}
+.event-date-meta .time {
+	font-size: 1.5em;
+	font-weight: 200;
+}
+
+
+/* ========================================= */
+/* BLOG                                      */
+/* ========================================= */
+
+.blog-container .blog-item {
+	background: #FFFFFF;
+	margin-bottom: 15px;
+}
+.blog-container .blog-item .content {
+	padding: 30px;
+}
+
+
+/* ========================================= */
+/* SIDEBAR                                   */
+/* ========================================= */
+
+.sidebar-container {
+	padding: 15px 0;
+}
+.sidebar-container .widget {
+	background: #ffffff;
+	padding: 20px;
+	margin-bottom: 15px;
+}
+
 
 /*==============================*/
 /* MEDIA QUERIES                */
