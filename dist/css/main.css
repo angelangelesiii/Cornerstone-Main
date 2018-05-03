@@ -812,11 +812,24 @@ article.article .location-description {
 	padding-top: 30px;
 }
 
+/* Page Settings */
+.main-container {
+	padding-right: 15px !important;
+}
+
 
 /* ========================================= */
 /* EVENTS                                    */
 /* ========================================= */
 
+h2.event-heading {
+	font-size: 3em;
+	font-weight: 200;
+	text-align: center;
+	padding: 0 80px;
+	margin: 30px 100px 80px;
+	display: block;
+}
 .events-container {
 	margin: 30px 0 50px;
 }
@@ -850,13 +863,13 @@ article.article .location-description {
 	text-align: left;
 }
 .events-container .event-item .content .schedule {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 200;
-	color: #b1b1b1;
-	margin: 0;
+	color: #9b9b9b;
+	margin: 0 0 10px;
 }
 .events-container .event-item .content .event-title {
-	font-size: 1.8em;
+	font-size: 1.85em;
 	line-height: 1em;
 	margin: 0 0 20px;	
 }
