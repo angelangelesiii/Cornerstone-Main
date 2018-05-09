@@ -899,12 +899,70 @@ h2.event-heading {
 /* BLOG                                      */
 /* ========================================= */
 
-.blog-container .blog-item {
+h1.main-title {
+	font-size: 3em;
+	font-weight: 200;
+	text-align: center;
+	padding: 0 80px;
+	margin: 30px 100px 30px;
+	display: block;
+}
+.blog-container {
+	padding: 20px 0;
+}
+.blog-container .blog-item .container {
 	background: #FFFFFF;
-	margin-bottom: 15px;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+.blog-container .blog-item .container:hover {
+	border: 1px solid #3F9AB1;
+	box-shadow: 0 5px 15px #0000002f;
 }
 .blog-container .blog-item .content {
-	padding: 30px;
+	padding: 25px;
+}
+.blog-container .blog-item .item-title {
+	font-size: 1.85em;
+    line-height: 1em;
+    margin: 0 0 20px;
+}
+.blog-container .blog-item .item-meta {
+	font-size: 0.8em;
+	color: #a1a1a1;
+	font-weight: 700;
+}
+.blog-container .blog-item .excerpt {
+	font-size: 0.9em;
+	color: #727272;
+}
+.blog-container .blog-item .item-title a:link,
+.blog-container .blog-item .item-title a:visited {
+	text-decoration: none;
+    color: #3F9AB1;
+}
+.blog-container .blog-item .item-title a:hover {
+	color: #6cbace;
+}
+.grid-sizer,
+.grid-item { 
+    width: 33.3%; 
+}
+.grid-item {
+	padding: 10px;
+}
+.grid-item.wide-2 {
+    width: 66.6%;
 }
 
 

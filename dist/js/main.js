@@ -132,6 +132,22 @@ jQuery(document).ready(function($){ // Document Ready
     }))
     // .addIndicators()
     .addTo(mainController);
+
+    // MASONRY
+    var $indexGrid = $('.grid-container').imagesLoaded(function(){
+        $indexGrid.masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+            transitionDuration: '0.3s',
+        });
+    });
+    
+
+    $indexMasonry.imagesLoaded().progress(function(){
+        $indexMasonry.masonry('layout');
+        console.log('did');
+    });
     
 
 });

@@ -10,20 +10,40 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<div class="wrapper-big row collapse">
-				<div class="column large-9 small-12 main-container">
+				<div class="main-container">
 					<?php if ( have_posts() ) : ?>
+					
+					<header class="title-container">
+						<h1 class="main-title">Latest</h1>
+					</header>
 	
-					<div class="blog-container">
+					<div class="blog-container grid-container clearfix">
+
+						<div class="grid-sizer"></div>
 	
 					<?php
 						/* Start the Loop */
 						while ( have_posts() ) : the_post();
+						$significanceClass = '';
+						if(get_field('significant')) $significanceClass = 'wide-2';
+						
 					?>
 			
-						<article class="blog-item">
-							<div class="content">
-								<h1><?php the_title(); ?></h1>
-								<?php the_excerpt(); ?>
+						<article class="blog-item grid-item <?php echo $significanceClass; ?>">
+							<div class="container">
+								<a href="#"><img src="<?php the_post_thumbnail_url( 'bg-medium' ) ?>" alt=""></a>
+								<div class="content">
+									<h2 class="item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+									<div class="item-meta">
+										<p class="meta">By <?php the_author(); ?><br/><?php the_date(); ?></p>
+									</div>
+									<div class="excerpt">
+										<?php the_excerpt(); ?>
+									</div>
+									<div class="btn-container">
+										<a href="<?php the_permalink(); ?>" class="btn">Read More</a>
+									</div>
+								</div>
 							</div>
 						</article>
 						
@@ -35,10 +55,6 @@ get_header(); ?>
 					endif; ?>
 				</div>
 			
-				<div class="column large-3 small-12 sidebar-container">
-					<?php get_sidebar(); ?>
-				</div>
-
 			</div>
 
 		</main><!-- #main -->
