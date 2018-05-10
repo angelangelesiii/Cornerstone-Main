@@ -733,7 +733,7 @@ a.btn.btn--icon.icon-location::after {
 	min-height: 700px;
 }
 .hero-banner.post-banner .overlay {
-	opacity: 0.1 !important;
+	opacity: 0.3 !important;
 }
 article.article {
 	margin-top: -100px;
