@@ -144,10 +144,4 @@ jQuery(document).ready(function($){ // Document Ready
     });
     
 
-    $indexMasonry.imagesLoaded().progress(function(){
-        $indexMasonry.masonry('layout');
-        console.log('did');
-    });
-    
-
 });
