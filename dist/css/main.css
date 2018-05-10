@@ -900,7 +900,7 @@ h2.event-heading {
 /* ========================================= */
 
 h1.main-title {
-	font-size: 3em;
+	font-size: 4em;
 	font-weight: 200;
 	text-align: center;
 	padding: 0 80px;
@@ -931,6 +931,9 @@ h1.main-title {
 }
 .blog-container .blog-item .content {
 	padding: 25px;
+}
+.blog-container .blog-item .post-image:hover {
+	opacity: 0.85;
 }
 .blog-container .blog-item .item-title {
 	font-size: 1.85em;

@@ -31,7 +31,7 @@ get_header(); ?>
 			
 						<article class="blog-item grid-item <?php echo $significanceClass; ?>">
 							<div class="container">
-								<a href="#"><img src="<?php the_post_thumbnail_url( 'bg-medium' ) ?>" alt=""></a>
+								<a href="#"><img src="<?php the_post_thumbnail_url( 'bg-medium' ) ?>" alt="" class="post-image"></a>
 								<div class="content">
 									<h2 class="item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 									<div class="item-meta">
