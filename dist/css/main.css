@@ -941,9 +941,31 @@ h1.main-title {
     margin: 0 0 20px;
 }
 .blog-container .blog-item .item-meta {
-	font-size: 0.8em;
-	color: #a1a1a1;
+	color: #9c9c9c;
 	font-weight: 700;
+	min-height: 48px;
+}
+.blog-container .blog-item .item-meta .avatar-container {
+	display: block;
+	width: 48px;
+	height: 48px;
+	background-size: cover;
+	background-position: center center;
+	overflow: hidden;
+	border-radius: 24px;
+	float: left;
+	margin-right: 10px;
+}
+.blog-container .blog-item .item-meta .author {
+	font-size: 1em;
+	line-height: 1em;
+}
+.blog-container .blog-item .item-meta .author-name:hover {
+	color: #838383;
+}
+.blog-container .blog-item .item-meta .date {
+	font-size: 0.8em;
+	line-height: 1em;
 }
 .blog-container .blog-item .excerpt {
 	font-size: 0.9em;

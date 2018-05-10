@@ -35,7 +35,12 @@ get_header(); ?>
 								<div class="content">
 									<h2 class="item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 									<div class="item-meta">
-										<p class="meta">By <?php the_author(); ?><br/><?php the_date(); ?></p>
+										
+										<p class="meta">
+											<div class="avatar-container" style="background-image: url('<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array('default' => 'mm', 'size' => '50') ) ?>');"></div>
+											<span class="author">By <span class="author-name"><?php the_author(); ?></span></span>
+											<br/><span class="date"><?php the_date(); ?></span>
+										</p>
 									</div>
 									<div class="excerpt">
 										<?php the_excerpt(); ?>
