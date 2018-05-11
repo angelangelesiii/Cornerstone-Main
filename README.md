@@ -14,6 +14,7 @@ Licensed under GNU GPL 3.0
 3. Formatted index/blog page
   * Initialized masonry layout on blog page
 4. General backend work.
+5. Footer changes (still ongoing)
 
 ### Log for April 5, 2018
 1. General backend work.
