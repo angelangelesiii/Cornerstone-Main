@@ -58,11 +58,11 @@ jQuery(document).ready(function($){ // Document Ready
         .to('.parallaxBG', 1, {
             y: '40%',
         }, 'a')
-        .fromTo('.hero-banner.full-section .overlay', 1, {
-            opacity: dimInitial,
-        }, {
-            opacity: 1,
-        }, 'a')
+        // .fromTo('.hero-banner.full-section .overlay', 1, {
+        //     opacity: dimInitial,
+        // }, {
+        //     opacity: 1,
+        // }, 'a')
         .to('.hero-banner .hero-container', 1, {
             opacity: 0.1,
             scale: 0.7,

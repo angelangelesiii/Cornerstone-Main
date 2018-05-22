@@ -34,6 +34,10 @@ body.menu-opened {
 	overflow: hidden;
 }
 
+#main {
+	min-height: 500px;
+}
+
 /*Clearfix*/
 .clearfix:before,
 .clearfix:after {
