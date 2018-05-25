@@ -113,6 +113,7 @@ function belt_menu_call($menuID = 'belt-menu') {
 
 				<div class="parallaxBG" style="background-image: url(<?php echo $heroImage; ?>);"></div>
 				<div class="overlay" style="opacity: <?php echo ($hero['dim_intensity']*0.01); ?>;"></div>
+				<div class="shadow"></div>
 				<div class="hero-container">
 					<div class="wrapper">
 						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
@@ -136,9 +137,9 @@ function belt_menu_call($menuID = 'belt-menu') {
 			<?php endif; ?>
 
 
-			<div id="belt-menu-trigger"></div>
-			<?php belt_menu_call(); ?>
-		</section>
+				<div id="belt-menu-trigger"></div>
+				<?php belt_menu_call(); ?>
+			</section>
 
 		<!-- <?php print_r($hero); ?> -->
 
