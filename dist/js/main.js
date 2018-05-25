@@ -63,11 +63,11 @@ jQuery(document).ready(function($){ // Document Ready
         // }, {
         //     opacity: 1,
         // }, 'a')
-        .to('.hero-banner .hero-container', 1, {
-            opacity: 0.1,
-            scale: 0.7,
-            y:'20%',
-        }, 'a')
+        // .to('.hero-banner .hero-container', 1, {
+        //     opacity: 0.1,
+        //     scale: 0.7,
+        //     y:'20%',
+        // }, 'a')
         .fromTo('#belt-menu-nav', 1, {
             css: {background: beltColor},
         },{
