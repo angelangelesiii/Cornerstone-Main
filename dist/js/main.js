@@ -139,7 +139,7 @@ jQuery(document).ready(function($){ // Document Ready
             itemSelector: '.grid-item',
             columnWidth: '.grid-sizer',
             percentPosition: true,
-            transitionDuration: '0.3s',
+            transitionDuration: '0.2s',
         });
     });
     
