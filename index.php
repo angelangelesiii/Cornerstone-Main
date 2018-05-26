@@ -43,7 +43,7 @@ get_header(); ?>
 										</p>
 									</div>
 									<div class="excerpt">
-										<?php the_excerpt(); ?>
+										<?php //the_excerpt(); ?>
 									</div>
 									<div class="btn-container">
 										<a href="<?php the_permalink(); ?>" class="btn">Read More</a>
@@ -57,7 +57,9 @@ get_header(); ?>
 					</div>
 	
 					<?php the_posts_navigation();
-					endif; ?>
+					endif; 
+					wp_reset_postdata();
+					?>
 				</div>
 			
 			</div>
