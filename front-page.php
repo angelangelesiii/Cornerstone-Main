@@ -13,8 +13,8 @@ get_header(); ?>
 			<?php // CONTENT--------------------
 
 			// GRID
-			// get_template_part( 'fp-parts/fp-grid' ); 
-
+			get_template_part( 'fp-parts/fp-blog-posts');
+			
 			// MESSAGE
 			get_template_part( 'fp-parts/fp-message' );
 
