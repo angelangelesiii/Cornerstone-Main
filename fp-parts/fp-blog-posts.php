@@ -1,14 +1,12 @@
 <?php 
-// Custom loop args
-$blogQuery = new WP_Query(array(
-    'post_type' 			=> 'post',
-    'posts_per_page' 		=> '3',
-));
 
 $featuredPostID = get_field('featured_blog_post','option')->ID;
 // echo '<pre>';
 // print_r( $featuredPostID );
 // echo '</pre>';
+
+$featuredPostIDcollection = array();
+
 ?>
 
 <!-- BLOG POSTS -->
@@ -36,11 +34,20 @@ $featuredPostID = get_field('featured_blog_post','option')->ID;
         </article>
 
         <?php 
+        $featuredPostIDcollection[] = get_sub_field('featured_post');
         endwhile;
         endif; 
         ?>
 
-        <?php if ( $blogQuery->have_posts() ) : // If have posts ?>
+        <?php 
+        // Custom loop args
+        $blogQuery = new WP_Query(array(
+            'post_type' 			=> 'post',
+            'posts_per_page' 		=> '5',
+            'post__not_in'          => $featuredPostIDcollection,
+        ));
+
+        if ( $blogQuery->have_posts() ) : // If have posts ?>
 
         <!-- Latest Posts -->
             
