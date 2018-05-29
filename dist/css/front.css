@@ -158,42 +158,65 @@
 /* BLOG                                      */
 /* ========================================= */
 
-section.latest-blog-posts {
+section.blog-posts {
     padding: 60px 0;
+    background: #222222;
 }
-section.latest-blog-posts .featured-post .card {
-    background-color: #292929;
+section.blog-posts .blog-slider-item {
+    
+}
+section.blog-posts .blog-slider-item .content {
+    height: 340px;
+    width: 340px;
+    margin: 0 15px;
     background-position: center center;
     background-size: cover;
+    overflow: hidden;
+    border-radius: 10px;
     position: relative;
+}
+section.blog-posts .blog-slider-item.featured-item .content {
+    width: 500px !important;
+}
+section.blog-posts .blog-slider-item .content .link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    height: 100%;
+    background: linear-gradient(to top, rgba(63, 154, 177, 0.75), rgba(255, 153, 0, 0.3));
+    opacity: 0;
+    transition:  all 0.5s ease;
+    -webkit-transition:  all 0.5s ease;
+    -moz-transition:  all 0.5s ease;
+    -ms-transition:  all 0.5s ease;
+    -o-transition:  all 0.5s ease;
 }
-section.latest-blog-posts .featured-post .card .sizer {
-    padding-bottom: 120%;
+section.blog-posts .blog-slider-item .content:hover .link-overlay {
+    opacity: 1;
+}
+section.blog-posts .blog-slider-item .content .title {
+    position: absolute;
+    bottom: -60%;
+    left: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))
+    padding: 10px 20px 30px;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2em;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
-section.latest-blog-posts .latest-posts .blog-post {
-    background: #e9e9e9;
-    overflow: hidden;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+section.blog-posts .blog-slider-item .content:hover .title {
+    bottom: 0;
 }
-section.latest-blog-posts .latest-posts .blog-post .thumbnail {
-    width: 176px;
-    float: left;
-}
-section.latest-blog-posts .latest-posts .blog-post .text {
-    float: left;
+section.blog-posts .blog-slider-item .content a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 

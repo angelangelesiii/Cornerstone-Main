@@ -12,43 +12,61 @@ $featuredPostID = get_field('featured_blog_post','option')->ID;
 ?>
 
 <!-- BLOG POSTS -->
-<section class="latest-blog-posts">
-    <div class="wrapper-medium row">
-
-        <?php if ($featuredPostID): // if there is a featured post ?>
-
-        <div class="featured-post column small-12 medium-5">
-            <div class="card" style="background-image: url(<?php echo get_the_post_thumbnail_url( $featuredPostID, 'bg-medium' ) ?>);">
-            <div class="sizer"></div>
-            </div>
-        </div>
-
-        <div class="latest-posts half column small-12 medium-7">
-
-        <?php else: // if none then make latest posts take up the whole space ?>
-        <div class="latest-posts full column small-12">
-        <?php endif; 
+<section class="blog-posts">
         
-        if ( $blogQuery->have_posts() ) : ?>
-            <!-- <h2 class="column-title">Latest Blog Posts</h2> -->
-            
-        <?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
-            
-            <article class="blog-post clearfix">
-                <img src="<?php the_post_thumbnail_url( 'square-medium' ) ?>" alt="<?php the_title(); ?>" class="thumbnail">
-                <div class="text">
-                    <h3 class="article-title"><?php the_title(); ?></h3>
-                    <p class="excerpt"><?php the_excerpt() ?></p>
-                    <a href="<?php the_permalink(); ?>" class="btn">Read More</a>
-                </div>
-            </article>
+    <div class="blog-slider-container">
+
+        <?php if (have_rows('featured_blog_posts','options')): ?>
+        
+        <!-- Featured Posts -->
+
+        <?php while (have_rows('featured_blog_posts','options')): the_row(); ?>
+
+        <article class="blog-slider-item featured-item">
+            <div class="content" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg-small' ) ?>);">
+                <a href="<?php echo get_the_permalink(get_sub_field('featured_post')); ?>">
+                    <div class="link-overlay">
+                        
+                    </div>
+                </a>
+                <a href="<?php echo get_the_permalink(get_sub_field('featured_post')); ?>">
+                    <h3 class="title"><?php echo get_the_title(get_sub_field('featured_post')); ?></h3>
+                </a>
+            </div>
+        </article>
 
         <?php 
+        endwhile;
+        endif; 
+        ?>
+
+        <?php if ( $blogQuery->have_posts() ) : // If have posts ?>
+
+        <!-- Latest Posts -->
+            
+        <?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); // Start loop?>
+
+        <article class="blog-slider-item">
+            <div class="content" style="background-image: url(<?php the_post_thumbnail_url( 'bg-small' ); ?>);">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="link-overlay">
+                        
+                    </div>
+                </a>
+                <a href="<?php the_permalink(); ?>">
+                    <h3 class="title"><?php the_title(); ?></h3>
+                </a>
+            </div>
+        </article>
+            
+    
+        <?php 
+        // Close latest posts loop
         endwhile; 
         endif; 
         wp_reset_postdata();
         ?>
-
-        </div>
+        
     </div>
+
 </section>
