@@ -162,8 +162,8 @@ section.blog-posts {
     padding: 60px 0;
     background: #222222;
 }
-section.blog-posts .blog-slider-item {
-    
+section.blog-posts .blog-slider-container {
+    position: relative;
 }
 section.blog-posts .blog-slider-item .content {
     height: 340px;
@@ -176,7 +176,7 @@ section.blog-posts .blog-slider-item .content {
     position: relative;
 }
 section.blog-posts .blog-slider-item.featured-item .content {
-    width: 500px !important;
+    width: 550px !important;
 }
 section.blog-posts .blog-slider-item .content .link-overlay {
     position: absolute;
@@ -184,7 +184,7 @@ section.blog-posts .blog-slider-item .content .link-overlay {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(63, 154, 177, 0.75), rgba(255, 153, 0, 0.3));
+    background: linear-gradient(to top, rgb(48, 118, 136), rgba(255, 0, 106, 0.4));
     opacity: 0;
     transition:  all 0.5s ease;
     -webkit-transition:  all 0.5s ease;
@@ -217,6 +217,42 @@ section.blog-posts .blog-slider-item .content:hover .title {
 section.blog-posts .blog-slider-item .content a {
     color: #FFFFFF;
     text-decoration: none;
+}
+/* slick layout */
+.blog-slider-container .slick-arrow {
+    padding: 0;
+    border: none;
+    outline: none;
+    height: 64px;
+    width: 64px;
+    text-align: center;
+    padding: 5px;
+    background: linear-gradient(to top left, #ff9900, #ff006a);
+    font-size: 1.6em;
+    color: #FFF;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+.blog-slider-container .slick-arrow:hover {
+    opacity: 1;
+}
+.blog-slider-container .slick-arrow.slick-prev {
+    left: 20px;
+}
+.blog-slider-container .slick-arrow.slick-next {
+    right: 20px;
 }
 
 
