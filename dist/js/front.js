@@ -18,5 +18,15 @@ jQuery(document).ready(function($){ // Document Ready
         arrows: false,
     });
 
+    // BLOG POSTS SLIDER
+    $('.blog-slider-container').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        arrows: false,
+        variableWidth: true,
+        infinite: true,
+        centerMode: true,
+    });
 
 });
