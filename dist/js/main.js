@@ -38,13 +38,26 @@ jQuery(document).ready(function($){ // Document Ready
         $('#belt-menu-alt-nav').toggleClass('menu-opened');
     }
 
+    var menuItem = $('ul#header-menu>li')
+    var menuStaggerAnimation = new TimelineMax()
+        .staggerFrom(menuItem, 0.5, {
+            opacity: 0,
+            x: 100,
+            ease: Back.easeOut
+        }, 0.1);
+
     $('#mainmenubutton').click(function(e) {
-       toggleMenu();
+        toggleMenu();
+        if ($('#mainmenupanel').hasClass('opened')) {
+            console.log('menu is opened so I will play animation');
+            menuStaggerAnimation.play(0);
+        }
     });
 
-    $('#menu-overlay').click(function(e) {
-        toggleMenu();
-    });
+    // $('#mainmenupanel').click(function(e) {
+    //     toggleMenu();
+    // });
+    
 
     // Parallax effect
     var mainController = new ScrollMagic.Controller(),
