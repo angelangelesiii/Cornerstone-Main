@@ -36,6 +36,7 @@ body.menu-opened {
 
 #main {
 	min-height: 500px;
+	background: #ffffff;
 }
 
 /*Clearfix*/
