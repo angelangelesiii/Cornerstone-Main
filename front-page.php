@@ -19,10 +19,10 @@ get_header(); ?>
 			get_template_part( 'fp-parts/fp-message' );
 
 			// FEATURED SLIDER
-			get_template_part( 'fp-parts/fp-featured-slider' ); 
+			// get_template_part( 'fp-parts/fp-featured-slider' ); 
 
 			// CORE
-			get_template_part( 'fp-parts/fp-core' ); 
+			// get_template_part( 'fp-parts/fp-core' ); 
 
 			?>
 
