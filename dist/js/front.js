@@ -18,7 +18,7 @@ jQuery(document).ready(function($){ // Document Ready
 
     // BLOG POSTS SLIDER
     $('.blog-slider-container').slick({
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
         speed: 1000,
         pauseOnHover: false,
