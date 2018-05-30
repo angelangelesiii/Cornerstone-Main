@@ -22,6 +22,7 @@ $featuredPostIDcollection = array();
 
         <article class="blog-slider-item featured-item">
             <div class="content" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg-small' ) ?>);">
+                <span class="label">Featured</span>
                 <a href="<?php echo get_the_permalink(get_sub_field('featured_post')); ?>">
                     <div class="link-overlay">
                         
