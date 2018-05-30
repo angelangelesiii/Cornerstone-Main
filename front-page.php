@@ -12,7 +12,10 @@ get_header(); ?>
 
 			<?php // CONTENT--------------------
 
-			// GRID
+			// OUTREACH MESSAGE
+			get_template_part( 'fp-parts/fp-outreach');
+
+			// BLOG POSTS
 			get_template_part( 'fp-parts/fp-blog-posts');
 			
 			// MESSAGE

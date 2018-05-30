@@ -31,4 +31,19 @@ jQuery(document).ready(function($){ // Document Ready
         centerMode: true,
     });
 
+    // PARALLAX FOR OUTREACH
+
+    var outreachParallaxStrength = $('.outreach-section').data('parallax-strength')+'%';
+    console.log('PS is '+outreachParallaxStrength);
+    var outreachParallax = new ScrollMagic.Scene({
+        triggerElement: '.outreach-section',
+        triggerHook: 1,
+        duration: ($(window).outerHeight()*2),
+    })
+    .setTween(TweenMax.to('.outreach-parallax-bg', 1, {
+        y: outreachParallaxStrength,
+    }))
+    .addIndicators()
+    .addTo(frontController);
+
 });
