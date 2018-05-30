@@ -1063,12 +1063,28 @@ SMALL ONLY <640px
 	#mainmenubutton .hint {
 		display: none;
 	}
+	#mainnav .logo-container {
+		top: 15px;
+		left: 20px;
+	}
+	#mainnav .logo {
+		max-height: 34px;
+	}
+	#website-title {
+		font-size: 1.5em;
+	}
+	.menu-button-container {
+		top: 15px;
+		right: 20px;
+	}
 }
 
 /*
 MEDIUM ONLY <1024px and >=640px
 */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	
+	
 
 }
 
@@ -1077,12 +1093,38 @@ MEDIUM BELOW <1024px
 */
 
 @media screen and (max-width: 63.9375em) {
+
+	/* HERO SECTION */
 	#mainheader .navbar-bg {
 		display: block;
 	}
 	#belt-menu-nav,
 	#belt-menu-alt-nav {
 		display: none;
+	}
+	#mainheader .navbar-bg {
+		height: 66px !important;
+	}
+	.hero-banner .hero-container .hero-image {
+		width: 100%;
+	}
+	.menu-button {
+		transform: scale(0.9)	;
+		-webkit-transform: scale(0.9)	;
+		-moz-transform: scale(0.9)	;
+		-ms-transform: scale(0.9)	;
+		-o-transform: scale(0.9)	;
+	}
+	/* Menu */
+	#header-menu, #header-menu > ul {
+		margin: 30px 0 0;
+		padding: 0 30px;
+	}
+	#header-menu > .menu-item {
+		display: block;
+	}
+	#header-menu > .menu-item > .sub-menu {
+		margin: 0 0 0 15px;
 	}
 }
 
