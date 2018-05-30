@@ -200,6 +200,24 @@ section.blog-posts .blog-slider-item .content {
 section.blog-posts .blog-slider-item.featured-item .content {
     width: 550px !important;
 }
+section.blog-posts .blog-slider-item.featured-item .content .label {
+    display: block;
+    background-color: #ff9900;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 50px 30px 5px;
+    color: #FFFFFF;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: -25px;
+    transform: rotate(45deg) translate(0, -30px);
+    -webkit-transform: rotate(45deg) translate(0, -30px);
+    -moz-transform: rotate(45deg) translate(0, -30px);
+    -ms-transform: rotate(45deg) translate(0, -30px);
+    -o-transform: rotate(45deg) translate(0, -30px);
+}
 section.blog-posts .blog-slider-item .content .link-overlay {
     position: absolute;
     top: 0;
