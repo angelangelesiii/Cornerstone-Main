@@ -179,15 +179,23 @@ section.blog-posts {
 section.blog-posts .blog-slider-container {
     position: relative;
 }
+section.blog-posts .blog-slider-item {
+    outline: none;
+}
 section.blog-posts .blog-slider-item .content {
     height: 340px;
     width: 340px;
-    margin: 0 15px;
+    margin: 0 0 0 30px;
     background-position: center center;
     background-size: cover;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
 }
 section.blog-posts .blog-slider-item.featured-item .content {
     width: 550px !important;
@@ -247,20 +255,30 @@ section.blog-posts .blog-slider-item .content a {
     opacity: 0.5;
     position: absolute;
     z-index: 10;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    bottom: 0;
+    transform: translateY(50%) scale(0.8);
+    -webkit-transform: translateY(50%) scale(0.8);
+    -moz-transform: translateY(50%) scale(0.8);
+    -ms-transform: translateY(50%) scale(0.8);
+    -o-transform: translateY(50%) scale(0.8);
     border-radius: 32px;
     -webkit-border-radius: 32px;
     -moz-border-radius: 32px;
     -ms-border-radius: 32px;
     -o-border-radius: 32px;
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
 }
 .blog-slider-container .slick-arrow:hover {
     opacity: 1;
+    transform: translateY(50%) scale(1);
+    -webkit-transform: translateY(50%) scale(1);
+    -moz-transform: translateY(50%) scale(1);
+    -ms-transform: translateY(50%) scale(1);
+    -o-transform: translateY(50%) scale(1);
 }
 .blog-slider-container .slick-arrow.slick-prev {
     left: 20px;

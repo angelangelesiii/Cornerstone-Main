@@ -8,8 +8,6 @@ jQuery(document).ready(function($){ // Document Ready
 
     var frontController = new ScrollMagic.Controller();
 
-    
-
     // FEATURED SLIDER
     $('.featured-slider-container').slick({
         autoplay: true,
@@ -20,9 +18,10 @@ jQuery(document).ready(function($){ // Document Ready
 
     // BLOG POSTS SLIDER
     $('.blog-slider-container').slick({
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 3000,
         speed: 1000,
+        pauseOnHover: false,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
