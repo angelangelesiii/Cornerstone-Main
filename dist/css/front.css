@@ -157,6 +157,7 @@
 .outreach-section .content .text {
     width: 60%;
     color: #FFFFFF;
+    text-align: center;
 }
 .outreach-section .content .text h2.title {
     font-size: 3em;
@@ -210,6 +211,7 @@ section.blog-posts .blog-slider-item.featured-item .content .label {
     text-transform: uppercase;
     font-weight: 700;
     position: absolute;
+    z-index: 20;
     top: 0;
     right: -25px;
     transform: rotate(45deg) translate(0, -30px);
@@ -224,8 +226,7 @@ section.blog-posts .blog-slider-item .content .link-overlay {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgb(48, 118, 136), rgba(255, 0, 106, 0.4));
-    opacity: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
     transition:  all 0.5s ease;
     -webkit-transition:  all 0.5s ease;
     -moz-transition:  all 0.5s ease;
@@ -233,15 +234,15 @@ section.blog-posts .blog-slider-item .content .link-overlay {
     -o-transition:  all 0.5s ease;
 }
 section.blog-posts .blog-slider-item .content:hover .link-overlay {
-    opacity: 1;
+    background: linear-gradient(to top, rgba(48, 118, 136, 0.4), rgba(255, 0, 106, 0.2));
 }
 section.blog-posts .blog-slider-item .content .title {
     position: absolute;
-    bottom: -60%;
+    bottom: 0;
     left: 0;
     width: 100%;
     padding: 10px 20px 30px;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: 700;
     margin: 0;
     line-height: 1.2em;

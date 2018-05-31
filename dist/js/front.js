@@ -42,7 +42,7 @@ jQuery(document).ready(function($){ // Document Ready
     .setTween(TweenMax.to('.outreach-parallax-bg', 1, {
         y: outreachParallaxStrength,
     }))
-    .addIndicators()
+    // .addIndicators()
     .addTo(frontController);
 
 });
