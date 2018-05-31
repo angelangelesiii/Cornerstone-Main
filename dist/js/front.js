@@ -33,7 +33,7 @@ jQuery(document).ready(function($){ // Document Ready
     // PARALLAX FOR OUTREACH
 
     var outreachParallaxStrength = $('.outreach-section').data('parallax-strength')+'%';
-    console.log('PS is '+outreachParallaxStrength);
+    // console.log('PS is '+outreachParallaxStrength);
     var outreachParallax = new ScrollMagic.Scene({
         triggerElement: '.outreach-section',
         triggerHook: 1,
