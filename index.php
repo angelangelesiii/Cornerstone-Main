@@ -6,7 +6,7 @@
 get_header(); ?>
 <div class="spacer"></div>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area blog-area">
 		<main id="main" class="site-main">
 
 			<div class="wrapper-big row collapse">
@@ -46,7 +46,7 @@ get_header(); ?>
 										<?php //the_excerpt(); ?>
 									</div>
 									<div class="btn-container">
-										<a href="<?php the_permalink(); ?>" class="btn">Read More</a>
+										<a href="<?php the_permalink(); ?>" class="btn btn--white">Read More</a>
 									</div>
 								</div>
 							</div>
