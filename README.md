@@ -8,12 +8,13 @@ Licensed under GNU GPL 3.0
 
 # Weekly Log
 
-### Log for May 29, 2018
+### Log for May 30, 2018
 1. Changed overall feel for the website. Introduced vibrant gradients and rounded cards design. Thinking of darkening the website to give a more inviting energy.
 2. Animated menu items.
 3. Optimized masonry layout on blog page.
 4. Added blog section to front page.
 5. Added location page for locations.
+6. Added segment for outreach and giving in the front page.
 
 ### Log for May 9, 2018
 1. Formatted events page
