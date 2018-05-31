@@ -14,6 +14,16 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<nav class="footer-nav">
+			<div class="wrapper-medium">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'footer-menu-1',
+						'menu_id'        => 'footer-menu',
+					));
+				?>
+			</div>
+		</nav>
 		<div class="wrapper-medium">
 			<h2>Follow us on social media</h2>
 			<ul class="social-links">
