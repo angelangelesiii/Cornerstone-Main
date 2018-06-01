@@ -22,7 +22,7 @@ if ($outreach) $parallaxStrength = $outreach['outreach_parallax_strength'];
             <div class="text">
                 <h2 class="title">Helping the least of these</h2>
                 <p class="subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab provident laudantium consectetur voluptatum.</p>
-                <p><a href="#" class="btn btn--white">Give Now</a></p>
+                <p><a href="#" class="btn btn--white btn--large">Give Now</a></p>
             </div>
         </div>
     </div>
