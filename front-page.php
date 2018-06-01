@@ -15,11 +15,14 @@ get_header(); ?>
 			// OUTREACH MESSAGE
 			get_template_part( 'fp-parts/fp-outreach');
 
+			// CORNERSTONE INTRO
+			get_template_part( 'fp-parts/fp-cs-video');
+
 			// BLOG POSTS
 			get_template_part( 'fp-parts/fp-blog-posts');
 			
 			// MESSAGE
-			get_template_part( 'fp-parts/fp-message' );
+			// get_template_part( 'fp-parts/fp-message' );
 
 			// FEATURED SLIDER
 			// get_template_part( 'fp-parts/fp-featured-slider' ); 

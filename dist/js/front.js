@@ -45,4 +45,18 @@ jQuery(document).ready(function($){ // Document Ready
     // .addIndicators()
     .addTo(frontController);
 
+    // CS INTRO ANIMATIONS
+    var csIntroAnimation = new ScrollMagic.Scene({
+        triggerElement: '.cs-video',
+        triggerHook: 0.5,
+        reverse: false
+    })
+    .setTween(TweenMax.from('.text-window', 1.5, {
+        x: '-100%',
+        autoAlpha: 0.5,
+        ease: Power3.easeOut,
+    }))
+    .addIndicators()
+    .addTo(frontController);
+
 });
