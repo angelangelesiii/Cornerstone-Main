@@ -228,6 +228,10 @@ function cornerstone_main_scripts() {
 		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
 		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/acf-map.js', false, false, true );
 	}
+	if(is_page('locations')) {
+		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
+		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/all-locations-map.js', false, false, true );
+	}
 	
 	// Slick Slider
 	wp_enqueue_script( 'slick', get_template_directory_uri().'/dist/js/slick.min.js', false, false, true );

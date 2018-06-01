@@ -997,6 +997,15 @@ h2.event-heading {
 
 
 /* ========================================= */
+/* LOCATIONS                                 */
+/* ========================================= */
+
+.location-map {
+	height: 500px;
+}
+
+
+/* ========================================= */
 /* BLOG                                      */
 /* ========================================= */
 
@@ -1016,7 +1025,7 @@ h1.main-title {
 	padding: 20px 0;
 }
 .blog-container .blog-item .container {
-	background: linear-gradient(to top, #0c1f24, #000000);
+	background: linear-gradient(to top, #000000, #0c1f24);
 	/* border: 1px solid #d8d8d8; */
 	border-radius: 10px;
 	overflow: hidden;

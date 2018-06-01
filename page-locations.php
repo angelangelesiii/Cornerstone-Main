@@ -22,70 +22,37 @@ $content = str_replace(']]>', ']]&gt;', $content);
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main events-type">
-			<div class="wrapper-big">
+			<?php 
+			$locationQuery = new WP_Query(array(
+				'post_type' 			=> 'location',
+				'posts_per_page' 		=> '6',
+				'orderby'				=> 'title',
+				'order'					=> 'ASC'
+			));
 
-				<?php 
-				// Custom loop args
-				$eventQuery = new WP_Query(array(
-					'post_type' 			=> 'location',
-					'posts_per_page' 		=> '10',
-				));
+			if ($locationQuery->have_posts()): ?>
 
-				// if custom loop have posts (event)
-				if($eventQuery->have_posts()): ?>
+			<div class="location-map acf-map">
 
-				<h2 class="event-heading">Locations</h2>
+			<?php
+				while($locationQuery->have_posts()): $locationQuery->the_post();
+				$location = get_field('location_location');
+			?>
 
-				<div class="events-container row small-up-1 medium-up-3 collapse">
-
-				<?php
-					// start looping through posts
-					while($eventQuery->have_posts()): $eventQuery->the_post();
-					$thumbnailStyle = '';
-					if (has_post_thumbnail()) {
-						$thumbnailStyle = 'background-image: url('.get_the_post_thumbnail_url(get_the_ID(), 'bg-small').');';
-					} elseif (get_field('fallback_thumbnail', 'options')) {
-						$thumbnailStyle = 'background-image: url('.wp_get_attachment_image_src(get_field('fallback_thumbnail', 'options'), 'bg-small')[0].');';
-					} else {
-						$thumbnailStyle = 'background-color: #3F9AB1;';
-					}
-
-					//print_r(wp_get_attachment_image_src(get_field('fallback_thumbnail', 'options'), 'bg-small'));
-				?>
-				
-					<article class="event-item column column-block">
-						<div class="inner">
-							<a href="<?php the_permalink(); ?>"><span class="event-thumbnail" style="<?php echo $thumbnailStyle; ?>"><div class="padder"></div></span></a>
-							<div class="content">
-								<h3 class="event-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<p><?php the_excerpt(); ?></p>
-								
-								<div class="btn-container">
-									<a href="<?php the_permalink(); ?>" class="btn">Details</a>
-								</div>
-							</div>
-						</div>
-					</article>
-
-				<?php
-					// end looping
-					endwhile; ?>
-				
+				<!-- LOCATION: <?php the_title(); ?> -->
+				<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+					<h3><?php the_title(); ?></h3>
 				</div>
 
-				<?php
-				//end the loop and restore global post data
-				endif;
-				wp_reset_query();
-				?>
-
+			<?php endwhile; ?>
+			
 			</div>
+
+			<?php
+			endif; 
+			wp_reset_postdata(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
-	<div class="wrapper-medium">
-		<?php //get_sidebar(); ?>
-	</div>
 
 <?php
 get_footer();
