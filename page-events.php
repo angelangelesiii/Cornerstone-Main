@@ -96,7 +96,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
 				<?php
 				//end the loop and restore global post data
 				endif;
-				wp_reset_query();
+				wp_reset_postdata();
 				?>
 
 			</div>

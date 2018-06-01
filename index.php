@@ -45,9 +45,7 @@ get_header(); ?>
 									<div class="excerpt">
 										<?php //the_excerpt(); ?>
 									</div>
-									<div class="btn-container">
-										<a href="<?php the_permalink(); ?>" class="btn btn--white">Read More</a>
-									</div>
+									
 								</div>
 							</div>
 						</article>

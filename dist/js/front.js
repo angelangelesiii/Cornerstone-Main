@@ -54,9 +54,9 @@ jQuery(document).ready(function($){ // Document Ready
     .setTween(TweenMax.from('.text-window', 1.5, {
         x: '-100%',
         autoAlpha: 0.5,
-        ease: Power3.easeOut,
+        ease: Power4.easeOut,
     }))
-    .addIndicators()
+    // .addIndicators()
     .addTo(frontController);
 
 });
