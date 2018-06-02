@@ -223,15 +223,7 @@ function cornerstone_main_scripts() {
 	// GSAP and ScrollMagic
 	require get_template_directory() . '/inc/javascript-dev.php';
 	
-	// ACF map
-	if(get_post_type() == 'location') {
-		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
-		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/acf-map.js', false, false, true );
-	}
-	if(is_page('locations')) {
-		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
-		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/all-locations-map.js', false, false, true );
-	}
+	
 	
 	// Slick Slider
 	wp_enqueue_script( 'slick', get_template_directory_uri().'/dist/js/slick.min.js', false, false, true );
@@ -244,9 +236,21 @@ function cornerstone_main_scripts() {
 	// ImagesLoaded
 	// wp_enqueue_script( 'imagesloaded', get_template_directory_uri().'/dist/js/imagesloaded.pkgd.min.js', false, false, true );
 
+	// ACF map
+	if(get_post_type() == 'location') {
+		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
+		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/acf-map.js', false, false, true );
+	}
+	if(is_page('locations')) {
+		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
+		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/all-locations-map.js', false, false, true );
+	}
+
 	// Main and Front JS
 	wp_enqueue_script( 'main-js', get_template_directory_uri().'/dist/js/main.js', false, false, true );
 	if (is_front_page()) wp_enqueue_script( 'front-js', get_template_directory_uri().'/dist/js/front.js', false, false, true );
+
+	
 }
 add_action( 'wp_enqueue_scripts', 'cornerstone_main_scripts' );
 

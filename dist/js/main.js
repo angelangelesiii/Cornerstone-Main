@@ -174,4 +174,39 @@ jQuery(document).ready(function($){ // Document Ready
         $('.header-menu-container').hScroll(40); // You can pass (optionally) scrolling amount
     });
 
+    // LOCATION LIST ACF MAP
+
+    // set map height
+    var locationMap = $('.location-section .location-map');
+    locationMap.outerHeight($(window).height() - $('#belt-menu-nav').outerHeight());
+    // locationMap.css('top', $('#belt-menu-nav').outerHeight());
+    locationMap.css('position','fixed');
+
+    $(window).load(function(e) {
+        locationMap.css('position', 'fixed');
+        locationMap.css('top', $('#belt-menu-nav').outerHeight());
+        locationMap.css('bottom', 'auto');
+    });
+
+    // location-map pin scene
+    var locationMapPinning = new ScrollMagic.Scene({
+        triggerElement: '#colophon',
+        triggerHook: 1,
+    })
+    .on('enter', function(e) {
+        locationMap.css('position', 'absolute');
+        locationMap.css('top', 'auto');
+        locationMap.css('bottom', '0');
+        console.log('ENTER!');
+    })
+    .on('leave', function(e) {
+        locationMap.css('position', 'fixed');
+        locationMap.css('top', $('#belt-menu-nav').outerHeight());
+        locationMap.css('bottom', 'auto');
+        console.log('EXIT!');
+    })
+    .addIndicators()
+    .addTo(mainController);
+
+
 });

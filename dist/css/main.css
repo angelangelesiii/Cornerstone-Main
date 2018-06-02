@@ -1000,8 +1000,23 @@ h2.event-heading {
 /* LOCATIONS                                 */
 /* ========================================= */
 
-.location-map {
-	height: 500px;
+.location-section {
+	position: relative;
+}
+.location-section .location-map {
+	height: 100vh;
+	width: 50%;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+}
+.location-section .location-list {
+	width: 50%;
+	margin: 0 0 0 auto;
+	padding: 30px;
+	color: #FFFFFF;
+	background-color: #222222;
 }
 
 
