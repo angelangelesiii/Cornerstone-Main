@@ -205,8 +205,23 @@ jQuery(document).ready(function($){ // Document Ready
         locationMap.css('bottom', 'auto');
         console.log('EXIT!');
     })
-    .addIndicators()
+    // .addIndicators()
     .addTo(mainController);
+
+    // BLOG PAGE FEATURED SLIDER
+    $('#blogpageslider').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        fade: true,
+        speed: 1000,
+        pauseOnHover: false,
+        arrows: false,
+        // prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+        // nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+        // variableWidth: true,
+        infinite: true,
+        // centerMode: true,
+    });
 
 
 });
