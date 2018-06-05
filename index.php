@@ -54,12 +54,14 @@ get_header(); ?>
 					while ( have_posts() ) : the_post();
 					$significanceClass = '';
 					if(get_field('significant')) $significanceClass = 'wide-2';
-					
 				?>
 		
 					<article class="blog-item grid-item <?php echo $significanceClass; ?>">
+
+						<?php if(!get_field('significant')): // IF NOT SIGNIFICANT ?>
+
 						<div class="container">
-							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg-medium' ) ?>" alt="" class="post-image"></a>
+							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg-small' ) ?>" alt="" class="post-image"></a>
 							<div class="content">
 
 								<span class="category item-meta">
@@ -68,13 +70,40 @@ get_header(); ?>
 									?>
 									<a href="<?php echo get_term_link($categoryName); ?>"><?php echo $categoryName->name; ?></a>
 								</span>
-								<h2 class="title"><?php the_title(); ?></h2>
+								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<span class="author date item-meta">
 								By <?php the_author(); ?> <?php the_date( 'F j, Y', 'on '); ?>
 							</span>	
 								
 							</div>
 						</div>
+
+						<?php elseif(get_field('significant')): // IF SIGNIFICANT ?>
+
+						<div class="container">
+							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg-medium' ) ?>" alt="" class="post-image"></a>
+
+							<a href="<?php the_permalink(); ?>"><span class="overlay"></span></a>
+
+							<div class="content">
+
+								<span class="category item-meta">
+									<?php $categoryName = get_the_category($post->ID)[0];
+									// var_dump( $categoryName );
+									?>
+									<a href="<?php echo get_term_link($categoryName); ?>"><?php echo $categoryName->name; ?></a>
+								</span>
+								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<span class="author date item-meta">
+								By <?php the_author(); ?> <?php the_date( 'F j, Y', 'on '); ?>
+							</span>	
+								
+							</div>
+						</div>
+
+
+						<?php endif; ?>
+
 					</article>
 					
 				<?php endwhile; ?>
