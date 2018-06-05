@@ -218,7 +218,7 @@ jQuery(document).ready(function($){ // Document Ready
         arrows: false,
         // prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
         // nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
-        // variableWidth: true,
+        dots: true,        
         infinite: true,
         // centerMode: true,
     });
