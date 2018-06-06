@@ -8,6 +8,13 @@ Licensed under GNU GPL 3.0
 
 # Weekly Log
 
+### Log for June 6, 2018
+1. Redesigned blog page
+2. Redesigned single blog posts page
+3. Redesigned location page
+4. Redesigned events page
+5. Code cleanups
+
 ### Log for May 30, 2018
 1. Changed overall feel for the website. Introduced vibrant gradients and rounded cards design. Thinking of darkening the website to give a more inviting energy.
 2. Animated menu items.
