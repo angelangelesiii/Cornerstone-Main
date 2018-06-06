@@ -155,7 +155,15 @@ jQuery(document).ready(function($){ // Document Ready
             transitionDuration: '0.2s',
         });
     });
-    
+
+    var $eventGrid = $('.events-container').imagesLoaded(function(){
+        $eventGrid.masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+            transitionDuration: '0.2s',
+        });
+    });
 
     // BLOG FADERS
     $('.blog-item .excerpt').each(function(e) {

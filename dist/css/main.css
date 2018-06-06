@@ -214,6 +214,22 @@ a.btn.btn--icon.btn--large.btn--icon:hover {
 a.btn.btn--icon.icon-location::after {
 	content: '\f041';
 }
+a.read-more-btn {
+	font-size: 1em;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	padding: 10px;
+	text-transform: uppercase;
+	border-radius: 5px;
+}
+a.read-more-btn.btn--white:link,
+a.read-more-btn.btn--white:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.read-more-btn.btn--white:hover {
+	background-color: #999999;
+}
 
 /* ========================================= */
 /* HEADER and NAV                            */
@@ -923,13 +939,18 @@ article.article .location-description {
 /* EVENTS                                    */
 /* ========================================= */
 
+#main.events-type {
+	background-color: #222222;
+	padding: 20px 0;
+}
 h2.event-heading {
 	font-size: 3em;
 	font-weight: 200;
 	text-align: center;
 	padding: 0 80px;
-	margin: 30px 100px 80px;
+	margin: 10px;
 	display: block;
+	color: #FFFFFF;
 }
 .events-container {
 	margin: 30px 0 50px;
@@ -937,47 +958,73 @@ h2.event-heading {
 .events-container .event-item {
 	padding: 0 15px 30px !important;
 }
-.events-container .event-item .inner {
-	background: #FFFFFF;
-	border: 1px solid #dddddd;
-	box-shadow: 1.5px 1.5px 0 #dddddd;
-}
 .events-container .event-item .event-thumbnail {
-	background-color: #3F9AB1;
-	background-size: cover;
-	background-position: center center;
 	display: block;
+	overflow: hidden;
+	border-radius: 10px;
 }
-.events-container .event-item .event-thumbnail .padder {
-	padding-bottom: 56.25%;
-	opacity: 0;
-	background-color: #FFFFFF;
+.events-container .event-item .inner {
+	position: relative;
 }
-.events-container .event-item .event-thumbnail:hover .padder {
-	opacity: 0.15;
+.events-container .event-item .image-link .upcoming-label {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	display: inline-block;
+	padding: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: 900;
+	/* letter-spacing: 0.1em; */
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
 }
 .events-container .event-item .content {
-	padding: 30px 30px 40px;
-	text-align: left;
+	padding: 0 0 20px;
+	border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+    margin-bottom: 15px;
 }
-.events-container .event-item .content .btn-container {
-	text-align: left;
+.events-container .event-item .event-meta.date {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #FFFFFF;
+	margin: 15px 0 0;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 0.12em;
+	padding: 7px;
 }
-.events-container .event-item .content .schedule {
-	font-size: 1.5em;
+.events-container .event-item.item-1 .event-meta.date {
+	background-color: rgba(255, 153, 0, 0.5);
+	font-size: 1.1em;
 	font-weight: 200;
-	color: #9b9b9b;
-	margin: 0 0 10px;
 }
-.events-container .event-item .content .event-title {
-	font-size: 1.85em;
-	line-height: 1em;
-	margin: 0 0 20px;	
+.events-container .event-item .event-title {
+	font-size: 1.6em;
+	margin: 10px 0;
+	line-height: 1.2em;
 }
-.events-container .event-item .content .event-title a:link,
-.events-container .event-item .content .event-title a:visited {
+.events-container .event-item.wide-2 .event-title {
+	font-size: 2.7em;
+}
+.events-container .event-item.wide-2.item-1 .event-title {
+	font-size: 3.1em;
+}
+.events-container .event-item .event-title a:link,
+.events-container .event-item .event-title a:visited {
+	color: #FFFFFF;
 	text-decoration: none;
-	color: #3F9AB1;
+}
+.events-container .event-item .excerpt {
+	font-size: 1em;
+	color: #FFFFFF;
+	font-weight: 100;
+}
+.events-container .event-item.item-1 .excerpt {
+	font-size: 1.3em;
+}
+.events-container .event-item .content .link-container {
+	text-align: right;
 }
 
 /* Single Event */
