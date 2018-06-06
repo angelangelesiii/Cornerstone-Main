@@ -20,15 +20,26 @@ get_header(); ?>
 					<!-- START FEATURED POSTS SLIDER -->
 					<div class="featured-posts-slider" id="blogpageslider">
 					
-					<?php while (have_rows('featured_blog_posts','options')): the_row(); ?>
+					<?php while (have_rows('featured_blog_posts','options')): the_row(); 
+						$featuredItemCategory = get_the_category(get_sub_field('featured_post'))[0];
+						// var_dump(get_the_category(get_sub_field('featured_post'))[0]);
+					?>
 
 						<!-- <?php echo 'POST ITEM '.get_the_title( get_sub_field('featured_post') ).' - #'.get_sub_field('featured_post'); ?> -->
 						<div class="featured-item">
 							<div class="featured-item-contents" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg-medium' ) ?>);">
+								<a href="<?php echo get_the_permalink( get_sub_field('featured_post') ); ?>">
 								<div class="text">
-									<!-- <h2><?php echo get_the_title( get_sub_field('featured_post') ); ?></h2> -->
+										<div class="overlay"></div>
+										<div class="content">
+											<span class="category-meta">
+												<?php echo $featuredItemCategory->name; ?>
+											</span>
+											<h2><?php echo get_the_title( get_sub_field('featured_post') ); ?></h2>
 								</div>
 							</div>
+								</a>
+						</div>
 						</div>
 
 					<?php endwhile; ?>
