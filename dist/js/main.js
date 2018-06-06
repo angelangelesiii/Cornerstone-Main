@@ -156,6 +156,17 @@ jQuery(document).ready(function($){ // Document Ready
         });
     });
     
+
+    // BLOG FADERS
+    $('.blog-item .excerpt').each(function(e) {
+        console.log('excerpt: '+$(this).outerHeight());
+        if($(this).outerHeight() >= 199) {
+            console.log('higher');
+            $(this).find('.fade').css('visibility','visible');
+        }
+    });
+
+    // HORIZONTAL SCROLL FOR MENU
     jQuery(function ($) {
         $.fn.hScroll = function (amount) {
             amount = amount || 120;

@@ -1156,8 +1156,56 @@ h1.main-title {
 	.blog-item.wide-2:hover .container .post-image {
 		opacity: 0.8;
 	}
+	/* regular without image */
+	.blog-item.no-thumb .container {
+		border-radius: 10px;
+		border: 1px rgba(255, 255, 255, 0.2) solid;
+		overflow: hidden;
+		padding: 8px 20px 20px;
+	}
+	.blog-item.no-thumb .container .content {
+		border: none;
+		padding: 0;
+	}
+	.blog-item.no-thumb .container .content .title {
+		font-size: 2.2em;
+		font-weight: 200;
+	}
+	.blog-item .container .content .excerpt {
+		font-weight: 100;
+		font-size: 0.95em;
+		position: relative;
+		max-height: 200px;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.blog-item .container .content .excerpt .fade {
+		position: absolute;
+		z-index: 3;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 80px;
+		background: linear-gradient(to top, #222222, #22222200);
+		display: inline-block;
+		visibility: hidden;
+	}
+	.blog-item .container .content .read-more {
+		margin: 0;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		font-size: 0.9em;
+	}
+	.blog-item .container .content .read-more a:link,
+	.blog-item .container .content .read-more a:visited{
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	.blog-item .container .content .read-more a:hover {
+		text-decoration: underline;
+	}
 	
-
 
 .grid-sizer,
 .grid-item { 

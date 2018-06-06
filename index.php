@@ -29,17 +29,17 @@ get_header(); ?>
 						<div class="featured-item">
 							<div class="featured-item-contents" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg-medium' ) ?>);">
 								<a href="<?php echo get_the_permalink( get_sub_field('featured_post') ); ?>">
-								<div class="text">
+									<div class="text">
 										<div class="overlay"></div>
 										<div class="content">
 											<span class="category-meta">
 												<?php echo $featuredItemCategory->name; ?>
 											</span>
 											<h2><?php echo get_the_title( get_sub_field('featured_post') ); ?></h2>
-								</div>
-							</div>
+										</div>
+									</div>
 								</a>
-						</div>
+							</div>
 						</div>
 
 					<?php endwhile; ?>
@@ -64,7 +64,8 @@ get_header(); ?>
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
 					$significanceClass = '';
-					if(get_field('significant')) $significanceClass = 'wide-2';
+					if(get_field('significant')) $significanceClass.= ' wide-2';
+					if(!has_post_thumbnail( $post->ID )) $significanceClass.= ' no-thumb';
 				?>
 		
 					<article class="blog-item grid-item <?php echo $significanceClass; ?>">
@@ -74,18 +75,33 @@ get_header(); ?>
 						<div class="container">
 							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg-small' ) ?>" alt="" class="post-image"></a>
 							<div class="content">
-
+								<?php if(has_post_thumbnail( $post->ID )): ?>
 								<span class="category item-meta">
 									<?php $categoryName = get_the_category($post->ID)[0];
 									// var_dump( $categoryName );
 									?>
 									<a href="<?php echo get_term_link($categoryName); ?>"><?php echo $categoryName->name; ?></a>
 								</span>
+								<?php endif; ?>
 								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<?php if(!has_post_thumbnail( $post->ID )): ?>
+								<span class="category item-meta">
+									<?php $categoryName = get_the_category($post->ID)[0];
+									// var_dump( $categoryName );
+									?>
+									<a href="<?php echo get_term_link($categoryName); ?>"><?php echo $categoryName->name; ?></a>
+								</span>
+								<?php endif; ?>
 								<span class="author date item-meta">
-								By <?php the_author(); ?> <?php the_date( 'F j, Y', 'on '); ?>
-							</span>	
-								
+									By <?php the_author(); ?> <?php the_date( 'F j, Y', 'on '); ?>
+								</span>	
+								<?php if(!has_post_thumbnail( $post->ID )): ?>
+								<p class="excerpt">
+									<?php echo get_the_excerpt( $post->ID ); ?>
+									<span class="fade"></span>
+								</p>
+								<p class="read-more"><a href="<?php the_permalink(); ?>">Read More &raquo;</a></p>
+								<?php endif; ?>
 							</div>
 						</div>
 
