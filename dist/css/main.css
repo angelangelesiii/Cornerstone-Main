@@ -846,15 +846,24 @@ a.read-more-btn.btn--white:hover {
 /* POST                                      */
 /* ========================================= */
 
+#main.site-main.post {
+	background: #222222;
+	margin: 0;
+}
 .hero-banner.post-banner {
-	min-height: 700px;
+	min-height: 500px;
 }
 .hero-banner.post-banner .overlay {
-	opacity: 0.3 !important;
+	opacity: 1 !important;
+	background: linear-gradient(to top, #222222, #22222200);
+	position: absolute;
+	bottom: 0;
+	top: auto;
+	height: 400px;
 }
 article.article {
-	margin-top: -100px;
-	margin-bottom: 30px;
+	margin-top: -80px;
+	margin-bottom: 60px;
 	position: relative;
 	z-index: 3;
 	/* border: 1px solid #d8d8d8; */
@@ -863,8 +872,11 @@ article.article {
 	margin-top: 0;
 }
 article.article .article-content {
-	background: #ffffff;
+	border: 2px rgb(255, 255, 255, 0.2) solid;
 	padding: 50px;
+	border-radius: 10px;
+	color: #eeeeee;
+	font-size: 1.1rem;
 }
 article.article .article-content.no-padding {
 	padding: 0;
@@ -919,7 +931,7 @@ article.article .article-title-container {
 article.article .article-title {
 	color: #FFFFFF;
 	background: rgba(0, 0, 0, 0.7);
-	font-size: 4em;
+	font-size: 3em;
 	line-height: 1.4em;
 	display: inline;
 	box-shadow: 10px 0 0 rgba(0, 0, 0, 0.7), -10px 0 0 rgba(0, 0, 0, 0.7);
@@ -927,6 +939,42 @@ article.article .article-title {
 article.article .location-description {
 	margin-top: 100px;
 	padding-top: 30px;
+}
+article.article .article-meta {
+	margin-bottom: 40px;
+}
+article.article .article-meta .avatar {
+	display: block;
+	border-radius: 50%;
+	height: 64px;
+	width: 64px;
+	overflow: hidden;
+	float: left;
+	margin-right: 10px;
+}
+article.article .article-meta .meta {
+	font-size: 0.8em;
+	font-weight: 700;
+	/* line-height: 1.2em; */
+	padding: 10px 0;
+	display: inline-block;
+	letter-spacing: 0.05em;
+}
+article.article .post-edit-link:link,
+article.article .post-edit-link:visited {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 7px 17px;
+	font-size: 0.9em;
+	background: #FFFFFF22;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+article.article .post-edit-link:hover {
+	background: #FFFFFF66;
 }
 
 /* Page Settings */
@@ -1252,7 +1300,7 @@ h1.main-title {
 	.blog-item .container .content .read-more a:hover {
 		text-decoration: underline;
 	}
-	
+
 
 .grid-sizer,
 .grid-item { 
@@ -1370,6 +1418,53 @@ h1.main-title {
 	background: #ffffff;
 	padding: 20px;
 	margin-bottom: 15px;
+}
+#secondary .widget.widget_search {
+	padding: 0;
+	border: none;
+	background: none;
+}
+#secondary .widget.widget_search input[type="search"] {
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	background: #ffffff22;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 10px;
+	outline: none;
+	font-size: 0.9em;
+	font-weight: 700;
+	border: none;
+}
+#secondary .widget.widget_search input[type="search"]:focus {
+	background: #FFFFFF;
+}
+#secondary .widget.widget_search input[type="submit"] {
+	display: none;
+}
+#secondary .widget {
+	padding: 0;
+	border: 0;
+	background: none;
+}
+#secondary .widget h2 {
+	font-size: 1.6em;
+	font-weight: 700;
+	color: #FFFFFF;
+}
+#secondary .widget ul {
+	margin: 0 0 10px 20px;
+	padding: 0 0 0 20px;
+	list-style-type: none;
+}
+#secondary a:link,
+#secondary a:visited {
+	color: #9e9e9e;
+	text-decoration: none;
+}
+#secondary a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
 }
 
 

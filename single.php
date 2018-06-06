@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" <?php post_class('site-main') ?>>
 			<div class="wrapper-medium row collapse">
 				<div class="column large-9 small-12 main-container">
 					<?php
@@ -21,6 +21,14 @@ get_header(); ?>
 							<h1 class="article-title"><?php the_title(); ?></h1>
 						</div>
 						<div class="article-content">
+							<div class="article-meta clearfix">
+								<?php echo get_avatar(get_the_author_meta('ID'), 64) ?>
+								<span class="meta">
+									by <span class="author-name"><?php the_author(); ?></span><br/>
+									on <span class="date"><?php the_date(); ?></span>
+								</span>
+							</div>
+							<?php edit_post_link('<i class="fas fa-edit"></i> Edit'); ?>
 							<?php the_content(); ?>
 						</div>
 					</article>
