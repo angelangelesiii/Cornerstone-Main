@@ -216,13 +216,13 @@ jQuery(document).ready(function($){ // Document Ready
         locationMap.css('position', 'absolute');
         locationMap.css('top', 'auto');
         locationMap.css('bottom', '0');
-        console.log('ENTER!');
+        // console.log('ENTER!');
     })
     .on('leave', function(e) {
         locationMap.css('position', 'fixed');
         locationMap.css('top', $('#belt-menu-nav').outerHeight());
         locationMap.css('bottom', 'auto');
-        console.log('EXIT!');
+        // console.log('EXIT!');
     })
     // .addIndicators()
     .addTo(mainController);
