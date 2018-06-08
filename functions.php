@@ -250,9 +250,25 @@ function cornerstone_main_scripts() {
 	wp_enqueue_script( 'main-js', get_template_directory_uri().'/dist/js/main.js', false, false, true );
 	if (is_front_page()) wp_enqueue_script( 'front-js', get_template_directory_uri().'/dist/js/front.js', false, false, true );
 
+	// Blog AJAX
+	if (is_home()) wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/dist/js/blog-ajax.js', array( 'jquery' ), '1.0', true );
+	wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' )
+	));
 	
+
 }
 add_action( 'wp_enqueue_scripts', 'cornerstone_main_scripts' );
+
+function blog_ajax() {
+	// do stuffs whatever you wish to do in your function
+	$html = 'ajax';
+	echo $html; // please make sure echo your output here
+	wp_die(); // this is required to terminate immediately and return a proper response
+}
+
+add_action('wp_ajax_blog_ajax', 'blog_ajax');
+add_action('wp_ajax_nopriv_blog_ajax', 'blog_ajax');
 
 /**
  * Implement the Custom Header feature.

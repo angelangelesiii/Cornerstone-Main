@@ -137,9 +137,15 @@ get_header(); ?>
 
 				</div>
 
-				<?php the_posts_navigation();
+				<nav class="load-more-nav">
+					<button class="load-more-button" id="post-loader">
+						Load Older
+					</button>
+				</nav>
+
+				<?php //the_posts_navigation();
 				endif; 
-				wp_reset_postdata();
+				// wp_reset_postdata();
 				?>
 
 				</div>
