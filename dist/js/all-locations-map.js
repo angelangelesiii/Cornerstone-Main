@@ -367,7 +367,7 @@ $(document).ready(function(){
 
     });
 
-    console.log('MAP!');
+    // console.log('MAP!');
 
 });
 
