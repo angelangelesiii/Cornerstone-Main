@@ -1493,6 +1493,11 @@ h1.main-title {
 SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
+	/* Navbar */
+	#mainheader.nfp .navbar-bg{
+		opacity: 1 !important;
+	}
+
 	#mainmenubutton .hint {
 		display: none;
 	}

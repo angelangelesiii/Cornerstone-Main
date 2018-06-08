@@ -36,7 +36,11 @@ function belt_menu_call($menuID = 'belt-menu') {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cornerstone-main' ); ?></a>
 
 	<div id="top"></div>
-	<header id="mainheader" class="full-header top-position">
+	<header id="mainheader" class="full-header top-position
+		<?php
+		if (!is_front_page()) echo 'nfp';
+		?>
+	">
 		<div class="navbar-bg"></div>
 		<div class="wrapper-header">
 			<nav id="mainnav" class="clearfix">
