@@ -139,7 +139,7 @@ get_header(); ?>
 
 				<nav class="load-more-nav">
 					<button class="load-more-button" id="post-loader">
-						Load Older
+						Load Older Posts
 					</button>
 					<span id="post-end">- No more posts to load -</span>
 				</nav>

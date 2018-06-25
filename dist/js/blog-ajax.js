@@ -38,6 +38,7 @@ jQuery(document).ready(function($){ // Document Ready
 
         // Change text to loading while posts load
         $(this).html('Loading...');
+        $(this).attr('disabled', true);
 
         console.log('posts per page: ' + postPerPage);
 
@@ -53,6 +54,7 @@ jQuery(document).ready(function($){ // Document Ready
 
                 // return the button to its original text
                 postLoaderBtn.html(preClickText);
+                postLoaderBtn.attr('disabled', false);
 
                 // figure out the max number of pages
                 maxNumPosts = request.getResponseHeader('X-WP-Total');
@@ -103,7 +105,7 @@ jQuery(document).ready(function($){ // Document Ready
             var significant = '';
 
             if(resultData[i].acf.significant) {
-                // significant += 'wide-2';
+                significant += 'wide-2';
             }
             if(!resultData[i].better_featured_image) {
                 significant += 'no-thumb';
@@ -116,8 +118,12 @@ jQuery(document).ready(function($){ // Document Ready
 
             // ---
             if(resultData[i].better_featured_image) {
-                renderedHTML += '<a href="'+resultData[i].link+'"><img src="'+resultData[i].better_featured_image.media_details.sizes.bg_small.source_url+'" alt="" class="post-image"></a>';
-                // 
+                if(resultData[i].acf.significant) {
+                    renderedHTML += '<a href="'+resultData[i].link+'"><img src="'+resultData[i].better_featured_image.media_details.sizes.bg_medium.source_url+'" alt="" class="post-image"></a>';
+                    renderedHTML += '<a href="'+resultData[i].link+'"><span class="overlay"></span></a>';
+                } else {
+                    renderedHTML += '<a href="'+resultData[i].link+'"><img src="'+resultData[i].better_featured_image.media_details.sizes.bg_small.source_url+'" alt="" class="post-image"></a>';
+                }
             }
             renderedHTML += '<div class="content">';
             if(resultData[i].better_featured_image) { // if has post thumbnail
@@ -127,7 +133,7 @@ jQuery(document).ready(function($){ // Document Ready
                 renderedHTML += '</a>';
                 renderedHTML += '</span>';
             }
-            renderedHTML += '<h2 class="title">'+resultData[i].title.rendered+'</h2>';
+            renderedHTML += '<h2 class="title"><a href="'+resultData[i].link+'">'+resultData[i].title.rendered+'</a></h2>';
             if(!resultData[i].better_featured_image) { // if has no post thumbnail
                 renderedHTML += '<span class="category item-meta">';
                 renderedHTML += '<a href="'+resultData[i].cat_link+'">';
