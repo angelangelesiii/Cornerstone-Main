@@ -141,6 +141,7 @@ get_header(); ?>
 					<button class="load-more-button" id="post-loader">
 						Load Older
 					</button>
+					<span id="post-end">- You've reached the end -</span>
 				</nav>
 
 				<?php //the_posts_navigation();
