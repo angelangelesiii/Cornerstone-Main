@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" <?php post_class('site-main') ?>>
 			<div class="wrapper-big row collapse">
 				<div class="column large-9 small-12 main-container">
 					<?php
