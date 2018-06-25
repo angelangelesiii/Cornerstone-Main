@@ -21,7 +21,7 @@ $featuredPostIDcollection = array();
         <?php while (have_rows('featured_blog_posts','options')): the_row(); ?>
 
         <article class="blog-slider-item featured-item">
-            <div class="content" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg-small' ) ?>);">
+            <div class="content" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg_small' ) ?>);">
                 <span class="label">Featured</span>
                 <a href="<?php echo get_the_permalink(get_sub_field('featured_post')); ?>">
                     <div class="link-overlay">
@@ -55,7 +55,7 @@ $featuredPostIDcollection = array();
         <?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); // Start loop?>
 
         <article class="blog-slider-item">
-            <div class="content" style="background-image: url(<?php the_post_thumbnail_url( 'bg-small' ); ?>);">
+            <div class="content" style="background-image: url(<?php the_post_thumbnail_url( 'bg_small' ); ?>);">
                 <a href="<?php the_permalink(); ?>">
                     <div class="link-overlay">
                         

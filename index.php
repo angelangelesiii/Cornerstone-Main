@@ -27,7 +27,7 @@ get_header(); ?>
 
 						<!-- <?php echo 'POST ITEM '.get_the_title( get_sub_field('featured_post') ).' - #'.get_sub_field('featured_post'); ?> -->
 						<div class="featured-item">
-							<div class="featured-item-contents" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg-medium' ) ?>);">
+							<div class="featured-item-contents" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg_medium' ) ?>);">
 								<a href="<?php echo get_the_permalink( get_sub_field('featured_post') ); ?>">
 									<div class="text">
 										<div class="overlay"></div>
@@ -73,7 +73,7 @@ get_header(); ?>
 						<?php if(!get_field('significant')): // IF NOT SIGNIFICANT ?>
 
 						<div class="container">
-							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg-small' ) ?>" alt="" class="post-image"></a>
+							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg_small' ) ?>" alt="" class="post-image"></a>
 							<div class="content">
 								<?php if(has_post_thumbnail( $post->ID )): ?>
 								<span class="category item-meta">
@@ -108,7 +108,7 @@ get_header(); ?>
 						<?php elseif(get_field('significant')): // IF SIGNIFICANT ?>
 
 						<div class="container">
-							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg-medium' ) ?>" alt="" class="post-image"></a>
+							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg_medium' ) ?>" alt="" class="post-image"></a>
 
 							<a href="<?php the_permalink(); ?>"><span class="overlay"></span></a>
 

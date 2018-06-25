@@ -854,7 +854,7 @@
                     "id": ""
                 },
                 "return_format": "id",
-                "preview_size": "bg-medium",
+                "preview_size": "bg_medium",
                 "library": "all",
                 "min_width": "",
                 "min_height": "",

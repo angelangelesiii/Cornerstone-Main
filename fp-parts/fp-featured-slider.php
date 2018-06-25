@@ -11,7 +11,7 @@
     $featuredID = get_sub_field('featured_post');
     
     ?>
-        <div class="featured-item relative-parent" style="background-image: url(<?php echo get_the_post_thumbnail_url( $featuredID, 'bg-medium' ); ?>)">
+        <div class="featured-item relative-parent" style="background-image: url(<?php echo get_the_post_thumbnail_url( $featuredID, 'bg_medium' ); ?>)">
             <div class="overlay"></div>
             <div class="featured-content center-center">
                 <h2 class="title"><?php echo get_the_title( $featuredID ); ?></h2>

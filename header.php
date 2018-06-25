@@ -99,7 +99,7 @@ function belt_menu_call($menuID = 'belt-menu') {
 			$heroImage = get_template_directory_uri().'/dist/images/background/placeholder.jpg';
 
 			// Hero Background
-			if ($hero['background_image']) $heroImage = wp_get_attachment_image_src( $hero['background_image'], 'bg-large')[0];
+			if ($hero['background_image']) $heroImage = wp_get_attachment_image_src( $hero['background_image'], 'bg_large')[0];
 
 			// Hero Link
 			$heroLinkText = "Learn More";
@@ -163,8 +163,8 @@ function belt_menu_call($menuID = 'belt-menu') {
 		<?php else: // ===== ELSE... ?>
 
 		<!-- Post Banner -->
-		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);">
-			<div class="parallaxBG" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg-medium' ) ?>);"></div>
+		<section class="<?php echo $heroBannerClasses; ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg_medium' ) ?>);">
+			<div class="parallaxBG" style="background-image: url(<?php echo get_the_post_thumbnail_url( $post->ID, 'bg_medium' ) ?>);"></div>
 			<div class="overlay" style="opacity: <?php echo ($hero['dim_intensity']*0.01); ?>;"></div>
 			<?php belt_menu_call(); ?>
 		</section>

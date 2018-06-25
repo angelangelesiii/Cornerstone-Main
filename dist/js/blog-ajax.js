@@ -86,11 +86,22 @@ jQuery(document).ready(function($){ // Document Ready
         var renderedHTML = '';
 
         for (i=0;i<resultData.length;i++){
-            renderedHTML += '<article class="blog-item grid-item">';
+
+            var significant = '';
+
+            if(resultData[i].acf.significant) {
+                // significant = 'wide-2';
+            }
+
+            // Rendered HTML
+            renderedHTML += '<article class="blog-item grid-item '+significant+'">';
             renderedHTML += '<div class="container">';
+            // ---
+            renderedHTML += '<a href="'+resultData[i].better_featured_image.media_details.sizes.bg_small.source_url+'" alt="" class="post-image"></a>';
             renderedHTML += '<div class="content">';
             renderedHTML += '<h2>'+resultData[i].title.rendered+'</h2>';
             renderedHTML += '</div>'; // content
+            // ---
             renderedHTML += '</div>'; // container
             renderedHTML += '</article>';
         }

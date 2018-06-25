@@ -59,8 +59,8 @@ $content = str_replace(']]>', ']]&gt;', $content);
 					$itemCount = 1;
 					while($eventQuery->have_posts()): $eventQuery->the_post();
 					$thumbnailStyle = '';
-					$thumbnailSize = 'bg-small';
-					if ($itemCount == 1 || get_field('major_event') == true) $thumbnailSize = 'bg-medium';
+					$thumbnailSize = 'bg_small';
+					if ($itemCount == 1 || get_field('major_event') == true) $thumbnailSize = 'bg_medium';
 
 					if (has_post_thumbnail()) {
 						$thumbnailStyle = get_the_post_thumbnail_url(get_the_ID(), $thumbnailSize);
@@ -74,7 +74,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
 						$displayDate = date('M j, Y', strtotime(get_field('start_date')));
 					}
 
-					//print_r(wp_get_attachment_image_src(get_field('fallback_thumbnail', 'options'), 'bg-small'));
+					//print_r(wp_get_attachment_image_src(get_field('fallback_thumbnail', 'options'), 'bg_small'));
 				?>
 				
 					<article class="event-item grid-item item-<?php 
