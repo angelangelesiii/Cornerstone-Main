@@ -75,7 +75,7 @@ get_header(); ?>
 						<div class="container">
 							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg_small' ) ?>" alt="" class="post-image"></a>
 							<div class="content">
-								<?php if(has_post_thumbnail( $post->ID )): ?>
+								<?php if(has_post_thumbnail( $post->ID )): // IF HAS THUMBNAIL ?>
 								<span class="category item-meta">
 									<?php $categoryName = get_the_category($post->ID)[0];
 									// var_dump( $categoryName );
@@ -84,7 +84,7 @@ get_header(); ?>
 								</span>
 								<?php endif; ?>
 								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-								<?php if(!has_post_thumbnail( $post->ID )): ?>
+								<?php if(!has_post_thumbnail( $post->ID )): // IF HAS NO THUMBNAIL ?>
 								<span class="category item-meta">
 									<?php $categoryName = get_the_category($post->ID)[0];
 									// var_dump( $categoryName );
@@ -122,8 +122,8 @@ get_header(); ?>
 								</span>
 								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<span class="author date item-meta">
-								By <?php the_author(); ?> <?php the_date( 'F j, Y', 'on '); ?>
-							</span>	
+									By <?php the_author(); ?> <?php the_date( 'F j, Y', 'on '); ?>
+								</span>	
 								
 							</div>
 						</div>
@@ -141,7 +141,7 @@ get_header(); ?>
 					<button class="load-more-button" id="post-loader">
 						Load Older
 					</button>
-					<span id="post-end">- You've reached the end -</span>
+					<span id="post-end">- No more posts to load -</span>
 				</nav>
 
 				<?php //the_posts_navigation();

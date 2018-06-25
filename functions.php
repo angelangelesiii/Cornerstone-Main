@@ -260,6 +260,27 @@ function cornerstone_main_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cornerstone_main_scripts' );
 
+function prepare_rest($data, $post, $request) {
+	$_data = $data->data;
+
+	// Items
+	$author_name = get_the_author( $post->ID );
+	$cats = get_the_category($post->ID);
+	$cat_link = get_term_link(get_the_category($post->ID)[0]);
+	$the_date = get_the_date( 'F j, Y', $post->ID );
+	$unrendered_excerpt = get_the_excerpt( $post->ID );
+
+	$_data['date_formatted'] = $the_date;
+	$_data['author_name'] = $author_name;
+	$_data['cats'] = $cats;
+	$_data['cat_link'] = $cat_link;
+	$_data['excerpt_u'] = $unrendered_excerpt;
+	$data->data = $_data;
+
+	return $data;
+}
+
+add_filter('rest_prepare_post', 'prepare_rest', 10, 3);
 
 /**
  * Implement the Custom Header feature.
