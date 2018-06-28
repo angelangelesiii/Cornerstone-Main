@@ -37,10 +37,11 @@ jQuery(document).ready(function($){ // Document Ready
     var outreachParallax = new ScrollMagic.Scene({
         triggerElement: '.outreach-section',
         triggerHook: 1,
-        duration: ($(window).outerHeight()*2),
+        duration: ($(window).outerHeight()+$('.outreach-section').outerHeight()),
     })
     .setTween(TweenMax.to('.outreach-parallax-bg', 1, {
         y: outreachParallaxStrength,
+        ease: Power0.easeInOut
     }))
     // .addIndicators()
     .addTo(frontController);

@@ -116,6 +116,7 @@
 }
 .outreach-section img.outreach-bg.invisible-sizer {
     opacity: 0;
+    max-height: 100vh;
 }
 .outreach-section img.outreach-bg.outreach-parallax-bg {
     position: absolute;
@@ -130,7 +131,7 @@
 }
 .outreach-section .shadow {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     left: 0;
     width: 100%;
     height: 100px;
@@ -143,9 +144,19 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
     bottom: 0;
 }
+.outreach-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    opacity: 0.15;
+    z-index: 3;
+}
 .outreach-section .content {
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     width: 100%;
     top: 50%;
     transform: translateY(-50%);
