@@ -1,0 +1,1127 @@
+[
+    {
+        "key": "group_5ac31647c8340",
+        "title": "Event Schedule",
+        "fields": [
+            {
+                "key": "field_5ac317a1e1014",
+                "label": "Event Type",
+                "name": "single_date_boolean",
+                "type": "select",
+                "instructions": "Set to single day if the event lasts only for a day. Select multiple days if the event will span a range of dates.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "true": "Single Day",
+                    "false": "Multiple Days"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5ac32aa9575f4",
+                "label": "Start date",
+                "name": "start_date",
+                "type": "date_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y",
+                "return_format": "Ymd",
+                "first_day": 0
+            },
+            {
+                "key": "field_5ac3193ae1016",
+                "label": "End date",
+                "name": "end_date",
+                "type": "date_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5ac317a1e1014",
+                            "operator": "==",
+                            "value": "false"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y",
+                "return_format": "Ymd",
+                "first_day": 0
+            },
+            {
+                "key": "field_5ac32368486f0",
+                "label": "All day event",
+                "name": "all_day_event",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5ac31948e1017",
+                "label": "Start time",
+                "name": "start_time",
+                "type": "time_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5ac32368486f0",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "g:i a",
+                "return_format": "g:i a"
+            },
+            {
+                "key": "field_5ac32064e1018",
+                "label": "End time",
+                "name": "end_time",
+                "type": "time_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5ac32368486f0",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "g:i a",
+                "return_format": "g:i a"
+            },
+            {
+                "key": "field_5b1731d54fd85",
+                "label": "Is this a major event?",
+                "name": "major_event",
+                "type": "true_false",
+                "instructions": "Major events shows up larger in the events page.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "event"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "field",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5aaa07c21ee7e",
+        "title": "Featured in Front Page",
+        "fields": [
+            {
+                "key": "field_5aaa07cc4c84d",
+                "label": "Featured Posts\/Pages",
+                "name": "featured_posts",
+                "type": "repeater",
+                "instructions": "- Drag the handle on the left side of a row to move the row around for rearranging.\r\n- Click the minus (-) icon on the right side of a row to delete it.\r\n- Click the up arrow icon on the upper left side of the row to minimize it.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5aaa08334c84e",
+                "min": 0,
+                "max": 15,
+                "layout": "row",
+                "button_label": "Add Featured",
+                "sub_fields": [
+                    {
+                        "key": "field_5aaa08334c84e",
+                        "label": "Post\/Page\/Event",
+                        "name": "featured_post",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [],
+                        "taxonomy": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "return_format": "id",
+                        "ui": 1
+                    },
+                    {
+                        "key": "field_5aaa0bfe4d8cc",
+                        "label": "Custom Title",
+                        "name": "custom_title",
+                        "type": "text",
+                        "instructions": "Leave blank if you want the post's original title to be displayed.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5aaa0c2f4d8cd",
+                        "label": "Custom Background",
+                        "name": "custom_background",
+                        "type": "image",
+                        "instructions": "Leave blank if you want the post's original featured image to be displayed.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "featured"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5ab1a8e4cb73f",
+        "title": "Location Details",
+        "fields": [
+            {
+                "key": "field_5ab1a8f7af7da",
+                "label": "Location",
+                "name": "location_location",
+                "type": "google_map",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "center_lat": "14.6498842",
+                "center_lng": "121.037877",
+                "zoom": "",
+                "height": ""
+            },
+            {
+                "key": "field_5ab31d2ed1cd8",
+                "label": "Address to Display",
+                "name": "location_address",
+                "type": "textarea",
+                "instructions": "This will be the address that will be shown on this location's page. No address will be shown if left blank.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_5ab1a95caf7db",
+                "label": "Service Times",
+                "name": "location_service_times",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "5ab1a97ec453c": {
+                        "key": "5ab1a97ec453c",
+                        "name": "service_multiple_times",
+                        "label": "Service with Multiple Times",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5ab1ac43af7dc",
+                                "label": "Description",
+                                "name": "description",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5ab1acb6af7dd",
+                                "label": "Times",
+                                "name": "times",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "collapsed": "",
+                                "min": 1,
+                                "max": 0,
+                                "layout": "block",
+                                "button_label": "Add Time",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5ab1ad99af7e1",
+                                        "label": "Day",
+                                        "name": "day",
+                                        "type": "select",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "Sunday": "Sunday",
+                                            "Monday": "Monday",
+                                            "Tuesday": "Tuesday",
+                                            "Wednesday": "Wednesday",
+                                            "Thursday": "Thursday",
+                                            "Friday": "Friday",
+                                            "Saturday": "Saturday"
+                                        },
+                                        "default_value": [],
+                                        "allow_null": 0,
+                                        "multiple": 0,
+                                        "ui": 0,
+                                        "ajax": 0,
+                                        "return_format": "value",
+                                        "placeholder": ""
+                                    },
+                                    {
+                                        "key": "field_5ab1acc4af7de",
+                                        "label": "Time",
+                                        "name": "time",
+                                        "type": "time_picker",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "display_format": "g:i a",
+                                        "return_format": "g:i a"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5ab1ad0daf7df": {
+                        "key": "5ab1ad0daf7df",
+                        "name": "service_with_single_time",
+                        "label": "Service with Single Time",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5ab1ae19af7e2",
+                                "label": "Description",
+                                "name": "description",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5ab1ae2daf7e3",
+                                "label": "Day",
+                                "name": "day",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "Sunday": "Sunday",
+                                    "Monday": "Monday",
+                                    "Tuesday": "Tuesday",
+                                    "Wednesday": "Wednesday",
+                                    "Thursday": "Thursday",
+                                    "Friday": "Friday",
+                                    "Saturday": "Saturday"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5ab1ae5eaf7e4",
+                                "label": "Time",
+                                "name": "time",
+                                "type": "time_picker",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "display_format": "g:i a",
+                                "return_format": "g:i a"
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Add Service Time",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "location"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5af1468239dfd",
+        "title": "Post Signficance",
+        "fields": [
+            {
+                "key": "field_5af14697d9d1a",
+                "label": "Make this post more significant",
+                "name": "significant",
+                "type": "true_false",
+                "instructions": "If checked, it will show bigger on the blog posts page.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5aab0f07b43a9",
+        "title": "Site Options",
+        "fields": [
+            {
+                "key": "field_5aab0f14bfe7a",
+                "label": "Hero Banner",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5aab0f98bfe7c",
+                "label": "Hero Banner",
+                "name": "hero_banner_group",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_5aab0fc6bfe7e",
+                        "label": "Hero Banner Image",
+                        "name": "image",
+                        "type": "image",
+                        "instructions": "This is the hero banner's featured image. Leave blank to default to the original hero banner. Only PNG type image is allowed.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "large",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": 5,
+                        "mime_types": "png"
+                    },
+                    {
+                        "key": "field_5aab1073bfe7f",
+                        "label": "Hero Banner Background",
+                        "name": "background_select",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "image": "Image",
+                            "video": "Video"
+                        },
+                        "default_value": [
+                            "image"
+                        ],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 1,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_5aab10d7bfe80",
+                        "label": "Hero Banner Background Image",
+                        "name": "background_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5aab1073bfe7f",
+                                    "operator": "==",
+                                    "value": "image"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "large",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": 10,
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5aab1122bfe81",
+                        "label": "Hero Banner Background Video",
+                        "name": "background_video",
+                        "type": "file",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5aab1073bfe7f",
+                                    "operator": "==",
+                                    "value": "video"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": 10,
+                        "mime_types": "mp4,webm"
+                    },
+                    {
+                        "key": "field_5aab1729ce592",
+                        "label": "Hero Banner Background Dim Intensity",
+                        "name": "dim_intensity",
+                        "type": "range",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "min": "",
+                        "max": 75,
+                        "step": 5,
+                        "prepend": "",
+                        "append": "%"
+                    },
+                    {
+                        "key": "field_5aab169ece590",
+                        "label": "Hero Banner Link Text",
+                        "name": "link_text",
+                        "type": "text",
+                        "instructions": "If left blank, it will display \"Learn More\" instead.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5aab16e3ce591",
+                        "label": "Hero Banner Link URL",
+                        "name": "link_url",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url"
+                    }
+                ]
+            },
+            {
+                "key": "field_5aab3bcd0e3fe",
+                "label": "Front Page Options",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "left",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5b0e3a03f69fb",
+                "label": "Outreach Segment",
+                "name": "outreach_segment",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_5b0e398e00fe1",
+                        "label": "Outreach Section Heading",
+                        "name": "outreach_heading",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5b0e39ab00fe2",
+                        "label": "Outreach Section Subtext",
+                        "name": "outreach_subtext",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5b342b71c87fc",
+                        "label": "Text Position",
+                        "name": "outreach_text_position",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "left": "Left",
+                            "right": "Right",
+                            "center": "Center"
+                        },
+                        "default_value": [
+                            "left"
+                        ],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_5b343362311b6",
+                        "label": "Text Align",
+                        "name": "outreach_text_align",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "center": "Center",
+                            "left": "Left",
+                            "right": "Right"
+                        },
+                        "default_value": [
+                            "center"
+                        ],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_5b342b05ebd48",
+                        "label": "Background Image",
+                        "name": "outreach_bg",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "id",
+                        "preview_size": "large",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5b0e390a00fe0",
+                        "label": "Outreach Section Parallax Effect Strength",
+                        "name": "outreach_parallax_strength",
+                        "type": "range",
+                        "instructions": "Determines the intensity of the parallax effect on the outreach segment. \r\n\r\nWarning: the higher the parallax effect, the more that the image will be enlarged.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 40,
+                        "min": 20,
+                        "max": 80,
+                        "step": 5,
+                        "prepend": "",
+                        "append": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5ac43c088aae8",
+                "label": "Events Page",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5ac43c1b8aae9",
+                "label": "Fallback Thumbnail",
+                "name": "fallback_thumbnail",
+                "type": "image",
+                "instructions": "Select an image to determine which thumbnail will be shown for the event item in case that article doesn't have its own thumbnail.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "bg-medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5b07709577f3f",
+                "label": "Blog",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5b0770a877f40",
+                "label": "Featured Blog Posts",
+                "name": "featured_blog_posts",
+                "type": "repeater",
+                "instructions": "Featured posts will be shown before latest posts in the blog slider. Up to 7 featured posts.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 7,
+                "layout": "table",
+                "button_label": "Add Featured Post",
+                "sub_fields": [
+                    {
+                        "key": "field_5b0cc98310e10",
+                        "label": "Featured Post",
+                        "name": "featured_post",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [
+                            "post"
+                        ],
+                        "taxonomy": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "return_format": "id",
+                        "ui": 1
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "site-options"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5b1725df191c3",
+        "title": "Event Location",
+        "fields": [
+            {
+                "key": "field_5b1725edb71da",
+                "label": "Location",
+                "name": "event_location",
+                "type": "google_map",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "center_lat": "14.73635",
+                "center_lng": "121.056029",
+                "zoom": 15,
+                "height": ""
+            },
+            {
+                "key": "field_5b172af8ac84c",
+                "label": "Address to display",
+                "name": "address_to_display",
+                "type": "text",
+                "instructions": "This is the address that will show on the event page instead of the one specified in the Google map field.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "event"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]
