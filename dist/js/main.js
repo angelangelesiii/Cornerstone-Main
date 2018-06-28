@@ -196,6 +196,65 @@ jQuery(document).ready(function($){ // Document Ready
         $('.header-menu-container').hScroll(40); // You can pass (optionally) scrolling amount
     });
 
+    // --- MODALS ---
+
+    function keepAspectRatio(iframe) {
+
+        var iframeWidth = iframe.attr('width'),
+            iframeHeight = iframe.attr('height'),
+            innerPadding = iframeHeight/iframeWidth*100;
+        
+        var iframeNewHeight, iframeNewWidth, percentResize;
+
+        iframe.attr('width', 100+'%');
+
+        iframeNewWidth = iframe.outerWidth();
+        iframe.attr('width', iframeNewWidth);
+        percentResize = iframeNewWidth/iframeWidth;
+        iframeNewHeight = iframeHeight*percentResize;
+        iframe.attr('height',iframeNewHeight);
+        // console.log(iframeNewHeight);
+        // console.log(iframeNewWidth);
+    }
+
+    function modalOpen(link) {
+        var targetModal = $(link.data('modal'));
+        console.log(targetModal);
+        console.log('Clicked: ' + link.attr('class'));
+        console.log('Target: ' + targetModal.attr('class'));
+        keepAspectRatio(targetModal.find('iframe'));
+        TweenLite.to(targetModal, 0.5, {autoAlpha: 1, ease: Power4.easeOut});
+    }
+
+    function modalClose(modal) {
+        TweenLite.to(modal, 0.5, {autoAlpha: 0, ease: Power4.easeIn});
+        console.log('Close modal: '+modal);
+    }
+
+    $('.modal-button').each(function(e){
+        $(this).click(function(){
+            modalOpen($(this));
+        });
+    });
+
+    $('.modal').each(function(e){
+        $(this).prepend('<span class="modal-dim"></span>');
+        $('.modal-dim').each(function(e){
+            $(this).click(function() {
+                modalClose($(this).parent('.modal'));
+            })
+        });
+    });
+
+    $(window).resize(function(e){
+        $('.modal').each(function(e){
+            if ($(this).hasClass('youtube-video')) {
+                keepAspectRatio($(this).find('iframe'));
+            }
+        });
+    });
+
+
     // LOCATION LIST ACF MAP
 
     // set map height
