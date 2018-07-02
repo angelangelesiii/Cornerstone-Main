@@ -10,7 +10,7 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<div class="wrapper-big row collapse">
-				<div class="main-container">
+				<div class="blog-main-container">
 					
 				<?php 
 				// FEATURED LOOP
