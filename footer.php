@@ -25,7 +25,7 @@
 			</div>
 		</nav>
 		<div class="wrapper-medium row footer-main">
-			<div class="column large-4 medium-6 small-12">
+			<div class="column large-4 small-12">
 				<h2>Follow us on social media</h2>
 				<ul class="social-links">
 					<li class="social-link"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
@@ -34,13 +34,13 @@
 					<li class="social-link"><a href="#"><i class="fab fa-youtube"></i></a></li>
 				</ul>
 			</div>
-			<div class="column large-4 medium-6 small-12">
+			<div class="column large-4 small-12">
 				<div class="details">
 					<h2>Business Office Address</h2>
 					<p>2nd Level Robinsons Novaliches, Novaliches Quezon City</p>
 				</div>
 			</div>
-			<div class="column large-4 medium-6 small-12">
+			<div class="column large-4 small-12">
 				<div class="details">
 					<h2>Contact Numbers</h2>
 					<p>+63-2-332-8743  |  +63-905-501-0165</p>
