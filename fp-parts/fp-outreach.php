@@ -44,8 +44,8 @@ if ($outreach) $parallaxStrength = $outreach['outreach_parallax_strength'];
                 </h2>
                 <p class="subtext">
                 <?php 
-                    if ($outreach['outreach_heading']) {
-                        echo $outreach['outreach_heading'];
+                    if ($outreach['outreach_subtext']) {
+                        echo $outreach['outreach_subtext'];
                     } else {
                         echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod totam sapiente.';
                     }
