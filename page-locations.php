@@ -34,20 +34,22 @@ $content = str_replace(']]>', ']]&gt;', $content);
 				if ($locationQuery->have_posts()): ?>
 
 				<!-- START MAP -->
-				<div class="location-map acf-map">
-	
-				<?php
-					while($locationQuery->have_posts()): $locationQuery->the_post();
-					$location = get_field('location_location');
-				?>
-	
-					<!-- LOCATION: <?php the_title(); ?> -->
-					<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
-						<h3><?php the_title(); ?></h3>
+				<div class="wrapper-medium">
+					<div class="location-map acf-map">
+		
+					<?php
+						while($locationQuery->have_posts()): $locationQuery->the_post();
+						$location = get_field('location_location');
+					?>
+		
+						<!-- LOCATION: <?php the_title(); ?> -->
+						<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+							<h3><?php the_title(); ?></h3>
+						</div>
+		
+					<?php endwhile; ?>
+					
 					</div>
-	
-				<?php endwhile; ?>
-				
 				</div>
 				<!-- END MAP -->
 	

@@ -1103,19 +1103,14 @@ h2.event-heading {
 	position: relative;
 }
 .location-section .location-map {
-	height: 100vh;
-	width: 50%;
-	position: fixed;
-	z-index: 2;
-	top: 0;
-	left: 0;
-}
-.location-section .location-list {
-	width: 50%;
-	margin: 0 0 0 auto;
-	padding: 30px;
-	color: #FFFFFF;
-	background-color: #222222;
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 

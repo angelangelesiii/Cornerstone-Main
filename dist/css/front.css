@@ -120,14 +120,7 @@
 }
 .outreach-section img.outreach-bg.outreach-parallax-bg {
     position: absolute;
-    /* top: -20%; */
-    /* right: 0; */
     z-index: 2;
-    /* transform: translateX(-10%) scale(1.2);
-    -webkit-transform: translateX(-10%) scale(1.2);
-    -moz-transform: translateX(-10%) scale(1.2);
-    -ms-transform: translateX(-10%) scale(1.2);
-    -o-transform: translateX(-10%) scale(1.2); */
 }
 .outreach-section .shadow {
     position: absolute;
@@ -376,7 +369,7 @@ section.blog-posts .blog-slider-item .content a {
     background: linear-gradient(to top left, #ff9900, #ff006a);
     font-size: 1.6em;
     color: #FFF;
-    opacity: 0.5;
+    opacity: 1;
     position: absolute;
     z-index: 10;
     bottom: 0;
