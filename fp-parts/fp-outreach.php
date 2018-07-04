@@ -51,7 +51,9 @@ if ($outreach) $parallaxStrength = $outreach['outreach_parallax_strength'];
                     }
                 ?>
                 </p>
-                <p><a href="#" class="btn btn--white btn--large">Give Now</a></p>
+                <?php if($outreach['show_link']): ?>
+                    <p><a href="<?php echo $outreach['link_button_url']; ?>" class="btn btn--white btn--large"><?php echo $outreach['link_button_text']; ?></a></p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
