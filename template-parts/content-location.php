@@ -16,7 +16,7 @@
 			<div class="location-description column large-5 medium-12">
 				<?php the_content(); ?>
 			</div>
-			<div class="article-content no-padding column large-7 medium-12">
+			<div class="article-content location-content no-padding column large-7 medium-12">
 				<div class="location-container">
 					<?php $location = get_field('location_location'); ?>
 					<div class="acf-map">
@@ -77,7 +77,7 @@
 						endwhile; ?>
 
 					</div>
-					<p class="button-container"><a href="#" class="btn btn--large">Plan Your Visit</a></p>	
+					<p class="button-container"><a href="#" class="btn btn--white">Plan Your Visit</a></p>	
 					
 					<?php endif; ?>
 				</div>

@@ -9,7 +9,7 @@ get_header(); ?>
 	<div id="primary" class="content-area blog-area">
 		<main id="main" class="site-main">
 
-			<div class="wrapper-big row collapse">
+			<div class="wrapper-big main-wrapper">
 				<div class="blog-main-container">
 					
 				<?php 
@@ -107,7 +107,7 @@ get_header(); ?>
 
 						<?php elseif(get_field('significant')): // IF SIGNIFICANT ?>
 
-						<div class="container">
+						<div class="container" style="background-image: url('<?php the_post_thumbnail_url( 'bg_medium' ) ?>')">
 							<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url( 'bg_medium' ) ?>" alt="" class="post-image"></a>
 
 							<a href="<?php the_permalink(); ?>"><span class="overlay"></span></a>

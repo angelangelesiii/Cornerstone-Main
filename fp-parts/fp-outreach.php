@@ -7,9 +7,10 @@ $parallaxStrength = '40';
 if ($outreach) $parallaxStrength = $outreach['outreach_parallax_strength'];
 ?>
 
+<?php $outreachBG = wp_get_attachment_image_src( $outreach['outreach_bg'], 'bg_medium')[0]; ?>
+
 <section class="outreach-section" style="background-image: url(<?php echo $outreachBG; ?>);" data-parallax-strength="<?php echo $parallaxStrength; ?>">
     <div class="shadow"></div><div class="shadow"></div>
-    <?php $outreachBG = wp_get_attachment_image_src( $outreach['outreach_bg'], 'bg_medium')[0]; ?>
     <img src="<?php echo $outreachBG; ?>" alt="" class="outreach-bg invisible-sizer">
     <img src="<?php echo $outreachBG; ?>" alt="" class="outreach-bg outreach-parallax-bg" style="
         top:-<?php echo ($parallaxStrength/2) ?>%;
