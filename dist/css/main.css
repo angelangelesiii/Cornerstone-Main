@@ -853,6 +853,7 @@ a.read-more-btn.btn--white:hover {
 #main.site-main.event {
 	background: #222222;
 	margin: 0;
+	padding-bottom: 50px;
 }
 .hero-banner.post-banner {
 	min-height: 500px;
@@ -867,7 +868,7 @@ a.read-more-btn.btn--white:hover {
 }
 article.article {
 	margin-top: -80px;
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 	position: relative;
 	z-index: 3;
 	/* border: 1px solid #d8d8d8; */
@@ -1587,6 +1588,14 @@ h1.main-title {
 }
 
 
+/*==============================*/
+/* COMMENTS	                    */
+/*==============================*/
+
+.comments {
+	margin-top: 20px;
+	padding: 30px;
+}
 
 
 /*==============================*/
@@ -1614,6 +1623,7 @@ h1.main-title {
 .page-404 .page-404-container p {
 	font-size: 1.1em;
 }
+
 
 /*==============================*/
 /* MEDIA QUERIES                */
