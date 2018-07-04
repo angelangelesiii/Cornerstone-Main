@@ -1587,6 +1587,34 @@ h1.main-title {
 }
 
 
+
+
+/*==============================*/
+/* 404    	                    */
+/*==============================*/
+
+.site-main.page-404 {
+	background-color: #222222 !important;
+	padding: 100px 0;
+}
+.page-404 .page-404-container {
+	text-align: center;
+	color: #FFFFFF;
+}
+.page-404 .page-404-container .title-404 {
+	font-size: 8em;
+	font-weight: 100;
+	margin: 0;
+}
+.page-404 .page-404-container .description {
+	font-size: 2em;
+	font-weight: 200;
+	margin: 0 0 20px;
+}
+.page-404 .page-404-container p {
+	font-size: 1.1em;
+}
+
 /*==============================*/
 /* MEDIA QUERIES                */
 /*==============================*/
