@@ -1112,6 +1112,51 @@ h2.event-heading {
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 }
+.location-section .location-list {
+	padding: 30px 0;
+}
+.location-section .location-list .location-container {
+	margin: 20px 0;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #474747;
+}
+.location-section .location-list .location-container:last-of-type {
+	border-bottom: none;
+}
+.location-section .location-list .location-image {
+	float: left;
+	width: 280px;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	overflow: hidden;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.location-section .location-list .location-image .sizer {
+	padding-bottom: 100%;
+}
+.location-section .location-list .location-container .text-container {
+	margin-left: 280px;
+	padding: 20px;
+}
+.location-section .location-list .location-container .text-container h2.location-name {
+	display: inline-block;
+	font-weight: 900;
+	font-size: 2.5em;
+	color: #FFFFFF;
+	margin: 0 0 10px;
+}
+.location-section .location-list .location-container .text-container p {
+	font-size: 1.1em;
+	color: #999999;
+}
+.location-section .location-list .location-container .text-container p.btn-container {
+	text-align: right;
+}
 
 
 /* ========================================= */
