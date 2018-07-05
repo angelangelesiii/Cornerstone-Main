@@ -416,6 +416,7 @@ SMALL ONLY <640px
     /* Outreach */
     .outreach-section {
         height: 100vh;
+        max-height: 600px !important;
     }
     /* Blog */
     section.blog-posts .blog-slider-item.featured-item .content,
