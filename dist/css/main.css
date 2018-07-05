@@ -1771,10 +1771,11 @@ MEDIUM BELOW <1024px
 	#header-menu, 
 	#header-menu > ul {
 		margin: 30px 0 0;
-		padding: 0 30px 80px;
+		padding: 0 30px 200px;
 	}
 	#header-menu > .menu-item {
 		display: block;
+		padding: 5px 0;
 	}
 	#header-menu > .menu-item > .sub-menu {
 		margin: 0 0 0 15px;
