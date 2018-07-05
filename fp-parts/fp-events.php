@@ -2,7 +2,7 @@
 // Custom loop args
 $eventQuery = new WP_Query(array(
     'post_type' 			=> 'event',
-    'posts_per_page' 		=> '10',
+    'posts_per_page' 		=> '3',
     'meta_key'				=> 'start_date',
     'orderby'				=> 'meta_value',
     'order'					=> 'ASC',
@@ -24,6 +24,14 @@ if($eventQuery->have_posts()):
 <section class="upcoming-events">
 
     <div class="wrapper-medium">
+
+        <div class="row medium-up-3 small-up-1">
+            <?php while($eventQuery->have_posts()): // main loop ?>
+            <article class="event-item">
+
+            </article>        
+            <?php endwhile; ?>
+        </div>
     
     </div>
     
