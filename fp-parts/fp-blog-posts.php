@@ -44,7 +44,7 @@ $featuredPostIDcollection = array();
         // Custom loop args
         $blogQuery = new WP_Query(array(
             'post_type' 			=> 'post',
-            'posts_per_page' 		=> '5',
+            'posts_per_page' 		=> '6',
             'post__not_in'          => $featuredPostIDcollection,
         ));
 
