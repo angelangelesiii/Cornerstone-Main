@@ -96,6 +96,9 @@ function belt_menu_call($menuID = 'belt-menu') {
 		if(is_front_page()): // ===== IF YOU ARE IN THE FRONT PAGE
 
 			$hero = get_field('hero_banner_group', 'options');
+			if (get_field('use_temporary_hero_banner', 'options')) { // use alternate hero banner
+				$hero = get_field('alternate_hero_banner_group', 'options');
+			}
 			$heroImage = get_template_directory_uri().'/dist/images/background/placeholder.jpg';
 
 			// Hero Background
