@@ -405,6 +405,89 @@ section.blog-posts .blog-slider-item .content a {
 }
 
 
+/* ========================================= */
+/* EVENTS                                    */
+/* ========================================= */
+
+section.upcoming-events {
+    background-color: #222222;
+    padding: 0 0 50px;
+}
+section.upcoming-events .wrapper.event-wrapper {
+    max-width: 800px;
+}
+section.upcoming-events .section-title {
+    margin: 0 0 50px;
+    color: #FFFFFF;
+    font-weight: 200;
+    text-align: center;
+    font-size: 3em;
+}
+section.upcoming-events .event-item .content {
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+}
+section.upcoming-events .event-item .content:hover {
+    background: linear-gradient(to right, #3f9ab14b, #3f9ab100);
+}
+section.upcoming-events .event-item .content .event-thumbnail {
+    float: left;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+section.upcoming-events .event-item .content .text-content {
+    margin-left: 150px;
+    padding: 10px;
+}
+section.upcoming-events .event-item .content .text-content .event-name {
+    display: inline-block;
+    font-size: 1.9em;
+    font-weight: 200;
+    margin: 0;
+}
+section.upcoming-events .event-item .content .text-content .event-date {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+section.upcoming-events .event-item .content .text-content .read-more-container {
+    margin: 20px 0 0;
+}
+section.upcoming-events .event-item .content .text-content .read-more-container .event-btn {
+    visibility: hidden;
+}
+section.upcoming-events .event-item .content:hover .text-content .read-more-container .event-btn {
+    visibility: visible;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 0.09em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+section.upcoming-events .event-item .content:hover .text-content .read-more-container .event-btn:hover {
+    text-decoration: underline;
+}
+
+
 /*==============================*/
 /* MEDIA QUERIES                */
 /*==============================*/

@@ -21,14 +21,8 @@ get_header(); ?>
 			// BLOG POSTS
 			get_template_part( 'fp-parts/fp-blog-posts');
 			
-			// MESSAGE
-			// get_template_part( 'fp-parts/fp-message' );
-
-			// FEATURED SLIDER
-			// get_template_part( 'fp-parts/fp-featured-slider' ); 
-
-			// CORE
-			// get_template_part( 'fp-parts/fp-core' ); 
+			// EVENTS
+			get_template_part( 'fp-parts/fp-events');
 
 			?>
 
