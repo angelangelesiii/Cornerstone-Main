@@ -39,7 +39,10 @@ body.menu-opened {
 
 #main {
 	min-height: 500px;
-	background: #ffffff;
+	/* background: #ffffff; */
+}
+.site-content {
+	background: #222222;
 }
 
 /*Clearfix*/
@@ -982,6 +985,26 @@ article.article .post-edit-link:visited {
 }
 article.article .post-edit-link:hover {
 	background: #FFFFFF66;
+}
+
+/* template: full page */
+.template-full-page article.article {
+	margin-top: auto;
+}
+.template-full-page article.article .article-title-container {
+	position: static;
+	bottom: auto;
+	padding-top: 2em;
+	margin: 0 0 2em;
+}
+.template-full-page article.article .article-content {
+	padding: 0 20px;
+}
+.template-full-page .full-wide article.article .article-content {
+	padding: 0;
+}
+.template-full-page .custom-width {
+	margin: 0 auto;
 }
 
 /* Page Settings */

@@ -157,7 +157,7 @@ function belt_menu_call($menuID = 'belt-menu') {
 			<?php belt_menu_call(); ?>
 		</section>
 
-		<?php elseif(!has_post_thumbnail( $post->ID ) || is_404() ): // ===== IF POST HAS NO THUMBNAIL OR 404 ?>
+		<?php elseif(!has_post_thumbnail( $post->ID ) || is_404() || is_page_template('template-full-page.php')): // ===== IF POST HAS NO THUMBNAIL OR 404 ?>
 
 		<section class="<?php echo $heroBannerClasses; ?> no-thumbnail">
 			<?php belt_menu_call(); ?>
