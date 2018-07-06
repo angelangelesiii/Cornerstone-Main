@@ -6,7 +6,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main template-page-no-sidebar">
+		<main id="main" class="site-main page template-page-no-sidebar">
 			<div class="wrapper-medium">
 					<?php
 				while ( have_posts() ) : the_post(); ?>
