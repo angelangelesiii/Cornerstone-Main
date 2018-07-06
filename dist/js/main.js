@@ -69,7 +69,8 @@ jQuery(document).ready(function($){ // Document Ready
     // console.log(dimInitial);
     var heroEffect = new TimelineMax()
         .to('.parallaxBG', 1, {
-            y: '40%',
+            y: '30%',
+            ease: Power0.easeInOut,
         }, 'a')
         // .fromTo('.hero-banner.full-section .overlay', 1, {
         //     opacity: dimInitial,
