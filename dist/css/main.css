@@ -42,7 +42,7 @@ body.menu-opened {
 	/* background: #ffffff; */
 }
 .site-content {
-	background: #222222;
+	background: #000000;
 }
 
 /*Clearfix*/
@@ -239,6 +239,10 @@ a.read-more-btn.btn--white:hover {
 
 .white-text {
 	color: #FFFFFF;
+}
+
+.slick-prev:before, .slick-next:before {
+	display: none !important;
 }
 
 /* ========================================= */
@@ -859,7 +863,7 @@ a.read-more-btn.btn--white:hover {
 #main.site-main.post,
 #main.site-main.event,
 #main.site-main.page {
-	background: #222222;
+	background: #000000;
 	margin: 0;
 	padding-bottom: 50px;
 }
@@ -868,7 +872,7 @@ a.read-more-btn.btn--white:hover {
 }
 .hero-banner.post-banner .overlay {
 	opacity: 1 !important;
-	background: linear-gradient(to top, #222222, #22222200);
+	background: linear-gradient(to top, #000000, #00000000);
 	position: absolute;
 	bottom: 0;
 	top: auto;
@@ -1022,7 +1026,7 @@ article.article .post-edit-link:hover {
 /* ========================================= */
 
 #main.events-type {
-	background-color: #222222;
+	background-color: #000000;
 	padding: 20px 0;
 }
 h2.event-heading {
@@ -1190,7 +1194,7 @@ h2.event-heading {
 
 /* Single */
 #main.site-main.location {
-	background-color: #222222;
+	background-color: #000000;
 	padding-bottom: 60px;
 }
 .article-content.location-content {
@@ -1204,7 +1208,7 @@ h2.event-heading {
 /* ========================================= */
 
 .blog-area #main {
-	background-color: #222222;
+	background-color: #000000;
 	padding: 40px 0 50px;
 }
 h1.main-title {
@@ -1366,7 +1370,7 @@ h1.main-title {
 		left: 0;
 		width: 100%;
 		height: 80px;
-		background: linear-gradient(to top, #222222, rgba(34, 34, 34, 0));
+		background: linear-gradient(to top, #000000, rgba(34, 34, 34, 0));
 		display: inline-block;
 		visibility: hidden;
 	}
@@ -1642,7 +1646,7 @@ h1.main-title {
 /*==============================*/
 
 .site-main.page-404 {
-	background-color: #222222 !important;
+	background-color: #000000 !important;
 	padding: 100px 0;
 }
 .page-404 .page-404-container {

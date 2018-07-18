@@ -273,7 +273,7 @@
 
 section.blog-posts {
     padding: 60px 0;
-    background: #222222;
+    background: #000000;
 }
 section.blog-posts .blog-slider-container {
     position: relative;
@@ -410,7 +410,7 @@ section.blog-posts .blog-slider-item .content a {
 /* ========================================= */
 
 section.upcoming-events {
-    background-color: #222222;
+    background-color: #000000;
     padding: 0 0 50px;
 }
 section.upcoming-events .wrapper.event-wrapper {
