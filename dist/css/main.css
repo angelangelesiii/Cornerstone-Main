@@ -1784,6 +1784,9 @@ MEDIUM ONLY <1024px and >=640px
 	#main.site-main {
 		padding: 0 20px 50px;
 	}
+	#main.site-main.front-page {
+		padding: 0 0 50px;
+	}
 
 }
 
