@@ -87,7 +87,7 @@ function belt_menu_call($menuID = 'belt-menu') {
 		$heroBannerClasses = 'hero-banner '.'type-'.get_post_type( $post->ID );
 		if(is_front_page()):
 			$heroBannerClasses .=' full-section';
-		elseif(is_home()):
+		elseif(is_home() || is_archive() || is_search()):
 			$heroBannerClasses .=' blog-hero';
 		else:
 			$heroBannerClasses .= ' post-banner';
@@ -150,7 +150,7 @@ function belt_menu_call($menuID = 'belt-menu') {
 
 		<!-- <?php print_r($hero); ?> -->
 
-		<?php elseif(is_home()): // ===== IF YOU ARE IN THE BLOG PAGE ?>
+		<?php elseif(is_home() || is_archive() || is_search()): // ===== IF YOU ARE IN THE BLOG PAGE OR ARCHIVE OR SEARCH ?>
 
 		<!-- Home Banner -->
 		<section class="<?php echo $heroBannerClasses; ?>" >
