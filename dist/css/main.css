@@ -110,6 +110,15 @@ body.menu-opened {
 	-o-transform: translate(-50%, -50%);
 }
 
+/* Links */
+a:link,
+a:visited {
+	color: #3F9AB1;
+}
+a:hover {
+	color: #66bacf;
+}
+
 /* Buttons */
 a.btn:link,
 a.btn:visited {
@@ -1529,6 +1538,81 @@ h1.main-title {
 
 
 /* ========================================= */
+/* SEARCH                                    */
+/* ========================================= */
+
+.search-box {
+	padding-top: 30px;
+}
+.search-box .search-form {
+	position: relative;
+}
+.search-box #search {
+	width: 100%;
+	height: 48px;
+	padding: 0 84px 0 20px;
+	background: rgba(255, 255, 255, 0.133);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	outline: none;
+	border: none;
+	border-radius: 24px;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	-ms-border-radius: 24px;
+	-o-border-radius: 24px;
+}
+.search-box #search:focus {
+	background: #FFFFFF;
+}
+.search-box #submit {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 48px;
+	width: 64px;
+	background: linear-gradient(to top right, #ff9900,#ff006a);
+	background-color: #ff006a;
+	color: #ffffff;
+	font-size: 1.3em;
+	border: none;
+	outline: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 24px;
+	border-bottom-right-radius: 24px;
+}
+
+.search-results .search-item {
+	margin-bottom: 40px;
+}
+.search-results .search-item .post-title {
+	font-weight: 200;
+	font-size: 2.2em;
+	margin: 0;
+}
+.search-results a {
+	text-decoration: none;
+}
+.search-results .search-item .meta {
+	margin: 0;
+}
+.search-results .search-item .meta a:link,
+.search-results .search-item .meta a:visited {
+	color: #646464;
+	font-size: 0.9em;
+}
+.search-results .search-item .meta a:hover {
+	color: #999999;
+}
+.search-results .search-item .excerpt {
+	margin: 0;
+	color: #9e9e9e;
+}
+
+
+/* ========================================= */
 /* SIDEBAR                                   */
 /* ========================================= */
 
@@ -1549,7 +1633,7 @@ h1.main-title {
 	display: block;
 	width: 100%;
 	padding: 10px 20px;
-	background: #ffffff22;
+	background: rgba(255, 255, 255, 0.133);
 	font-family: 'Poppins', sans-serif;
 	border-radius: 10px;
 	outline: none;
@@ -1560,7 +1644,8 @@ h1.main-title {
 #secondary .widget.widget_search input[type="search"]:focus {
 	background: #FFFFFF;
 }
-#secondary .widget.widget_search input[type="submit"] {
+#secondary .widget.widget_search input[type="submit"],
+#secondary .widget.widget_search #submit {
 	display: none;
 }
 #secondary .widget {
