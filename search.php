@@ -13,9 +13,14 @@ get_header(); ?>
 		<main id="main" class="site-main">
 			<div class="spacer"></div>
 
-			<div class="wrapper-medium">
+			<div class="wrapper">
+
+				<section class="search-box">
+					<?php get_search_form(); ?>
+				</section>
+
 				<header class="page-header">
-					<h1 class="page-title"><?php
+					<h1 class="search-title"><?php
 						/* translators: %s: search query. */
 						printf( esc_html__( 'Search Results for: %s', 'cornerstone-main' ), '<span>' . get_search_query() . '</span>' );
 					?></h1>
@@ -23,21 +28,31 @@ get_header(); ?>
 	
 				<?php
 				if ( have_posts() ) : ?>
-	
+
+				<section class="search-results">
+
 					<?php
 					/* Start the Loop */
-					while ( have_posts() ) : the_post();
+					while ( have_posts() ) : the_post(); ?>
 	
-						/**
-						 * Run the loop for the search to output the results.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-search.php and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', 'search' );
-	
+						<article class="search-item">
+							<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<p class="meta">
+								<span class="link"><a href="<?php the_permalink(); ?>"><?php echo get_the_permalink(); ?></a></span>
+							</p>
+							<p class="excerpt">
+								<?php echo get_the_excerpt( $post->ID ); ?>
+							</p>
+						</article>
+
+					<?php
 					endwhile;
 	
-					the_posts_navigation();
+					the_posts_navigation(); ?>
+
+				</section>
+
+				<?php
 	
 				else :
 	
