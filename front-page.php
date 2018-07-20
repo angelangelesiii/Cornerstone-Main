@@ -28,7 +28,7 @@ get_header(); ?>
 			get_template_part( 'fp-parts/fp-blog-posts');
 			
 			// EVENTS
-			get_template_part( 'fp-parts/fp-events');
+			get_template_part( 'fp-parts/fp-latest');
 
 			?>
 
