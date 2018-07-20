@@ -19,15 +19,6 @@ jQuery(document).ready(function($){ // Document Ready
        mediumSizeScript();
     });
 
-    // Scrollbars
-    // $('.custom-scrollbar').scrollbar({
-    //     // options
-    //     autoUpdate: true,
-    //     autoScrollSize: true,
-    // });
-
-    // Main menu button interaction
-
     function toggleMenu() {
         $('body').toggleClass('menu-opened')
         $('#mainheader').toggleClass('opened')
@@ -72,16 +63,6 @@ jQuery(document).ready(function($){ // Document Ready
             y: '30%',
             ease: Power0.easeInOut,
         }, 'a')
-        // .fromTo('.hero-banner.full-section .overlay', 1, {
-        //     opacity: dimInitial,
-        // }, {
-        //     opacity: 1,
-        // }, 'a')
-        // .to('.hero-banner .hero-container', 1, {
-        //     opacity: 0.1,
-        //     scale: 0.7,
-        //     y:'20%',
-        // }, 'a')
         .fromTo('#belt-menu-nav', 1, {
             css: {background: beltColor},
         },{

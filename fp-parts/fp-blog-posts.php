@@ -18,19 +18,33 @@ $featuredPostIDcollection = array();
         
         <!-- Featured Posts -->
 
-        <?php while (have_rows('featured_blog_posts','options')): the_row(); ?>
+        <?php while (have_rows('featured_blog_posts','options')): the_row(); 
+        $fallbackImage = wp_get_attachment_image_url( get_field('fallback_thumbnail','options'), 'bg_small');
+        $postID = get_sub_field('featured_post');
+        ?>
 
         <article class="blog-slider-item featured-item">
+            <?php if(has_post_thumbnail($postID)): ?>
             <div class="content" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_sub_field('featured_post'), 'bg_small' ) ?>);">
+            <?php else: ?>
+            <div class="content" style="background-image: url(<?php echo $fallbackImage; ?>);">
+            <?php endif; ?>
                 <span class="label">Featured</span>
                 <a href="<?php echo get_the_permalink(get_sub_field('featured_post')); ?>">
                     <div class="link-overlay">
                         
                     </div>
                 </a>
-                <a href="<?php echo get_the_permalink(get_sub_field('featured_post')); ?>">
-                    <h3 class="title"><?php echo get_the_title(get_sub_field('featured_post')); ?></h3>
-                </a>
+                
+                <div class="inner">
+                    <div class="category">
+                        <?php $categoryName = get_the_category($postID)[0];
+                        // var_dump( $categoryName );
+                        ?>
+                        <a href="<?php echo get_term_link($categoryName); ?>"><?php echo $categoryName->name; ?></a>
+                    </div>
+                    <h3 class="title"><a href="<?php echo get_the_permalink(get_sub_field('featured_post')); ?>"><?php echo get_the_title(get_sub_field('featured_post')); ?></a></h3>
+                </div>
             </div>
         </article>
 
@@ -40,40 +54,7 @@ $featuredPostIDcollection = array();
         endif; 
         ?>
 
-        <?php 
-        // Custom loop args
-        $blogQuery = new WP_Query(array(
-            'post_type' 			=> 'post',
-            'posts_per_page' 		=> '6',
-            'post__not_in'          => $featuredPostIDcollection,
-        ));
-
-        if ( $blogQuery->have_posts() ) : // If have posts ?>
-
-        <!-- Latest Posts -->
-            
-        <?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); // Start loop?>
-
-        <article class="blog-slider-item">
-            <div class="content" style="background-image: url(<?php the_post_thumbnail_url( 'bg_small' ); ?>);">
-                <a href="<?php the_permalink(); ?>">
-                    <div class="link-overlay">
-                        
-                    </div>
-                </a>
-                <a href="<?php the_permalink(); ?>">
-                    <h3 class="title"><?php the_title(); ?></h3>
-                </a>
-            </div>
-        </article>
-            
-    
-        <?php 
-        // Close latest posts loop
-        endwhile; 
-        endif; 
-        wp_reset_postdata();
-        ?>
+        
         
     </div>
 
