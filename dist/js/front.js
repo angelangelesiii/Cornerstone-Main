@@ -8,26 +8,36 @@ jQuery(document).ready(function($){ // Document Ready
 
     var frontController = new ScrollMagic.Controller();
 
-    // FEATURED SLIDER
-    $('.featured-slider-container').slick({
-        autoplay: true,
-        autoplaySpeed: 8000,
-        speed: 1000,
-        arrows: false,
-    });
-
     // BLOG POSTS SLIDER
     $('.blog-slider-container').slick({
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         speed: 1000,
         pauseOnHover: false,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
-        variableWidth: true,
         infinite: true,
         centerMode: true,
+        slidesToShow: 3,
+        centerPadding: '60px',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '60px'
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '30px',
+                    arrows: false,
+                }
+            }
+        ]
     });
 
     // PARALLAX FOR OUTREACH

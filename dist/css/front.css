@@ -178,7 +178,7 @@
 /* ========================================= */
 
 .cs-video {
-    background-color: #111111;
+    /* background-color: #111111; */
     position: relative;
     overflow: hidden;
 }
@@ -272,8 +272,11 @@
 /* ========================================= */
 
 section.blog-posts {
-    padding: 60px 0;
+    margin: 0 0;
+    padding: 20px 0;
     background: #000000;
+    background-image: url('../images/background/dp24.jpg');
+    background-repeat: repeat;
 }
 section.blog-posts .blog-slider-container {
     position: relative;
@@ -283,8 +286,7 @@ section.blog-posts .blog-slider-item {
 }
 section.blog-posts .blog-slider-item .content {
     height: 340px;
-    width: 340px;
-    margin: 0 0 0 30px;
+    margin: 0 10px;
     background-position: center center;
     background-size: cover;
     overflow: hidden;
@@ -295,9 +297,6 @@ section.blog-posts .blog-slider-item .content {
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
-}
-section.blog-posts .blog-slider-item.featured-item .content {
-    width: 550px !important;
 }
 section.blog-posts .blog-slider-item.featured-item .content .label {
     display: block;
@@ -334,12 +333,32 @@ section.blog-posts .blog-slider-item .content .link-overlay {
 section.blog-posts .blog-slider-item .content:hover .link-overlay {
     background: linear-gradient(to top, rgba(48, 118, 136, 0.4), rgba(255, 0, 106, 0.2));
 }
-section.blog-posts .blog-slider-item .content .title {
+section.blog-posts .blog-slider-item .content .inner {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 10px 20px 30px;
+}
+section.blog-posts .blog-slider-item .content .category {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 0.12em;
+}
+section.blog-posts .blog-slider-item .content .category a:link,
+section.blog-posts .blog-slider-item .content .category a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+section.blog-posts .blog-slider-item .content .category a:hover {
+    background-color: #3F9AB1;
+}
+
+section.blog-posts .blog-slider-item .content .title {
     font-size: 1.8em;
     font-weight: 700;
     margin: 0;
