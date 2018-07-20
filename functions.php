@@ -337,14 +337,14 @@ if( function_exists('acf_add_options_page') ) {
 		'position'		=> '60'
 	));
 
-	acf_add_options_page(array(
-		'page_title' 	=> 'Featured',
-		'menu_title'	=> 'Featured',
-		'menu_slug' 	=> 'featured',
-		'capability'	=> 'publish_posts',
-		'redirect'		=> false,
-		'icon_url'		=> 'dashicons-star-filled',
-		'position'		=> '15'
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'Featured',
+	// 	'menu_title'	=> 'Featured',
+	// 	'menu_slug' 	=> 'featured',
+	// 	'capability'	=> 'publish_posts',
+	// 	'redirect'		=> false,
+	// 	'icon_url'		=> 'dashicons-star-filled',
+	// 	'position'		=> '15'
+	// ));
 	
 }
