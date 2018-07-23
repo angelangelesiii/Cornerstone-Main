@@ -60,7 +60,7 @@ jQuery(document).ready(function($){ // Document Ready
     // console.log(dimInitial);
     var heroEffect = new TimelineMax()
         .to('.parallaxBG', 1, {
-            y: '30%',
+            y: '40%',
             ease: Power0.easeInOut,
         }, 'a')
         .fromTo('#belt-menu-nav', 1, {

@@ -2,7 +2,7 @@
 
 <section class="cs-video clearfix">
     <div class="video-window">
-        <div class="video-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/alfred_abad.jpg' ?>);">
+        <div class="video-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/outreach_2.jpg' ?>);">
         <a href="javascript:void(0);" data-modal="#cs-video-modal" class="modal-button cs-video-button"><span class="overlay">
             <i class="fas fa-play play-icon"></i>
         </span></a>
