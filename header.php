@@ -100,9 +100,13 @@ function belt_menu_call($menuID = 'belt-menu') {
 				$hero = get_field('alternate_hero_banner_group', 'options');
 			}
 			$heroImage = get_template_directory_uri().'/dist/images/background/placeholder.jpg';
+			$heroFront = get_template_directory_uri().'/dist/images/hero-1.png';
 
 			// Hero Background
 			if ($hero['background_image']) $heroImage = wp_get_attachment_image_src( $hero['background_image'], 'bg_large')[0];
+
+			// Hero Image
+			if ($hero['image']) $heroFront = wp_get_attachment_image_src( $hero['image'], 'bg_large')[0];
 
 			// Hero Link
 			$heroLinkText = "Learn More";
@@ -123,7 +127,7 @@ function belt_menu_call($menuID = 'belt-menu') {
 				<div class="shadow"></div>
 				<div class="hero-container">
 					<div class="wrapper">
-						<img src="<?php echo get_template_directory_uri().'/dist/images/hero-1.png' ?>" alt="" class="hero-image">
+						<img src="<?php echo $heroFront; ?>" alt="" class="hero-image">
 					</div>
 					<a href="<?php echo $heroLinkURL ?>" class="btn btn--white btn--large"><?php echo $heroLinkText ?></a>
 				</div>
