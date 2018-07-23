@@ -14,12 +14,12 @@ get_header(); ?>
 
 			// OUTREACH MESSAGE
 			// get_template_part( 'fp-parts/fp-outreach');
-			while(have_posts()): the_post(); ?>
+			// while(have_posts()): the_post(); ?>
 			<section class="main-content">
-				<?php the_content(); ?>
+				<?php // the_content(); ?>
 			</section>
 			<?php
-			endwhile;
+			// endwhile;
 
 			// CORNERSTONE INTRO
 			get_template_part( 'fp-parts/fp-cs-video');
