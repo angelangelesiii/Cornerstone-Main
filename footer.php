@@ -12,7 +12,11 @@
 ?>
 
 	</div><!-- #content -->
-
+	<?php 
+	if (!is_front_page()):
+	if (is_single() || is_page() || get_post_type() == 'event' || get_post_type() == 'location'): ?>
+	<?php edit_post_link('<i class="fas fa-edit"></i>', NULL, NULL, NULL, 'post-edit-floater'); ?> 
+	<?php endif; endif;?>
 	<footer id="colophon" class="site-footer">
 		<nav class="footer-nav">
 			<div class="wrapper-medium">
@@ -56,7 +60,6 @@
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 
 </body>
