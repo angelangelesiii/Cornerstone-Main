@@ -840,13 +840,17 @@ a.post-edit-floater:hover::before {
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 }
+.page-bleed-true #belt-menu-nav.latch,
 .hero-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch, 
 .hero-banner.post-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch {
 	background: rgba(0, 0, 0, 0) !important;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0)) !important;
 }
+.nfp.not-top-position .page-bleed-true #belt-menu-nav.latch,
 .nfp.not-top-position .hero-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch, 
 .nfp.not-top-position .hero-banner.post-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch {
 	background: rgba(0, 0, 0, 1) !important;
+	/* background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)) !important; */
 }
 #belt-menu-nav.menu-opened {
 	opacity: 0;
@@ -1009,7 +1013,7 @@ a.post-edit-floater:hover::before {
 	padding-bottom: 50px;
 }
 .hero-banner.post-banner {
-	min-height: 500px;
+	min-height: 572px;
 }
 .hero-banner.post-banner .overlay {
 	opacity: 1 !important;
@@ -1349,7 +1353,7 @@ h2.event-heading {
 
 .blog-area #main {
 	background-color: #000000;
-	padding: 40px 0 50px;
+	padding: 0 0 50px;
 }
 h1.main-title {
 	font-size: 4em;
@@ -1548,18 +1552,18 @@ h1.main-title {
 	margin-bottom: 0 !important;
 }
 .featured-posts-slider .featured-item {
-	padding: 0 13px;
+	/* padding: 0 13px; */
 	outline: none;
 }
 .featured-posts-slider .featured-item-contents {
 	overflow: hidden;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	background-position: center center;
 	background-size: cover;
-	height: 520px;
+	height: 600px;
 }
 .featured-posts-slider .slick-dots {
-	margin: 10px 0 0;
+	margin: 15px 0 0;
 	padding: 0;
 	text-align: center;
 	position: static;
@@ -1572,12 +1576,12 @@ h1.main-title {
 .featured-posts-slider .slick-dots li button {
 	color: transparent;
 	background-color: #FFFFFF;
-	opacity: 0.7;
+	opacity: 0.5;
 	height: 12.5px;
 	width: 12.5px;
 	border-radius: 6.25px;
 	border: none;
-	margin: 0;
+	margin: 0 3px;
 	overflow: hidden;
 	position: relative;
 	display: block;
@@ -1592,7 +1596,7 @@ h1.main-title {
 }
 .featured-posts-slider .slick-dots li.slick-active button {
 	/* width: 32px; */
-	opacity: 0.7;
+	opacity: 1;
 	/* margin: 0 10px; */
 }
 .featured-posts-slider .slick-dots li button:hover {

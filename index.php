@@ -3,14 +3,19 @@
  * @package Cornerstone_Main
  */
 
-get_header(); ?>
+get_header();
+
+// FEATURED LOOP
+if (!have_rows('featured_blog_posts','options')):
+?>
 <div class="spacer"></div>
+<?php endif; ?>
 
 	<div id="primary" class="content-area blog-area">
 		<main id="main" class="site-main">
 
-			<div class="wrapper-big main-wrapper">
-				<div class="blog-main-container">
+			
+			<div class="blog-main-container">
 					
 				<?php 
 				// FEATURED LOOP
@@ -32,10 +37,12 @@ get_header(); ?>
 									<div class="text">
 										<div class="overlay"></div>
 										<div class="content">
-											<span class="category-meta">
-												<?php echo $featuredItemCategory->name; ?>
-											</span>
-											<h2><?php echo get_the_title( get_sub_field('featured_post') ); ?></h2>
+											<div class="wrapper-big">
+												<span class="category-meta">
+													<?php echo $featuredItemCategory->name; ?>
+												</span>
+												<h2><?php echo get_the_title( get_sub_field('featured_post') ); ?></h2>
+											</div>
 										</div>
 									</div>
 								</a>
@@ -55,6 +62,8 @@ get_header(); ?>
 				// MAIN LOOP
 				if ( have_posts() ) : 
 				?>
+
+				<div class="wrapper-big main-wrapper">
 
 				<div class="blog-container grid-container clearfix">
 
@@ -144,14 +153,15 @@ get_header(); ?>
 					<span id="post-end">- No more posts to load -</span>
 				</nav>
 
+				</div>
+
 				<?php //the_posts_navigation();
 				endif; 
 				// wp_reset_postdata();
 				?>
 
-				</div>
-			
 			</div>
+			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

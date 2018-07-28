@@ -94,7 +94,11 @@ function belt_menu_call($menuID = 'belt-menu') {
 		endif;
 
 		// If page bleed is on
-		if(is_page_template( 'template-full-page.php' ) && get_field('header_spacer_boolean') == true)
+		if (is_page_template( 'template-full-page.php' ) && get_field('header_spacer_boolean') == true)
+			$heroBannerClasses .=' page-bleed-true';
+		
+		// If featured blog slider is on
+		if ((have_rows('featured_blog_posts','options') && is_home()) || (is_single() && has_post_thumbnail( $post->ID )))
 			$heroBannerClasses .=' page-bleed-true';
 		
 		if(is_front_page()): // ===== IF YOU ARE IN THE FRONT PAGE
