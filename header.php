@@ -92,6 +92,10 @@ function belt_menu_call($menuID = 'belt-menu') {
 		else:
 			$heroBannerClasses .= ' post-banner';
 		endif;
+
+		// If page bleed is on
+		if(is_page_template( 'template-full-page.php' ) && get_field('header_spacer_boolean') == true)
+			$heroBannerClasses .=' page-bleed-true';
 		
 		if(is_front_page()): // ===== IF YOU ARE IN THE FRONT PAGE
 

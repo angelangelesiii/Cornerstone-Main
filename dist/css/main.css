@@ -721,6 +721,10 @@ a.post-edit-floater:hover::before {
 .hero-banner.post-banner.no-thumbnail {
 	min-height: 74px;
 }
+.hero-banner.no-thumbnail.page-bleed-true, 
+.hero-banner.post-banner.no-thumbnail.page-bleed-true {
+	min-height: 0 !important;
+}
 .hero-banner .hero-container {
     position: absolute;
     z-index: 3;
@@ -829,6 +833,19 @@ a.post-edit-floater:hover::before {
 	position: fixed;
 	top: 0;
 	bottom: auto;
+	background: rgba(0, 0, 0, 1) !important;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+}
+.hero-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch, 
+.hero-banner.post-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch {
+	background: rgba(0, 0, 0, 0) !important;
+}
+.nfp.not-top-position .hero-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch, 
+.nfp.not-top-position .hero-banner.post-banner.no-thumbnail.page-bleed-true #belt-menu-nav.latch {
 	background: rgba(0, 0, 0, 1) !important;
 }
 #belt-menu-nav.menu-opened {
