@@ -14,7 +14,7 @@ jQuery(document).ready(function($){ // Document Ready
         maxNumPosts = 0,
         maxNumPages = 0,
         lastPagePostCount = 0,
-        restURL = blogPageData.jsonURL + '/wp/v2/post?per_page=' + postPerPage + '&page=' + postPage + '';
+        restURL = blogPageData.jsonURL + '/wp/v2/posts?per_page=' + postPerPage + '&page=' + postPage + '';
 
     // On Page Load
     $.ajax({

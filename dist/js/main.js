@@ -245,8 +245,8 @@ jQuery(document).ready(function($){ // Document Ready
     $('#blogpageslider').slick({
         autoplay: true,
         autoplaySpeed: 5000,
-        fade: true,
-        speed: 1000,
+        fade: false,
+        speed: 500,
         pauseOnHover: false,
         arrows: false,
         // prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
