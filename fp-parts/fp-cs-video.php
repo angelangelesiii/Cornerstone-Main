@@ -10,8 +10,22 @@
     </div>
     <div class="text-window">
         <div class="text">
-            <h3>Commited to reaching out</h3>
+        <?php
+        $intro = get_field('intro_segment', 'options');
+        ?>
+            <h3>
+                <?php if($intro['heading']): 
+                    echo $intro['heading'];
+                else:
+                    echo 'Lorem Ipsum Dolor';
+                endif;  
+                ?>
+            </h3>
+            <?php if ($intro['subtext']):
+                echo '<p>'.$intro['subtext'].'</p>';
+            else: ?>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis iusto suscipit vel enim? Tempora, reiciendis blanditiis! Debitis maiores hic possimus eos.</p>
+            <?php endif; ?>
         </div>
     </div>
     
