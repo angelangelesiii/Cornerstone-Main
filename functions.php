@@ -196,7 +196,7 @@ function cornerstone_main_scripts() {
 	if (is_front_page()) wp_enqueue_style( 'front', get_template_directory_uri().'/dist/css/front.css' );
 
 	// Location Post Type - ACF MAP
-	if(get_post_type() == 'location') wp_enqueue_style( 'ACF-map', get_template_directory_uri().'/dist/css/acf-map.css' );
+	if(get_post_type() == 'location' || get_post_type() == 'event' ) wp_enqueue_style( 'ACF-map', get_template_directory_uri().'/dist/css/acf-map.css' );
 
 	// Slick Slider CSS
 	wp_enqueue_style( 'slick', get_template_directory_uri().'/dist/css/slick.css' );
@@ -240,7 +240,7 @@ function cornerstone_main_scripts() {
 		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
 		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/acf-map.js', false, false, true );
 	}
-	if(is_page('locations')) {
+	if(is_page('locations') || get_post_type($post->ID) == 'event') {
 		wp_enqueue_script( 'google-maps-api-key', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPL_70m6Amg9Tej-BHQVE0fZons4Jl1PY', false, false, true );
 		wp_enqueue_script( 'acf-map', get_template_directory_uri().'/dist/js/all-locations-map.js', false, false, true );
 	}

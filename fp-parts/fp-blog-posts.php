@@ -9,12 +9,14 @@ $featuredPostIDcollection = array();
 
 ?>
 
+<?php if (have_rows('featured_blog_posts','options')): ?>
+
 <!-- BLOG POSTS -->
 <section class="blog-posts">
         
     <div class="blog-slider-container">
 
-        <?php if (have_rows('featured_blog_posts','options')): ?>
+        
         
         <!-- Featured Posts -->
 
@@ -51,7 +53,6 @@ $featuredPostIDcollection = array();
         <?php 
         $featuredPostIDcollection[] = get_sub_field('featured_post');
         endwhile;
-        endif; 
         ?>
 
         
@@ -59,3 +60,5 @@ $featuredPostIDcollection = array();
     </div>
 
 </section>
+
+<?php endif; ?>

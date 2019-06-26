@@ -49,8 +49,8 @@
 								$day = get_sub_field('day');
 								echo "<span class='day'>";
 								the_sub_field('day');
-								echo ":</span><br/>";
-								echo $time;
+								echo ":</span> ";
+								echo $time."<br/>";
 								?>
 								
 								<?php else: 

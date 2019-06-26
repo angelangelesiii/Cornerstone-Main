@@ -19,6 +19,10 @@ get_header(); ?>
 					// MAIN LOOP
 					if ( have_posts() ) : 
 					?>
+
+					<header class="archive-header">
+						<h1 class="archive-title"><?php echo get_the_archive_title(); ?></h1>
+					</header>
 			
 					<div class="blog-container grid-container clearfix">
 			

@@ -200,6 +200,7 @@ jQuery(document).ready(function($){ // Document Ready
     }
 
     function modalOpen(link) {
+        
         var targetModal = $(link.data('modal'));
         console.log(targetModal);
         console.log('Clicked: ' + link.attr('class'));
@@ -211,11 +212,15 @@ jQuery(document).ready(function($){ // Document Ready
     function modalClose(modal) {
         TweenLite.to(modal, 0.5, {autoAlpha: 0, ease: Power4.easeIn});
         console.log('Close modal: '+modal);
+        
     }
 
     $('.modal-button').each(function(e){
         $(this).click(function(){
             modalOpen($(this));
+            var videoSrc = $(this).data('video-src');
+            console.log(videoSrc);
+            $($(this).data('modal')).find('iframe').attr('src', videoSrc+'?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1');
         });
     });
 
@@ -224,6 +229,7 @@ jQuery(document).ready(function($){ // Document Ready
         $('.modal-dim').each(function(e){
             $(this).click(function() {
                 modalClose($(this).parent('.modal'));
+                $(this).parent('.modal').find('iframe').attr('src', '');
             })
         });
     });

@@ -12,12 +12,13 @@
 <article class="article page-article overlapping">
 	<?php 
 	$contentPaddingClass = '';
-	if(is_page_template('template-full-page.php') && get_field('show_title')): 
+	if((is_page_template('template-full-page.php') && (get_field('show_title'))) || !is_page_template('template-full-page.php')): 
 		$contentPaddingClass = 'vertical-space'
 		?>
 	<div class="article-title-container">
 		<h1 class="article-title"><?php the_title(); ?></h1>
 	</div>
+	
 	<?php endif; ?>
 
 	<div class="article-content <?php echo $contentPaddingClass; ?>">

@@ -2,8 +2,15 @@
 
 <section class="cs-video clearfix">
     <div class="video-window">
-        <div class="video-image" style="background-image: url(<?php echo get_template_directory_uri().'/dist/images/background/outreach_2.jpg' ?>);">
-        <a href="javascript:void(0);" data-modal="#cs-video-modal" class="modal-button cs-video-button"><span class="overlay">
+        <?php 
+        $videoGroup = get_field('intro_segment', 'options');
+        $thumbnail = wp_get_attachment_image_url( $videoGroup['video_link_thumbnail'], 'bg-medium' );
+        $youtubeSrc = str_replace('/watch?v=', '/embed/', $videoGroup['video_youtube']);
+        ?>
+
+        <div class="video-image" style="background-image: url(<?php echo $thumbnail; ?>);">
+
+        <a href="javascript:void(0);" data-modal="#cs-video-modal" class="modal-button cs-video-button" data-video-src="<?php echo $youtubeSrc; ?>"><span class="overlay">
             <i class="fas fa-play play-icon"></i>
         </span></a>
         </div>
@@ -33,6 +40,6 @@
 
 <div class="modal video-modal youtube-video" id="cs-video-modal">
     <div class="modal-inner">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gysmSobGxSM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen allowscriptaccess="always"></iframe>
     </div>
 </div>

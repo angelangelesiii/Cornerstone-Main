@@ -1039,6 +1039,9 @@ article.article .article-content {
 	border-radius: 10px;
 	font-size: 1.1rem;
 }
+.no-thumbnail article.article .article-content {
+	padding: 20px 50px 50px;
+}
 article.article .article-content.no-padding {
 	padding: 0;
 }
@@ -1264,7 +1267,7 @@ h2.event-heading {
 .event-date-meta .date {
 	font-size: 1.8em;
 	font-weight: 200;
-	color: #3F9AB1;
+	color: rgb(255, 255, 255);
 	display: block;
 }
 .event-date-meta .time {
@@ -1272,6 +1275,14 @@ h2.event-heading {
 	font-weight: 200;
 }
 
+.event-location-container .acf-map {
+	height: 400px;
+}
+
+.event-poster img {
+	width: 100%;
+	margin-bottom: 20px;
+}
 
 /* ========================================= */
 /* LOCATIONS                                 */
@@ -1351,6 +1362,12 @@ h2.event-heading {
 /* BLOG                                      */
 /* ========================================= */
 
+.blog-main-container .archive-header .archive-title {
+	font-weight: 900;
+	font-size: 3em;
+	text-transform: uppercase;
+	color:#FFF;
+}
 .blog-area #main {
 	background-color: #000000;
 	padding: 0 0 50px;
